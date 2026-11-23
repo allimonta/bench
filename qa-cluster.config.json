@@ -5,9 +5,9 @@
   "localURL": "http://localhost:4180",
   "healthPath": "/",
   "testgraphProject": "Bench - QA Cluster",
-  "outputs": ["e2e"],
+  "outputs": ["testgraph", "e2e"],
+  "bugCases": true,
   "testgraphScope": ["Volume Test"],
-  "testgraphWrites": ["test-runs", "automation-status"],
   "failOn": "never",
   "requirements": {}
 }
