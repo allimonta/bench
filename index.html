@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Partwerk — Android Parts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Michroma&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --bg:#000000;
+  --panel:#121417;
+  --panel-2:#181B1F;
+  --line:#262B31;
+  --steel:#8A949E;
+  --text:#E8ECEF;
+  --muted:#9AA3AC;
+  --amber:#FFB000;
+  --amber-dim:#7A5500;
+  --display:"Michroma", "Eurostile", "Arial Black", sans-serif;
+  --body:"Barlow", "Segoe UI", system-ui, sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#000000; } }
+:root[data-theme="dark"]{ --bg:#000000; }
+html{ scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px); scroll-behavior:smooth; }
+*,*::before,*::after{ box-sizing:border-box; }
+body{ margin:0; background:var(--bg); color:var(--text); font-family:var(--body); font-size:17px; line-height:1.5; }
+body::before{ content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); z-index:10; background:rgba(0,0,0,.85); backdrop-filter:blur(10px); }
+img,svg{ max-width:100%; }
+button{ font:inherit; color:inherit; cursor:pointer; }
+:focus-visible{ outline:2px solid var(--amber); outline-offset:3px; }
+
+/* Header / menu */
+header{ position:sticky; top:env(safe-area-inset-top,0px); z-index:20; background:rgba(0,0,0,.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+.nav{ max-width:1200px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; gap:32px; }
+.logo{ font-family:var(--display); font-size:18px; letter-spacing:.06em; color:var(--text); text-decoration:none; display:flex; align-items:center; gap:10px; }
+.logo-dot{ width:10px; height:10px; border-radius:50%; background:var(--amber); box-shadow:0 0 10px var(--amber); animation:blink 2.4s infinite; }
+.menu{ display:flex; gap:24px; list-style:none; margin:0; padding:0; flex:1; }
+.menu a{ color:var(--muted); text-decoration:none; font-weight:500; }
+.menu a:hover{ color:var(--text); }
+.cart-btn{ display:flex; align-items:center; gap:8px; background:var(--panel); border:1px solid var(--line); border-radius:999px; padding:8px 16px; }
+.cart-btn:hover{ border-color:var(--steel); }
+.badge{ min-width:22px; height:22px; padding:0 6px; border-radius:11px; background:var(--amber); color:#000; font-weight:600; font-size:13px; display:inline-grid; place-items:center; }
+.badge.bump{ animation:bump .35s ease; }
+.menu-toggle{ display:none; background:none; border:1px solid var(--line); border-radius:8px; padding:6px 10px; }
+
+/* Banner */
+.banner{ max-width:1200px; margin:0 auto; padding:56px 24px 40px; display:grid; grid-template-columns:1.1fr 1fr; gap:32px; align-items:center; }
+.banner h1{ font-family:var(--display); font-weight:400; font-size:clamp(30px,5vw,56px); line-height:1.12; margin:0 0 20px; letter-spacing:-.01em; }
+.banner p{ color:var(--muted); max-width:46ch; margin:0 0 28px; font-size:19px; }
+.cta{ display:inline-block; background:var(--amber); color:#000; font-weight:600; padding:14px 28px; border-radius:6px; text-decoration:none; border:none; }
+.cta:hover{ filter:brightness(1.1); }
+.stage{ position:relative; aspect-ratio:1/1.1; max-height:520px; justify-self:center; width:100%; }
+.stage::before{ content:""; position:absolute; inset:8% 10%; border-radius:50%; background:radial-gradient(circle, rgba(255,176,0,.14), transparent 65%); }
+.stage svg{ position:relative; width:100%; height:100%; }
+.scanline{ position:absolute; left:10%; right:10%; height:2px; background:linear-gradient(90deg,transparent,var(--amber),transparent); opacity:.6; animation:scan 4s ease-in-out infinite; }
+
+/* Android assembly (the one orchestrated moment) */
+.part{ transform-box:fill-box; animation:assemble .9s cubic-bezier(.2,.8,.2,1) both; }
+.p-legs{ --from:translateY(120px); animation-delay:.1s; }
+.p-torso{ --from:translateY(-140px); animation-delay:.35s; }
+.p-arm-l{ --from:translateX(-140px); animation-delay:.6s; }
+.p-arm-r{ --from:translateX(140px); animation-delay:.6s; }
+.p-head{ --from:translateY(-200px); animation-delay:.85s; }
+.wave{ transform-box:fill-box; transform-origin:top center; animation:wave 3s ease-in-out 2s infinite; }
+.eye{ animation:blink 4s 2s infinite; }
+.antenna-tip{ animation:blink 1.2s infinite; }
+.hero-core{ transform-box:fill-box; transform-origin:center; animation:pulse 2s ease-in-out infinite; }
+
+/* Shop */
+.shop{ max-width:1200px; margin:0 auto; padding:40px 24px 80px; }
+.shop-head{ display:flex; flex-wrap:wrap; justify-content:space-between; align-items:end; gap:16px; margin-bottom:28px; }
+.shop-head h2{ font-family:var(--display); font-weight:400; font-size:26px; margin:0; }
+.filters{ display:flex; flex-wrap:wrap; gap:8px; }
+.filter{ background:transparent; border:1px solid var(--line); color:var(--muted); padding:8px 16px; border-radius:999px; }
+.filter[aria-pressed="true"]{ border-color:var(--amber); color:var(--text); }
+.grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:20px; }
+.card{ background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden; display:flex; flex-direction:column; }
+.card-art{ background:#000; border-bottom:1px solid var(--line); aspect-ratio:10/7; display:grid; place-items:center; }
+.card-art svg{ width:82%; height:82%; }
+.card-body{ padding:18px 18px 20px; display:flex; flex-direction:column; gap:6px; flex:1; }
+.card-cat{ color:var(--steel); font-size:14px; }
+.card h3{ margin:0; font-size:20px; font-weight:600; }
+.card p{ margin:0; color:var(--muted); font-size:15px; flex:1; }
+.card-foot{ display:flex; justify-content:space-between; align-items:center; margin-top:14px; }
+.price{ font-family:var(--display); font-size:16px; }
+.add{ background:var(--panel-2); border:1px solid var(--steel); border-radius:6px; padding:9px 16px; font-weight:600; }
+.add:hover{ background:var(--amber); color:#000; border-color:var(--amber); }
+.add.added{ background:var(--amber); color:#000; border-color:var(--amber); }
+
+/* Card animations */
+.svg-steel{ fill:none; stroke:var(--steel); stroke-width:3; }
+.svg-fill{ fill:var(--panel-2); stroke:var(--steel); stroke-width:3; }
+.amber{ fill:var(--amber); }
+.amber-stroke{ fill:none; stroke:var(--amber); stroke-width:3; }
+.iris{ animation:look 3.5s ease-in-out infinite; }
+.forearm{ transform-box:view-box; transform-origin:100px 70px; animation:swing 2.6s ease-in-out infinite; }
+.core{ transform-box:fill-box; transform-origin:center; animation:pulse 1.8s ease-in-out infinite; }
+.spin{ transform-box:fill-box; transform-origin:center; animation:spin 6s linear infinite; }
+.spin-rev{ transform-box:fill-box; transform-origin:center; animation:spin 9s linear infinite reverse; }
+.finger{ transform-box:fill-box; transform-origin:bottom center; animation:flex 2.2s ease-in-out infinite; }
+.finger:nth-of-type(2){ animation-delay:.15s } .finger:nth-of-type(3){ animation-delay:.3s } .finger:nth-of-type(4){ animation-delay:.45s }
+.piston{ animation:piston 1.6s ease-in-out infinite; }
+.trace{ stroke-dasharray:8 10; animation:flow 1.4s linear infinite; }
+.bar{ transform-box:fill-box; transform-origin:center; animation:eq 1s ease-in-out infinite; }
+.bar:nth-child(2){animation-delay:.1s}.bar:nth-child(3){animation-delay:.25s}.bar:nth-child(4){animation-delay:.05s}.bar:nth-child(5){animation-delay:.35s}.bar:nth-child(6){animation-delay:.2s}.bar:nth-child(7){animation-delay:.4s}
+
+@keyframes assemble{ from{ transform:var(--from); opacity:0 } to{ transform:none; opacity:1 } }
+@keyframes blink{ 0%,92%,100%{opacity:1} 95%{opacity:.15} }
+@keyframes pulse{ 0%,100%{transform:scale(1); opacity:1} 50%{transform:scale(1.15); opacity:.7} }
+@keyframes wave{ 0%,100%{transform:rotate(0)} 25%{transform:rotate(-14deg)} 50%{transform:rotate(6deg)} }
+@keyframes scan{ 0%,100%{top:12%} 50%{top:86%} }
+@keyframes look{ 0%,100%{transform:translateX(0)} 25%{transform:translateX(-18px)} 75%{transform:translateX(18px)} }
+@keyframes swing{ 0%,100%{transform:rotate(0)} 50%{transform:rotate(-40deg)} }
+@keyframes spin{ to{transform:rotate(360deg)} }
+@keyframes flex{ 0%,100%{transform:scaleY(1)} 50%{transform:scaleY(.55)} }
+@keyframes piston{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(22px)} }
+@keyframes flow{ to{stroke-dashoffset:-36} }
+@keyframes eq{ 0%,100%{transform:scaleY(.3)} 50%{transform:scaleY(1)} }
+@keyframes bump{ 50%{transform:scale(1.35)} }
+
+/* Cart drawer */
+.overlay{ position:fixed; inset:0; background:rgba(0,0,0,.6); opacity:0; pointer-events:none; transition:opacity .25s; z-index:30; }
+.overlay.open{ opacity:1; pointer-events:auto; }
+.drawer{ position:fixed; top:0; right:0; height:100%; width:min(420px,100%); background:var(--panel); border-left:1px solid var(--line); z-index:40; transform:translateX(100%); transition:transform .3s ease; display:flex; flex-direction:column; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px); }
+.drawer.open{ transform:none; }
+.drawer-head{ display:flex; justify-content:space-between; align-items:center; padding:20px 24px; border-bottom:1px solid var(--line); }
+.drawer-head h2{ font-family:var(--display); font-weight:400; font-size:20px; margin:0; }
+.icon-btn{ background:none; border:1px solid var(--line); border-radius:6px; width:36px; height:36px; display:grid; place-items:center; }
+.items{ list-style:none; margin:0; padding:8px 24px; overflow-y:auto; flex:1; }
+.item{ display:grid; grid-template-columns:64px 1fr auto; gap:14px; align-items:center; padding:16px 0; border-bottom:1px solid var(--line); }
+.item-art{ width:64px; height:64px; background:#000; border:1px solid var(--line); border-radius:6px; display:grid; place-items:center; }
+.item-art svg{ width:90%; }
+.item-name{ font-weight:600; margin:0 0 6px; }
+.qty{ display:inline-flex; align-items:center; border:1px solid var(--line); border-radius:6px; }
+.qty button{ background:none; border:none; width:30px; height:30px; }
+.qty span{ min-width:26px; text-align:center; }
+.item-side{ text-align:right; }
+.remove{ background:none; border:none; color:var(--muted); font-size:14px; text-decoration:underline; padding:4px 0 0; }
+.empty, .confirm{ padding:48px 24px; text-align:center; color:var(--muted); }
+.confirm h3{ color:var(--text); font-family:var(--display); font-weight:400; }
+.summary{ padding:20px 24px 24px; border-top:1px solid var(--line); display:grid; gap:8px; }
+.row{ display:flex; justify-content:space-between; color:var(--muted); }
+.row.total{ color:var(--text); font-weight:600; font-size:19px; margin-top:4px; }
+.summary .cta{ width:100%; margin-top:10px; text-align:center; }
+.summary .cta:disabled{ opacity:.4; cursor:not-allowed; }
+
+.toast{ position:fixed; left:50%; bottom:calc(24px + env(safe-area-inset-bottom,0px)); transform:translate(-50%,120px); background:var(--panel-2); border:1px solid var(--amber); padding:12px 20px; border-radius:8px; transition:transform .3s; z-index:50; }
+.toast.show{ transform:translate(-50%,0); }
+
+footer{ border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+footer div{ max-width:1200px; margin:0 auto; padding:24px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; }
+
+@media (max-width:820px){
+  .banner{ grid-template-columns:1fr; padding-top:32px; }
+  .stage{ max-height:380px; order:-1; }
+  .menu{ display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; background:#000; padding:16px 24px; border-bottom:1px solid var(--line); }
+  .menu.open{ display:flex; }
+  .menu-toggle{ display:block; margin-left:auto; }
+  .nav{ position:relative; gap:12px; }
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{ animation:none !important; transition:none !important; }
+}
+</style>
+</head>
+<body>
+
+<header data-testid="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="logo" href="#top" data-testid="logo"><span class="logo-dot"></span>PARTWERK</a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menu" data-testid="menu-toggle">Menu</button>
+    <ul class="menu" id="menu" data-testid="nav-menu">
+      <li><a href="#shop" data-testid="nav-shop">Shop parts</a></li>
+      <li><a href="#shop" data-filter="Sensors" data-testid="nav-sensors">Sensors</a></li>
+      <li><a href="#shop" data-filter="Limbs" data-testid="nav-limbs">Limbs</a></li>
+      <li><a href="#shop" data-filter="Power" data-testid="nav-power">Power</a></li>
+      <li><a href="#support" data-testid="nav-support">Support</a></li>
+    </ul>
+    <button class="cart-btn" id="cartBtn" aria-label="Open cart" data-testid="cart-button">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11h11L21 8H6.2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
+      Cart <span class="badge" id="badge" data-testid="cart-count">0</span>
+    </button>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="banner" data-testid="banner">
+    <div>
+      <h1>Build your android, one part at a time.</h1>
+      <p>Certified optics, servo limbs, fusion cores and neural processors. Every part ships calibrated and ready to bolt on.</p>
+      <a class="cta" href="#shop" data-testid="banner-cta">Shop parts</a>
+    </div>
+    <div class="stage" aria-hidden="true">
+      <div class="scanline"></div>
+      <svg viewBox="0 0 320 420">
+        <g class="part p-legs">
+          <rect x="112" y="290" width="36" height="100" rx="8" class="svg-fill"/>
+          <rect x="172" y="290" width="36" height="100" rx="8" class="svg-fill"/>
+          <rect x="102" y="384" width="54" height="18" rx="6" class="svg-fill"/>
+          <rect x="164" y="384" width="54" height="18" rx="6" class="svg-fill"/>
+          <circle cx="130" cy="335" r="6" class="amber"/><circle cx="190" cy="335" r="6" class="amber"/>
+        </g>
+        <g class="part p-torso">
+          <rect x="92" y="150" width="136" height="150" rx="18" class="svg-fill"/>
+          <circle cx="160" cy="215" r="28" class="svg-steel"/>
+          <circle cx="160" cy="215" r="16" class="amber hero-core"/>
+          <line x1="112" y1="270" x2="208" y2="270" class="svg-steel"/>
+          <line x1="112" y1="282" x2="180" y2="282" class="svg-steel"/>
+        </g>
+        <g class="part p-arm-l">
+          <rect x="56" y="160" width="30" height="120" rx="12" class="svg-fill"/>
+          <circle cx="71" cy="292" r="12" class="svg-fill"/>
+        </g>
+        <g class="part p-arm-r"><g class="wave">
+          <rect x="234" y="160" width="30" height="120" rx="12" class="svg-fill"/>
+          <circle cx="249" cy="292" r="12" class="svg-fill"/>
+        </g></g>
+        <g class="part p-head">
+          <line x1="160" y1="40" x2="160" y2="66" class="svg-steel"/>
+          <circle cx="160" cy="34" r="7" class="amber antenna-tip"/>
+          <rect x="110" y="66" width="100" height="76" rx="16" class="svg-fill"/>
+          <rect x="124" y="88" width="72" height="26" rx="13" fill="#000" stroke="var(--steel)" stroke-width="2"/>
+          <circle cx="144" cy="101" r="7" class="amber eye"/>
+          <circle cx="176" cy="101" r="7" class="amber eye"/>
+          <line x1="140" y1="128" x2="180" y2="128" class="svg-steel"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="shop" id="shop" data-testid="shop-section">
+    <div class="shop-head">
+      <h2>Parts catalog</h2>
+      <div class="filters" role="group" aria-label="Filter by category" id="filters" data-testid="filters"></div>
+    </div>
+    <div class="grid" id="grid" data-testid="product-grid"></div>
+  </section>
+</main>
+
+<footer id="support"><div><span>Partwerk Android Supply</span><span>Need help fitting a part? support@partwerk.example</span></div></footer>
+
+<div class="overlay" id="overlay" data-testid="cart-overlay"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true" data-testid="cart-drawer">
+  <div class="drawer-head">
+    <h2 id="cartTitle">Your cart</h2>
+    <button class="icon-btn" id="closeCart" aria-label="Close cart" data-testid="cart-close">✕</button>
+  </div>
+  <div id="cartBody" style="flex:1;display:flex;flex-direction:column;min-height:0"></div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite" data-testid="toast"></div>
+
+<script>
+const ART = {
+  eye:`<svg viewBox="0 0 200 140"><ellipse cx="100" cy="70" rx="80" ry="44" class="svg-fill"/><g class="iris"><circle cx="100" cy="70" r="26" class="svg-steel"/><circle cx="100" cy="70" r="12" class="amber"/></g></svg>`,
+  arm:`<svg viewBox="0 0 200 140"><rect x="20" y="58" width="80" height="24" rx="12" class="svg-fill"/><g class="forearm"><rect x="100" y="60" width="72" height="20" rx="10" class="svg-fill"/><circle cx="176" cy="70" r="10" class="amber"/></g><circle cx="100" cy="70" r="14" class="svg-fill"/><circle cx="100" cy="70" r="5" class="amber"/></svg>`,
+  core:`<svg viewBox="0 0 200 140"><circle cx="100" cy="70" r="54" class="svg-steel spin" stroke-dasharray="10 8"/><circle cx="100" cy="70" r="38" class="svg-fill"/><circle cx="100" cy="70" r="20" class="amber core"/></svg>`,
+  hand:`<svg viewBox="0 0 200 140"><rect x="64" y="70" width="72" height="56" rx="12" class="svg-fill"/><g><rect class="finger svg-fill" x="66" y="20" width="14" height="48" rx="7"/><rect class="finger svg-fill" x="84" y="12" width="14" height="56" rx="7"/><rect class="finger svg-fill" x="102" y="14" width="14" height="54" rx="7"/><rect class="finger svg-fill" x="120" y="24" width="14" height="44" rx="7"/></g><circle cx="100" cy="98" r="6" class="amber"/></svg>`,
+  leg:`<svg viewBox="0 0 200 140"><rect x="78" y="10" width="44" height="60" rx="8" class="svg-fill"/><g class="piston"><rect x="90" y="60" width="20" height="44" class="svg-fill"/><rect x="70" y="100" width="60" height="16" rx="6" class="svg-fill"/></g><circle cx="100" cy="36" r="6" class="amber"/></svg>`,
+  neural:`<svg viewBox="0 0 200 140"><path class="amber-stroke trace" d="M10 40 H70 M10 100 H70 M130 40 H190 M130 100 H190 M100 4 V40 M100 100 V136"/><rect x="66" y="36" width="68" height="68" rx="8" class="svg-fill"/><rect x="84" y="54" width="32" height="32" rx="4" class="amber core"/></svg>`,
+  vocal:`<svg viewBox="0 0 200 140"><g class="amber">${[0,1,2,3,4,5,6].map(i=>`<rect class="bar" x="${34+i*20}" y="30" width="10" height="80" rx="5"/>`).join("")}</g></svg>`,
+  torso:`<svg viewBox="0 0 200 140"><rect x="40" y="10" width="120" height="120" rx="20" class="svg-fill"/><circle cx="100" cy="70" r="30" fill="none" stroke="var(--steel)" stroke-width="12" stroke-dasharray="7 5" class="spin"/><circle cx="100" cy="70" r="16" class="svg-fill"/><circle cx="100" cy="70" r="6" class="amber"/></svg>`
+};
+
+const PRODUCTS = [
+  {id:"opt-01", name:"Optic Sensor Array", cat:"Sensors", price:1240, art:"eye", desc:"Stereo vision with 40 m depth range and low-light tracking."},
+  {id:"arm-02", name:"Servo Arm Assembly", cat:"Limbs", price:3480, art:"arm", desc:"Seven-axis arm rated for 25 kg lifts. Shoulder mount included."},
+  {id:"pwr-03", name:"Fusion Core Cell", cat:"Power", price:5900, art:"core", desc:"Runs a full-size android for 96 hours between charges."},
+  {id:"hnd-04", name:"Dexterous Hand Unit", cat:"Limbs", price:2150, art:"hand", desc:"Pressure-sensing fingertips that can hold an egg or a wrench."},
+  {id:"leg-05", name:"Hydraulic Leg Module", cat:"Limbs", price:4320, art:"leg", desc:"Shock-absorbing piston stride for stairs and rough ground."},
+  {id:"cpu-06", name:"Neural Processor", cat:"Processing", price:7800, art:"neural", desc:"On-board learning chip. Ships with the base behavior pack."},
+  {id:"voc-07", name:"Vocal Synth Module", cat:"Sensors", price:890, art:"vocal", desc:"Natural speech in 32 languages with adjustable tone."},
+  {id:"chs-08", name:"Torso Chassis Frame", cat:"Power", price:6450, art:"torso", desc:"Titanium frame with a built-in cooling gear and core bay."}
+];
+const CATS = ["All", ...new Set(PRODUCTS.map(p=>p.cat))];
+const money = n => new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0}).format(n);
+
+let cart = {};
+try{ cart = JSON.parse(localStorage.getItem("partwerk-cart")) || {}; }catch(e){ cart = {}; }
+let filter = "All";
+let confirmed = null;
+
+const $ = s => document.querySelector(s);
+const save = () => { try{ localStorage.setItem("partwerk-cart", JSON.stringify(cart)); }catch(e){} };
+
+function renderFilters(){
+  $("#filters").innerHTML = CATS.map(c=>`<button class="filter" aria-pressed="${c===filter}" data-cat="${c}" data-testid="filter-${c.toLowerCase()}">${c}</button>`).join("");
+}
+function renderGrid(){
+  const list = PRODUCTS.filter(p=>filter==="All"||p.cat===filter);
+  $("#grid").innerHTML = list.map(p=>`
+    <article class="card" data-testid="product-card" data-product-id="${p.id}">
+      <div class="card-art" aria-hidden="true">${ART[p.art]}</div>
+      <div class="card-body">
+        <span class="card-cat">${p.cat}</span>
+        <h3 data-testid="product-name">${p.name}</h3>
+        <p>${p.desc}</p>
+        <div class="card-foot">
+          <span class="price" data-testid="product-price">${money(p.price)}</span>
+          <button class="add" data-add="${p.id}" data-testid="add-to-cart-${p.id}">Add to cart</button>
+        </div>
+      </div>
+    </article>`).join("");
+}
+function count(){ return Object.values(cart).reduce((a,b)=>a+b,0); }
+function renderCart(){
+  const badge = $("#badge");
+  badge.textContent = count();
+  const body = $("#cartBody");
+  if(confirmed){
+    body.innerHTML = `<div class="confirm" data-testid="order-confirmation"><h3>Order placed</h3><p>Reference <strong data-testid="order-ref">${confirmed}</strong>. Your parts ship within 2 business days.</p><button class="cta" id="continue" data-testid="continue-shopping">Continue shopping</button></div>`;
+    return;
+  }
+  const ids = Object.keys(cart);
+  if(!ids.length){
+    body.innerHTML = `<div class="empty" data-testid="cart-empty"><p>Your cart is empty. Add a part from the catalog to start your build.</p></div>`;
+    return;
+  }
+  const sub = ids.reduce((s,id)=>s+PRODUCTS.find(p=>p.id===id).price*cart[id],0);
+  const ship = sub >= 10000 ? 0 : 150;
+  body.innerHTML = `
+    <ul class="items" data-testid="cart-items">${ids.map(id=>{const p=PRODUCTS.find(x=>x.id===id);return `
+      <li class="item" data-testid="cart-item" data-product-id="${id}">
+        <div class="item-art" aria-hidden="true">${ART[p.art]}</div>
+        <div><p class="item-name">${p.name}</p>
+          <div class="qty"><button data-dec="${id}" aria-label="Decrease quantity of ${p.name}" data-testid="qty-decrease-${id}">−</button><span data-testid="qty-${id}">${cart[id]}</span><button data-inc="${id}" aria-label="Increase quantity of ${p.name}" data-testid="qty-increase-${id}">+</button></div>
+        </div>
+        <div class="item-side"><div data-testid="line-total-${id}">${money(p.price*cart[id])}</div><button class="remove" data-remove="${id}" data-testid="remove-${id}">Remove</button></div>
+      </li>`}).join("")}</ul>
+    <div class="summary">
+      <div class="row"><span>Subtotal</span><span data-testid="cart-subtotal">${money(sub)}</span></div>
+      <div class="row"><span>Shipping${ship?" (free over $10,000)":""}</span><span data-testid="cart-shipping">${ship?money(ship):"Free"}</span></div>
+      <div class="row total"><span>Total</span><span data-testid="cart-total">${money(sub+ship)}</span></div>
+      <button class="cta" id="checkout" data-testid="checkout-button">Place order</button>
+    </div>`;
+}
+function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove("show"),1800); }
+function bump(){ const b=$("#badge"); b.classList.remove("bump"); void b.offsetWidth; b.classList.add("bump"); }
+function openCart(){ $("#drawer").classList.add("open"); $("#overlay").classList.add("open"); $("#drawer").setAttribute("aria-hidden","false"); $("#closeCart").focus(); }
+function closeCart(){ $("#drawer").classList.remove("open"); $("#overlay").classList.remove("open"); $("#drawer").setAttribute("aria-hidden","true"); $("#cartBtn").focus(); }
+
+document.addEventListener("click", e=>{
+  const t = e.target.closest("button, a");
+  if(!t) return;
+  if(t.dataset.cat){ filter=t.dataset.cat; renderFilters(); renderGrid(); }
+  if(t.dataset.filter){ filter=t.dataset.filter; renderFilters(); renderGrid(); $("#menu").classList.remove("open"); }
+  if(t.dataset.add){
+    const id=t.dataset.add; confirmed=null; cart[id]=(cart[id]||0)+1; save(); renderCart(); bump();
+    toast(`${PRODUCTS.find(p=>p.id===id).name} added to cart`);
+    t.classList.add("added"); t.textContent="Added"; setTimeout(()=>{t.classList.remove("added"); t.textContent="Add to cart";},1200);
+  }
+  if(t.dataset.inc){ cart[t.dataset.inc]++; save(); renderCart(); }
+  if(t.dataset.dec){ const id=t.dataset.dec; cart[id]--; if(cart[id]<=0) delete cart[id]; save(); renderCart(); }
+  if(t.dataset.remove){ delete cart[t.dataset.remove]; save(); renderCart(); toast("Part removed"); }
+  if(t.id==="checkout"){ confirmed="PW-"+Math.random().toString(36).slice(2,8).toUpperCase(); cart={}; save(); renderCart(); }
+  if(t.id==="continue"){ confirmed=null; renderCart(); closeCart(); }
+});
+$("#cartBtn").addEventListener("click", openCart);
+$("#closeCart").addEventListener("click", closeCart);
+$("#overlay").addEventListener("click", closeCart);
+document.addEventListener("keydown", e=>{ if(e.key==="Escape" && $("#drawer").classList.contains("open")) closeCart(); });
+$("#menuToggle").addEventListener("click", ()=>{ const m=$("#menu"); const o=m.classList.toggle("open"); $("#menuToggle").setAttribute("aria-expanded",o); });
+
+renderFilters(); renderGrid(); renderCart();
+</script>
+</body>
+</html>

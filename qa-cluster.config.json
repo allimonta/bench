@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/thisisqubika/QA-Cluster/main/qa-cluster/schemas/qa-config.schema.json",
+  "start": ["python3 -m http.server 4180 --bind 127.0.0.1"],
+  "stop": ["lsof -ti:4180 | xargs kill -9 2>/dev/null || true"],
+  "localURL": "http://localhost:4180",
+  "healthPath": "/",
+  "testgraphProject": "Bench - QA Cluster",
+  "outputs": ["e2e"],
+  "testgraphScope": ["Volume Test"],
+  "testgraphWrites": ["test-runs", "automation-status"],
+  "failOn": "never",
+  "requirements": {}
+}
