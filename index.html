@@ -143,6 +143,7 @@ header{ position:sticky; top:env(safe-area-inset-top,0px); z-index:20; backgroun
 .item-side{ text-align:right; }
 .remove{ background:none; border:none; color:var(--muted); font-size:14px; text-decoration:underline; padding:4px 0 0; }
 .empty, .confirm{ padding:48px 24px; text-align:center; color:var(--muted); }
+.empty-cart-img{ display:block; margin:0 auto 16px; max-width:60%; height:auto; }
 .confirm h3{ color:var(--text); font-family:var(--display); font-weight:400; }
 .summary{ padding:20px 24px 24px; border-top:1px solid var(--line); display:grid; gap:8px; }
 .row{ display:flex; justify-content:space-between; color:var(--muted); }
@@ -424,7 +425,16 @@ function renderCart(){
   }
   const ids = Object.keys(cart);
   if(!ids.length){
-    body.innerHTML = `<div class="empty" data-testid="cart-empty"><p>Your cart is empty. Add a part from the catalog to start your build.</p></div>`;
+    body.innerHTML = `<div class="empty" data-testid="cart-empty">
+      <svg class="empty-cart-img" data-testid="cart-empty-image" role="img" aria-label="Empty cart" width="140" height="120" viewBox="0 0 140 120" fill="none">
+        <ellipse cx="72" cy="108" rx="48" ry="5" fill="var(--line)"/>
+        <path d="M14 22h16l14 58h62l14-42H36" stroke="var(--steel)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M44 80l-6 12h72" stroke="var(--steel)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M58 50h44M54 64h44" stroke="var(--line)" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 7"/>
+        <circle cx="52" cy="100" r="7" stroke="var(--amber)" stroke-width="4"/>
+        <circle cx="100" cy="100" r="7" stroke="var(--amber)" stroke-width="4"/>
+      </svg>
+      <p>Your cart is empty. Add a part from the catalog to start your build.</p></div>`;
     return;
   }
   const sub = ids.reduce((s,id)=>s+PRODUCTS.find(p=>p.id===id).price*cart[id],0);
