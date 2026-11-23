@@ -150,6 +150,34 @@ header{ position:sticky; top:env(safe-area-inset-top,0px); z-index:20; backgroun
 .summary .cta{ width:100%; margin-top:10px; text-align:center; }
 .summary .cta:disabled{ opacity:.4; cursor:not-allowed; }
 
+/* Bulk reservation */
+.header-actions{ display:flex; align-items:center; gap:10px; flex:none; }
+.header-actions .cart-btn svg{ flex:none; }
+.drawer.wide{ width:min(520px,100%); }
+.reserve-form{ flex:1; overflow-y:auto; padding:8px 24px 24px; display:grid; gap:18px; align-content:start; }
+.reserve-form fieldset{ border:1px solid var(--line); border-radius:8px; padding:14px 16px 16px; margin:0; display:grid; gap:12px; }
+.reserve-form legend{ padding:0 6px; color:var(--steel); font-size:14px; }
+.hint{ margin:0; color:var(--muted); font-size:14px; }
+.field{ display:grid; gap:4px; }
+.field label{ font-size:14px; color:var(--muted); }
+.field input{ background:#000; border:1px solid var(--line); border-radius:6px; padding:9px 12px; color:var(--text); font:inherit; width:100%; }
+.field input:focus{ border-color:var(--amber); outline:none; }
+.two{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.qty-line{ display:grid; grid-template-columns:1fr 120px; gap:12px; align-items:center; }
+.qty-line span{ font-size:15px; }
+.qty-line input{ text-align:right; }
+.pay-options{ display:flex; flex-wrap:wrap; gap:8px 18px; }
+.pay-options label{ display:flex; align-items:center; gap:6px; color:var(--text); font-size:15px; }
+.reserve-totals{ display:grid; gap:6px; }
+.errors{ margin:0; padding:12px 16px 12px 32px; border:1px solid #B3261E; border-radius:8px; color:#FFB4AB; background:rgba(179,38,30,.12); font-size:15px; }
+.hold-note{ margin:0; padding:10px 14px; border-left:3px solid var(--amber); background:var(--panel-2); font-size:15px; }
+.reserve-confirm{ text-align:left; padding:24px; overflow-y:auto; display:grid; gap:14px; }
+.reserve-confirm h3{ margin:0; }
+.reserve-confirm p{ margin:0; }
+.email-preview{ border:1px solid var(--line); border-radius:8px; padding:14px 16px; background:#000; color:var(--text); font-size:15px; display:grid; gap:4px; }
+.email-preview h4{ margin:0 0 6px; font-size:14px; color:var(--steel); font-weight:500; }
+.email-preview ul{ margin:2px 0; padding-left:20px; }
+
 .toast{ position:fixed; left:50%; bottom:calc(24px + env(safe-area-inset-bottom,0px)); transform:translate(-50%,120px); background:var(--panel-2); border:1px solid var(--amber); padding:12px 20px; border-radius:8px; transition:transform .3s; z-index:50; }
 .toast.show{ transform:translate(-50%,0); }
 
@@ -163,6 +191,13 @@ footer div{ max-width:1200px; margin:0 auto; padding:24px; display:flex; flex-wr
   .menu.open{ display:flex; }
   .menu-toggle{ display:block; margin-left:auto; }
   .nav{ position:relative; gap:12px; }
+  .nav{ padding:12px 16px; }
+  .logo{ font-size:15px; gap:8px; }
+  .menu-toggle{ padding:6px 8px; }
+  .header-actions{ gap:6px; }
+  .header-actions .cart-btn{ padding:7px 10px; gap:6px; }
+  .header-actions .btn-label{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+  .two{ grid-template-columns:1fr; }
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{ animation:none !important; transition:none !important; }
@@ -182,10 +217,16 @@ footer div{ max-width:1200px; margin:0 auto; padding:24px; display:flex; flex-wr
       <li><a href="#shop" data-filter="Power" data-testid="nav-power">Power</a></li>
       <li><a href="#support" data-testid="nav-support">Support</a></li>
     </ul>
-    <button class="cart-btn" id="cartBtn" aria-label="Open cart" data-testid="cart-button">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11h11L21 8H6.2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
-      Cart <span class="badge" id="badge" data-testid="cart-count">0</span>
-    </button>
+    <div class="header-actions">
+      <button class="cart-btn" id="reserveBtn" aria-label="Reserve parts in bulk" data-testid="reserve-button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>
+        <span class="btn-label">Reserve</span>
+      </button>
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart" data-testid="cart-button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11h11L21 8H6.2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
+        <span class="btn-label">Cart</span> <span class="badge" id="badge" data-testid="cart-count">0</span>
+      </button>
+    </div>
   </nav>
 </header>
 
@@ -252,6 +293,13 @@ footer div{ max-width:1200px; margin:0 auto; padding:24px; display:flex; flex-wr
     <button class="icon-btn" id="closeCart" aria-label="Close cart" data-testid="cart-close">✕</button>
   </div>
   <div id="cartBody" style="flex:1;display:flex;flex-direction:column;min-height:0"></div>
+</aside>
+<aside class="drawer wide" id="reserveDrawer" role="dialog" aria-modal="true" aria-labelledby="reserveTitle" aria-hidden="true" data-testid="reserve-drawer">
+  <div class="drawer-head">
+    <h2 id="reserveTitle">Reserve parts</h2>
+    <button class="icon-btn" id="closeReserve" aria-label="Close reservation" data-testid="reserve-close">✕</button>
+  </div>
+  <div id="reserveBody" style="flex:1;display:flex;flex-direction:column;min-height:0"></div>
 </aside>
 <div class="toast" id="toast" role="status" aria-live="polite" data-testid="toast"></div>
 
@@ -341,7 +389,7 @@ function renderCart(){
 }
 function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove("show"),1800); }
 function bump(){ const b=$("#badge"); b.classList.remove("bump"); void b.offsetWidth; b.classList.add("bump"); }
-function openCart(){ $("#drawer").classList.add("open"); $("#overlay").classList.add("open"); $("#drawer").setAttribute("aria-hidden","false"); $("#closeCart").focus(); }
+function openCart(){ if($("#reserveDrawer").classList.contains("open")) closeReserve(); $("#drawer").classList.add("open"); $("#overlay").classList.add("open"); $("#drawer").setAttribute("aria-hidden","false"); $("#closeCart").focus(); }
 function closeCart(){ $("#drawer").classList.remove("open"); $("#overlay").classList.remove("open"); $("#drawer").setAttribute("aria-hidden","true"); $("#cartBtn").focus(); }
 
 document.addEventListener("click", e=>{
@@ -362,8 +410,152 @@ document.addEventListener("click", e=>{
 });
 $("#cartBtn").addEventListener("click", openCart);
 $("#closeCart").addEventListener("click", closeCart);
-$("#overlay").addEventListener("click", closeCart);
-document.addEventListener("keydown", e=>{ if(e.key==="Escape" && $("#drawer").classList.contains("open")) closeCart(); });
+$("#overlay").addEventListener("click", ()=>{ if($("#reserveDrawer").classList.contains("open")) closeReserve(); else closeCart(); });
+document.addEventListener("keydown", e=>{
+  if(e.key!=="Escape") return;
+  if($("#reserveDrawer").classList.contains("open")) closeReserve();
+  else if($("#drawer").classList.contains("open")) closeCart();
+});
+
+/* ---- Bulk reservation: at least 1,000 pieces in total (any mix of parts), $45 transport per started 1,000 ---- */
+const MIN_PIECES = 1000;
+const TRANSPORT_PER_1000 = 45;
+const PAYMENT_METHODS = [["check","Check"],["transfer","Bank transfer"],["card","Credit card"]];
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const count0 = n => new Intl.NumberFormat("en-US").format(n);
+const money2 = n => new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"}).format(n);
+const transportCost = pieces => Math.ceil(pieces/1000)*TRANSPORT_PER_1000;
+const esc = s => String(s).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let reservations = [];
+try{ reservations = JSON.parse(localStorage.getItem("partwerk-reservations")) || []; }catch(e){ reservations = []; }
+let lastReservation = null;
+
+function renderReserve(){
+  const body = $("#reserveBody");
+  if(lastReservation){ body.innerHTML = reservationConfirmation(lastReservation); return; }
+  body.innerHTML = `
+    <form class="reserve-form" id="reserveForm" novalidate data-testid="reserve-form">
+      <p class="hint">Reserve parts in bulk: at least ${count0(MIN_PIECES)} pieces in total, combining any parts. Transport costs ${money2(TRANSPORT_PER_1000)} for every ${count0(1000)} pieces (or part of them).</p>
+      <fieldset data-testid="reserve-parts">
+        <legend>Parts and quantities</legend>
+        ${PRODUCTS.map(p=>`
+        <div class="qty-line field">
+          <label for="rq-${p.id}"><span>${p.name}</span></label>
+          <input id="rq-${p.id}" type="number" inputmode="numeric" min="0" step="1" placeholder="0" data-reserve-qty="${p.id}" data-testid="reserve-qty-${p.id}">
+        </div>`).join("")}
+        <div class="reserve-totals">
+          <div class="row"><span>Total pieces</span><span data-testid="reserve-total-pieces" id="reserveTotalPieces">0</span></div>
+          <div class="row total"><span>Transport cost</span><span data-testid="reserve-transport-cost" id="reserveTransport">${money2(0)}</span></div>
+        </div>
+      </fieldset>
+      <fieldset data-testid="reserve-requester">
+        <legend>Requested by</legend>
+        <div class="field"><label for="rCompany">Company</label><input id="rCompany" autocomplete="organization" data-testid="reserve-company"></div>
+        <div class="two">
+          <div class="field"><label for="rFirst">First name</label><input id="rFirst" autocomplete="given-name" data-testid="reserve-first-name"></div>
+          <div class="field"><label for="rLast">Last name(s)</label><input id="rLast" autocomplete="family-name" data-testid="reserve-last-name"></div>
+        </div>
+        <div class="field"><label for="rEmail">Email for the confirmation</label><input id="rEmail" type="email" autocomplete="email" data-testid="reserve-email"></div>
+      </fieldset>
+      <fieldset data-testid="reserve-payment">
+        <legend>Payment method</legend>
+        <div class="pay-options">${PAYMENT_METHODS.map(([v,l])=>`<label><input type="radio" name="payment" value="${v}" data-testid="reserve-payment-${v}"> ${l}</label>`).join("")}</div>
+      </fieldset>
+      <ul class="errors" id="reserveErrors" role="alert" data-testid="reserve-errors" hidden></ul>
+      <p class="hold-note" data-testid="reserve-payment-note">The reserved shipment is not sent until the payment is completed.</p>
+      <button class="cta" type="submit" id="reserveSubmit" data-testid="reserve-submit">Reserve</button>
+    </form>`;
+  updateReserveTotals();
+}
+
+function readQuantities(){
+  const lines = []; let invalid = false;
+  document.querySelectorAll("[data-reserve-qty]").forEach(i=>{
+    const raw = i.value.trim(); if(raw==="") return;
+    const n = Number(raw);
+    if(!Number.isInteger(n) || n<0){ invalid = true; return; }
+    if(n>0) lines.push({id:i.dataset.reserveQty, qty:n});
+  });
+  return {lines, invalid, pieces: lines.reduce((s,l)=>s+l.qty,0)};
+}
+
+function updateReserveTotals(){
+  const {pieces} = readQuantities();
+  $("#reserveTotalPieces").textContent = count0(pieces);
+  $("#reserveTransport").textContent = money2(pieces ? transportCost(pieces) : 0);
+}
+
+function submitReserve(e){
+  e.preventDefault();
+  const q = readQuantities();
+  const company = $("#rCompany").value.trim(), first = $("#rFirst").value.trim(), last = $("#rLast").value.trim(), email = $("#rEmail").value.trim();
+  const payment = (document.querySelector('input[name="payment"]:checked')||{}).value;
+  const errors = [];
+  if(q.invalid) errors.push("Quantities must be whole numbers of 0 or more.");
+  else if(q.pieces < MIN_PIECES) errors.push(`A reservation needs at least ${count0(MIN_PIECES)} pieces in total (now ${count0(q.pieces)}).`);
+  if(!company) errors.push("Company is required.");
+  if(!first) errors.push("First name is required.");
+  if(!last) errors.push("Last name is required.");
+  if(!email) errors.push("Email is required.");
+  else if(!EMAIL_RE.test(email)) errors.push("Enter a valid email address.");
+  if(!payment) errors.push("Choose a payment method.");
+  const box = $("#reserveErrors");
+  if(errors.length){
+    box.innerHTML = errors.map(m=>`<li data-testid="reserve-error">${m}</li>`).join("");
+    box.hidden = false; box.scrollIntoView({block:"nearest"});
+    return;
+  }
+  lastReservation = {
+    tracking: "PWR-" + Math.random().toString(36).slice(2,10).toUpperCase(),
+    createdAt: new Date().toISOString(),
+    company, firstName:first, lastName:last, email,
+    payment, paymentLabel: PAYMENT_METHODS.find(([v])=>v===payment)[1],
+    lines: q.lines.map(l=>({...l, name: PRODUCTS.find(p=>p.id===l.id).name})),
+    pieces: q.pieces, transport: transportCost(q.pieces),
+    status: "Awaiting payment"
+  };
+  reservations.push(lastReservation);
+  try{ localStorage.setItem("partwerk-reservations", JSON.stringify(reservations)); }catch(err){}
+  renderReserve();
+  toast(`Reservation ${lastReservation.tracking} created`);
+}
+
+function reservationConfirmation(r){
+  return `<div class="confirm reserve-confirm" data-testid="reservation-confirmation">
+    <h3>Parts reserved</h3>
+    <p>Tracking number <strong data-testid="tracking-number">${r.tracking}</strong></p>
+    <p class="hold-note" data-testid="payment-hold">Status: <strong data-testid="reservation-status">${r.status}</strong>. The shipment is not sent until the payment is completed.</p>
+    <p data-testid="email-sent">We sent the reservation details and the tracking number to <strong data-testid="email-sent-to">${esc(r.email)}</strong>.</p>
+    <section class="email-preview" data-testid="email-preview" aria-label="Email sent">
+      <h4>Email sent</h4>
+      <div>To: <span data-testid="email-to">${esc(r.email)}</span></div>
+      <div>Subject: <span data-testid="email-subject">Partwerk reservation ${r.tracking}</span></div>
+      <div>Company: <span data-testid="email-company">${esc(r.company)}</span></div>
+      <div>Requested by: <span data-testid="email-requester">${esc(r.firstName)} ${esc(r.lastName)}</span></div>
+      <div>Parts:</div>
+      <ul data-testid="email-parts">${r.lines.map(l=>`<li data-testid="email-part-${l.id}">${count0(l.qty)} × ${l.name}</li>`).join("")}</ul>
+      <div>Total pieces: <span data-testid="email-total-pieces">${count0(r.pieces)}</span></div>
+      <div>Transport cost: <span data-testid="email-transport-cost">${money2(r.transport)}</span></div>
+      <div>Payment method: <span data-testid="email-payment">${r.paymentLabel}</span></div>
+      <div>Tracking number: <span data-testid="email-tracking">${r.tracking}</span></div>
+      <div>Status: <span data-testid="email-status">${r.status}</span>: the shipment is sent once the payment is completed.</div>
+    </section>
+    <button class="cta" id="newReservation" data-testid="new-reservation">Make another reservation</button>
+  </div>`;
+}
+
+function openReserve(){
+  if($("#drawer").classList.contains("open")) closeCart();
+  renderReserve();
+  $("#reserveDrawer").classList.add("open"); $("#overlay").classList.add("open"); $("#reserveDrawer").setAttribute("aria-hidden","false"); $("#closeReserve").focus();
+}
+function closeReserve(){ $("#reserveDrawer").classList.remove("open"); $("#overlay").classList.remove("open"); $("#reserveDrawer").setAttribute("aria-hidden","true"); lastReservation = null; $("#reserveBtn").focus(); }
+
+$("#reserveBtn").addEventListener("click", openReserve);
+$("#closeReserve").addEventListener("click", closeReserve);
+$("#reserveBody").addEventListener("input", e=>{ if(e.target.dataset.reserveQty) updateReserveTotals(); });
+$("#reserveBody").addEventListener("submit", submitReserve);
+$("#reserveBody").addEventListener("click", e=>{ if(e.target.id==="newReservation"){ lastReservation = null; renderReserve(); } });
 $("#menuToggle").addEventListener("click", ()=>{ const m=$("#menu"); const o=m.classList.toggle("open"); $("#menuToggle").setAttribute("aria-expanded",o); });
 
 renderFilters(); renderGrid(); renderCart();
