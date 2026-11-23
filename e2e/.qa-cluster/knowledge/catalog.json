@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T14:29:45.378Z",
+  "updatedAt": "2026-11-23T16:41:30.604Z",
   "fixtures": [
     "ctx",
     "api",
@@ -8,7 +8,9 @@
     "loginPage",
     "appHeader",
     "cartDrawer",
-    "productDetailView"
+    "productDetailView",
+    "reservePartsDrawer",
+    "reservationConfirmation"
   ],
   "pages": [
     {
@@ -18,6 +20,7 @@
       ],
       "methods": [
         "clickNavLink",
+        "clickButton",
         "openCart",
         "cartCountValue"
       ],
@@ -94,6 +97,33 @@
       ],
       "methods": [],
       "routes": []
+    },
+    {
+      "file": "src/main/pages/ReservationConfirmation.ts",
+      "classes": [
+        "ReservationConfirmation"
+      ],
+      "methods": [
+        "clickButton"
+      ],
+      "routes": []
+    },
+    {
+      "file": "src/main/pages/ReservePartsDrawer.ts",
+      "classes": [
+        "ReservePartsDrawer"
+      ],
+      "methods": [
+        "expectLoaded",
+        "enterQuantity",
+        "enterCompany",
+        "enterFirstName",
+        "enterLastName",
+        "enterEmail",
+        "choosePaymentMethod",
+        "clickButton"
+      ],
+      "routes": []
     }
   ],
   "steps": [
@@ -128,6 +158,187 @@
       "file": "src/test/steps/app-header.steps.ts",
       "pages": [
         "AppHeader"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user clicks the header {string} button",
+      "file": "src/test/steps/app-header.steps.ts",
+      "pages": [
+        "AppHeader"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user enters the company {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user enters the first name {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user enters the last name {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "Is the reservation accepted?",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts"
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user enters the {string} reserved quantity {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user enters the confirmation email {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user chooses the payment method {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user clicks the reservation form {string} button",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the {string} panel is shown",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation total pieces reads {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation transport cost reads {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation form shows the error {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation form is shown",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user clicks the confirmation {string} button",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the {string} confirmation is shown",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the confirmation shows a tracking number starting with {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation status reads {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the confirmation says the details were sent to {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the email sent lists the part {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the email sent shows the total pieces {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the email sent shows the transport cost {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the email sent shows the payment method {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
       ]
     },
     {

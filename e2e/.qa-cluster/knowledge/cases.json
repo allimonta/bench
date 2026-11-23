@@ -917,6 +917,440 @@
       "lastRunAt": "2026-11-23T14:29:45.360Z",
       "bugs": [],
       "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-BULKPARTS-001": {
+      "title": "Reserve 1,000 pieces of one part — reservation confirmed",
+      "flow": "bulk-parts-reservation",
+      "priority": "P1",
+      "tier": "smoke",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwth09le02rc01thcc4v3f15",
+        "testCaseId": "cmwth1r30033l01sz4m5jp1sq",
+        "scenarioId": "64d4f81e-78c8-4cb3-8ee1-2d02716bda5e::51c7c587-1987-466c-81f9-33fec8e22f77",
+        "feature": "Bulk parts reservation",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "86b8e737-0165-41bd-8f38-25f5daf9e69f",
+          "3eb1073b-5be0-47ba-8fc1-7fdbf0f8e352",
+          "baba9c33-557b-4dbd-a6cd-8b4100dc014f",
+          "c71aaa56-a905-427a-9905-531d9276e01b",
+          "2f06234a-7b37-41c0-92d5-acc6ab229e9b",
+          "6fea29da-874b-41a6-8080-3182e58c0324",
+          "1462ce05-0012-4ca5-91a0-fb608f3106c7",
+          "262cd3fd-a47a-4d00-bc63-ac8174cf1b5a",
+          "d92379a9-10ba-49e7-825d-e3f2bb1397ee",
+          "bbe5438c-1e9d-4a73-bece-91f94d47c896",
+          "e4a3b05a-6088-4ff2-8584-72ad64e4e9ea",
+          "e9881118-716a-4670-bb14-f02e3e435c23",
+          "0b55aea2-f0f0-4920-99f8-3da62029769c",
+          "c1beeb08-fde4-487b-a9bb-406897e4dce7",
+          "68647d90-1aaf-4860-9605-8fb5fbfdaa79",
+          "135f5f30-1af7-485a-b327-e3970ba449b7",
+          "51c7c587-1987-466c-81f9-33fec8e22f77"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "1462ce05-0012-4ca5-91a0-fb608f3106c7"
+        ],
+        "dataNodeIds": [
+          "c71aaa56-a905-427a-9905-531d9276e01b",
+          "2f06234a-7b37-41c0-92d5-acc6ab229e9b",
+          "6fea29da-874b-41a6-8080-3182e58c0324",
+          "262cd3fd-a47a-4d00-bc63-ac8174cf1b5a",
+          "e4a3b05a-6088-4ff2-8584-72ad64e4e9ea",
+          "e9881118-716a-4670-bb14-f02e3e435c23"
+        ],
+        "validationNodeIds": [
+          "baba9c33-557b-4dbd-a6cd-8b4100dc014f",
+          "d92379a9-10ba-49e7-825d-e3f2bb1397ee",
+          "bbe5438c-1e9d-4a73-bece-91f94d47c896",
+          "c1beeb08-fde4-487b-a9bb-406897e4dce7",
+          "68647d90-1aaf-4860-9605-8fb5fbfdaa79",
+          "135f5f30-1af7-485a-b327-e3970ba449b7",
+          "51c7c587-1987-466c-81f9-33fec8e22f77"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "6623570df15f8043",
+      "codeRefs": {
+        "index.html": "c20899800cd5ce37"
+      },
+      "feature": "src/test/resources/features/bulk-parts-reservation/bulk-parts-reservation.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-161259",
+      "lastRunAt": "2026-11-23T16:41:30.412Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T16:40:45.387Z"
+    },
+    "TC-BULKPARTS-002": {
+      "title": "Reserve 999 pieces — below the 1,000 minimum is rejected",
+      "flow": "bulk-parts-reservation",
+      "priority": "P1",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwth09le02rc01thcc4v3f15",
+        "testCaseId": "cmwth1rgg02rd01thufl64819",
+        "scenarioId": "4670e6cd-e616-4da4-a109-accbffbb6559::3bac8e0e-8f7f-4bf0-9e9e-c2b933e953f9",
+        "feature": "Bulk parts reservation",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "86b8e737-0165-41bd-8f38-25f5daf9e69f",
+          "3eb1073b-5be0-47ba-8fc1-7fdbf0f8e352",
+          "baba9c33-557b-4dbd-a6cd-8b4100dc014f",
+          "c71aaa56-a905-427a-9905-531d9276e01b",
+          "2f06234a-7b37-41c0-92d5-acc6ab229e9b",
+          "6fea29da-874b-41a6-8080-3182e58c0324",
+          "1462ce05-0012-4ca5-91a0-fb608f3106c7",
+          "679b11a8-4a9c-4455-ab22-618add6a51b5",
+          "44a11f97-9a3e-4881-b7a2-edc43bff357d",
+          "b004b6af-8cf8-4e1f-8fb4-e0ed34eb1f99",
+          "7f3bc7c3-3268-4369-b8b3-9a83d3bdbaef",
+          "81103979-18d8-4f51-bf6b-07e2232b5290",
+          "f6bb6e69-8879-4bab-a7d1-4b171f4827fd",
+          "3bac8e0e-8f7f-4bf0-9e9e-c2b933e953f9"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "1462ce05-0012-4ca5-91a0-fb608f3106c7"
+        ],
+        "dataNodeIds": [
+          "c71aaa56-a905-427a-9905-531d9276e01b",
+          "2f06234a-7b37-41c0-92d5-acc6ab229e9b",
+          "6fea29da-874b-41a6-8080-3182e58c0324",
+          "679b11a8-4a9c-4455-ab22-618add6a51b5",
+          "b004b6af-8cf8-4e1f-8fb4-e0ed34eb1f99",
+          "7f3bc7c3-3268-4369-b8b3-9a83d3bdbaef"
+        ],
+        "validationNodeIds": [
+          "baba9c33-557b-4dbd-a6cd-8b4100dc014f",
+          "44a11f97-9a3e-4881-b7a2-edc43bff357d",
+          "f6bb6e69-8879-4bab-a7d1-4b171f4827fd",
+          "3bac8e0e-8f7f-4bf0-9e9e-c2b933e953f9"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "7a736302c4c8423c",
+      "codeRefs": {
+        "index.html": "c20899800cd5ce37"
+      },
+      "feature": "src/test/resources/features/bulk-parts-reservation/bulk-parts-reservation.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-161259",
+      "lastRunAt": "2026-11-23T16:41:30.412Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T16:40:45.387Z"
+    },
+    "TC-BULKPARTS-003": {
+      "title": "Reserve a mix of parts — transport charged per started 1,000 pieces",
+      "flow": "bulk-parts-reservation",
+      "priority": "P1",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwth09le02rc01thcc4v3f15",
+        "testCaseId": "cmwth1rx5033m01sz2oprn10o",
+        "scenarioId": "50529f81-f923-45ab-a35f-6bdbbe5caa4b::43fa6445-5be7-427b-9588-bb87ba5b24fd",
+        "feature": "Bulk parts reservation",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "86b8e737-0165-41bd-8f38-25f5daf9e69f",
+          "3eb1073b-5be0-47ba-8fc1-7fdbf0f8e352",
+          "baba9c33-557b-4dbd-a6cd-8b4100dc014f",
+          "c71aaa56-a905-427a-9905-531d9276e01b",
+          "2f06234a-7b37-41c0-92d5-acc6ab229e9b",
+          "6fea29da-874b-41a6-8080-3182e58c0324",
+          "1462ce05-0012-4ca5-91a0-fb608f3106c7",
+          "b89eae52-1695-445e-9138-4513e42e26f1",
+          "b3fcc2d2-6e47-4fc3-8ee6-eedbf62805a2",
+          "8140c2ef-08f2-4d21-8fc3-67c8fedaa587",
+          "d63decc7-e64b-4403-b546-b98190e6fa12",
+          "1e68c7d1-8069-48d4-9efd-26a5cca432b4",
+          "545efce2-5a10-4740-b8d7-9aa937dbfc97",
+          "64eee18a-16df-4045-9cff-c15e1612eeb1",
+          "19e58d4a-7331-46ee-87b7-f8276b3795ac",
+          "5fb79d1e-8b37-47d0-9bd8-5d9fdb75150b",
+          "fe40d640-2f9e-4b08-afb6-1e2a1b9312ea",
+          "e2f7a2cc-b7e9-4cb2-b341-05a7048830ad",
+          "43fa6445-5be7-427b-9588-bb87ba5b24fd"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "1462ce05-0012-4ca5-91a0-fb608f3106c7"
+        ],
+        "dataNodeIds": [
+          "c71aaa56-a905-427a-9905-531d9276e01b",
+          "2f06234a-7b37-41c0-92d5-acc6ab229e9b",
+          "6fea29da-874b-41a6-8080-3182e58c0324",
+          "b89eae52-1695-445e-9138-4513e42e26f1",
+          "b3fcc2d2-6e47-4fc3-8ee6-eedbf62805a2",
+          "1e68c7d1-8069-48d4-9efd-26a5cca432b4",
+          "545efce2-5a10-4740-b8d7-9aa937dbfc97"
+        ],
+        "validationNodeIds": [
+          "baba9c33-557b-4dbd-a6cd-8b4100dc014f",
+          "8140c2ef-08f2-4d21-8fc3-67c8fedaa587",
+          "d63decc7-e64b-4403-b546-b98190e6fa12",
+          "19e58d4a-7331-46ee-87b7-f8276b3795ac",
+          "5fb79d1e-8b37-47d0-9bd8-5d9fdb75150b",
+          "fe40d640-2f9e-4b08-afb6-1e2a1b9312ea",
+          "e2f7a2cc-b7e9-4cb2-b341-05a7048830ad",
+          "43fa6445-5be7-427b-9588-bb87ba5b24fd"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "0530a5e563492234",
+      "codeRefs": {
+        "index.html": "c20899800cd5ce37"
+      },
+      "feature": "src/test/resources/features/bulk-parts-reservation/bulk-parts-reservation.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-161259",
+      "lastRunAt": "2026-11-23T16:41:30.412Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T16:40:45.387Z"
+    },
+    "TC-BULKPARTS-004": {
+      "title": "Reserve with an invalid email — reservation rejected",
+      "flow": "bulk-parts-reservation",
+      "priority": "P1",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwth09le02rc01thcc4v3f15",
+        "testCaseId": "cmwth1s6w02re01thui89j3rq",
+        "scenarioId": "231a12a9-2b3d-4f63-922e-d1e480c94257::d9f9b99d-5b90-451e-8f7a-b5b4531cbdf2",
+        "feature": "Bulk parts reservation",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "86b8e737-0165-41bd-8f38-25f5daf9e69f",
+          "3eb1073b-5be0-47ba-8fc1-7fdbf0f8e352",
+          "baba9c33-557b-4dbd-a6cd-8b4100dc014f",
+          "c71aaa56-a905-427a-9905-531d9276e01b",
+          "2f06234a-7b37-41c0-92d5-acc6ab229e9b",
+          "6fea29da-874b-41a6-8080-3182e58c0324",
+          "1462ce05-0012-4ca5-91a0-fb608f3106c7",
+          "dddf1116-1dda-4383-9e9c-db5f3ce2bf51",
+          "fbf06975-de61-4288-a990-ed0b42d17050",
+          "426195aa-8868-413b-ba0e-e362e279af6d",
+          "8afb814e-d37c-455a-91e8-43288ee161d7",
+          "179c157a-b13a-48e7-9850-87704fdc3d7f",
+          "68685f11-2111-4799-8750-4be2bc7e450c",
+          "d9f9b99d-5b90-451e-8f7a-b5b4531cbdf2"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "1462ce05-0012-4ca5-91a0-fb608f3106c7"
+        ],
+        "dataNodeIds": [
+          "c71aaa56-a905-427a-9905-531d9276e01b",
+          "2f06234a-7b37-41c0-92d5-acc6ab229e9b",
+          "6fea29da-874b-41a6-8080-3182e58c0324",
+          "dddf1116-1dda-4383-9e9c-db5f3ce2bf51",
+          "426195aa-8868-413b-ba0e-e362e279af6d",
+          "8afb814e-d37c-455a-91e8-43288ee161d7"
+        ],
+        "validationNodeIds": [
+          "baba9c33-557b-4dbd-a6cd-8b4100dc014f",
+          "fbf06975-de61-4288-a990-ed0b42d17050",
+          "68685f11-2111-4799-8750-4be2bc7e450c",
+          "d9f9b99d-5b90-451e-8f7a-b5b4531cbdf2"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "9ff2f0bd6b3b576e",
+      "codeRefs": {
+        "index.html": "c20899800cd5ce37"
+      },
+      "feature": "src/test/resources/features/bulk-parts-reservation/bulk-parts-reservation.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-161259",
+      "lastRunAt": "2026-11-23T16:41:30.412Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T16:40:45.387Z"
+    },
+    "TC-BULKPARTS-005": {
+      "title": "Reserve 2,000 pieces paid by check — another reservation can be started",
+      "flow": "bulk-parts-reservation",
+      "priority": "P1",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwth09le02rc01thcc4v3f15",
+        "testCaseId": "cmwth1sgl033n01szwhag02mo",
+        "scenarioId": "a8e1958f-5a2f-467f-92e6-720f22337d05::834054fe-68e0-47d4-8f4c-01f65a123282",
+        "feature": "Bulk parts reservation",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "86b8e737-0165-41bd-8f38-25f5daf9e69f",
+          "3eb1073b-5be0-47ba-8fc1-7fdbf0f8e352",
+          "baba9c33-557b-4dbd-a6cd-8b4100dc014f",
+          "c71aaa56-a905-427a-9905-531d9276e01b",
+          "2f06234a-7b37-41c0-92d5-acc6ab229e9b",
+          "6fea29da-874b-41a6-8080-3182e58c0324",
+          "1462ce05-0012-4ca5-91a0-fb608f3106c7",
+          "54597944-4cd2-47fc-a6ed-f3f1607b516f",
+          "84f7e5df-a580-4cf4-8824-e23aa8ba1537",
+          "fef4851f-e48c-4dec-8d40-6189495af366",
+          "8a09ccef-3425-44aa-9ade-955795f49fa5",
+          "37130fe7-4ac8-4fa2-93ff-18d39337f71c",
+          "a7c4c64a-6746-4092-bd67-858458efce34",
+          "e6eaca73-22b3-4a84-8a1d-693a4d13bb9e",
+          "4a305825-258a-4264-b5de-9299aff79911",
+          "4f6c5b15-1b79-4453-8230-8e3c5fd5e83d",
+          "2e5186b5-4780-4ec2-aaca-756a2b5dec5a",
+          "53c3c4b0-0718-47be-b127-a40742a3fdd1",
+          "834054fe-68e0-47d4-8f4c-01f65a123282"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "1462ce05-0012-4ca5-91a0-fb608f3106c7"
+        ],
+        "dataNodeIds": [
+          "c71aaa56-a905-427a-9905-531d9276e01b",
+          "2f06234a-7b37-41c0-92d5-acc6ab229e9b",
+          "6fea29da-874b-41a6-8080-3182e58c0324",
+          "54597944-4cd2-47fc-a6ed-f3f1607b516f",
+          "8a09ccef-3425-44aa-9ade-955795f49fa5",
+          "37130fe7-4ac8-4fa2-93ff-18d39337f71c"
+        ],
+        "validationNodeIds": [
+          "baba9c33-557b-4dbd-a6cd-8b4100dc014f",
+          "84f7e5df-a580-4cf4-8824-e23aa8ba1537",
+          "fef4851f-e48c-4dec-8d40-6189495af366",
+          "e6eaca73-22b3-4a84-8a1d-693a4d13bb9e",
+          "4a305825-258a-4264-b5de-9299aff79911",
+          "4f6c5b15-1b79-4453-8230-8e3c5fd5e83d",
+          "53c3c4b0-0718-47be-b127-a40742a3fdd1",
+          "834054fe-68e0-47d4-8f4c-01f65a123282"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "4e5b0401be97aae3",
+      "codeRefs": {
+        "index.html": "c20899800cd5ce37"
+      },
+      "feature": "src/test/resources/features/bulk-parts-reservation/bulk-parts-reservation.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-161259",
+      "lastRunAt": "2026-11-23T16:41:30.412Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T16:40:45.387Z"
+    },
+    "TC-BULKPARTS-006": {
+      "title": "Reserve without a payment method — reservation rejected",
+      "flow": "bulk-parts-reservation",
+      "priority": "P1",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwth09le02rc01thcc4v3f15",
+        "testCaseId": "cmwth1sqv02rf01th1azb336h",
+        "scenarioId": "1a2b5728-48bc-41c0-b948-8f598bf067bb::0d2ba328-eddf-4b0f-9a02-f68eb44678a7",
+        "feature": "Bulk parts reservation",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "86b8e737-0165-41bd-8f38-25f5daf9e69f",
+          "3eb1073b-5be0-47ba-8fc1-7fdbf0f8e352",
+          "baba9c33-557b-4dbd-a6cd-8b4100dc014f",
+          "c71aaa56-a905-427a-9905-531d9276e01b",
+          "2f06234a-7b37-41c0-92d5-acc6ab229e9b",
+          "6fea29da-874b-41a6-8080-3182e58c0324",
+          "1462ce05-0012-4ca5-91a0-fb608f3106c7",
+          "9f1f55f3-5e4f-4556-ba26-016dddf221eb",
+          "2773b9d5-b27f-462b-abbc-f98d3236507f",
+          "f95a48c9-87ce-4864-a15c-10a7d2db7003",
+          "01dbe576-6869-4724-8a16-23d24e5ff65a",
+          "36f112b7-06de-43a5-8e82-6733439060da",
+          "0d2ba328-eddf-4b0f-9a02-f68eb44678a7"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "1462ce05-0012-4ca5-91a0-fb608f3106c7"
+        ],
+        "dataNodeIds": [
+          "c71aaa56-a905-427a-9905-531d9276e01b",
+          "2f06234a-7b37-41c0-92d5-acc6ab229e9b",
+          "6fea29da-874b-41a6-8080-3182e58c0324",
+          "9f1f55f3-5e4f-4556-ba26-016dddf221eb",
+          "f95a48c9-87ce-4864-a15c-10a7d2db7003"
+        ],
+        "validationNodeIds": [
+          "baba9c33-557b-4dbd-a6cd-8b4100dc014f",
+          "2773b9d5-b27f-462b-abbc-f98d3236507f",
+          "36f112b7-06de-43a5-8e82-6733439060da",
+          "0d2ba328-eddf-4b0f-9a02-f68eb44678a7"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "d7a14c31740448b1",
+      "codeRefs": {
+        "index.html": "c20899800cd5ce37"
+      },
+      "feature": "src/test/resources/features/bulk-parts-reservation/bulk-parts-reservation.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-161259",
+      "lastRunAt": "2026-11-23T16:41:30.412Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T16:40:45.387Z"
+    },
+    "TC-BULKPARTS-007": {
+      "title": "Reserve a fractional quantity — whole numbers required",
+      "flow": "bulk-parts-reservation",
+      "priority": "P2",
+      "tier": "edge",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwth09le02rc01thcc4v3f15",
+        "testCaseId": "cmwth1t0p033o01sz7d5b4jmm",
+        "scenarioId": "de5dad76-35df-4348-8dfe-214e14c20a85::c78151a4-0f31-4bb0-9c0a-be05a034dd5d",
+        "feature": "Bulk parts reservation",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "86b8e737-0165-41bd-8f38-25f5daf9e69f",
+          "3eb1073b-5be0-47ba-8fc1-7fdbf0f8e352",
+          "baba9c33-557b-4dbd-a6cd-8b4100dc014f",
+          "c71aaa56-a905-427a-9905-531d9276e01b",
+          "2f06234a-7b37-41c0-92d5-acc6ab229e9b",
+          "6fea29da-874b-41a6-8080-3182e58c0324",
+          "1462ce05-0012-4ca5-91a0-fb608f3106c7",
+          "dada6629-7691-479b-91f9-4087a27c46da",
+          "34d3191f-b4a7-4d04-bc53-fdd42f29dd37",
+          "ce07fccf-0dc4-476b-878a-86e5392c5751",
+          "362d5551-588f-4293-8265-d0961e0a3247",
+          "2ab3f25e-449c-49b8-af22-a436e298571e",
+          "c78151a4-0f31-4bb0-9c0a-be05a034dd5d"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "1462ce05-0012-4ca5-91a0-fb608f3106c7"
+        ],
+        "dataNodeIds": [
+          "c71aaa56-a905-427a-9905-531d9276e01b",
+          "2f06234a-7b37-41c0-92d5-acc6ab229e9b",
+          "6fea29da-874b-41a6-8080-3182e58c0324",
+          "dada6629-7691-479b-91f9-4087a27c46da",
+          "34d3191f-b4a7-4d04-bc53-fdd42f29dd37",
+          "ce07fccf-0dc4-476b-878a-86e5392c5751"
+        ],
+        "validationNodeIds": [
+          "baba9c33-557b-4dbd-a6cd-8b4100dc014f",
+          "2ab3f25e-449c-49b8-af22-a436e298571e",
+          "c78151a4-0f31-4bb0-9c0a-be05a034dd5d"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "45538793bbc95d65",
+      "codeRefs": {
+        "index.html": "c20899800cd5ce37"
+      },
+      "feature": "src/test/resources/features/bulk-parts-reservation/bulk-parts-reservation.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-161259",
+      "lastRunAt": "2026-11-23T16:41:30.412Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T16:40:45.387Z"
     }
   },
   "repositories": {
@@ -924,5 +1358,5 @@
       "front"
     ]
   },
-  "updatedAt": "2026-11-23T14:29:45.360Z"
+  "updatedAt": "2026-11-23T16:41:30.412Z"
 }

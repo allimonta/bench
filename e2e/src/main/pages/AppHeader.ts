@@ -8,6 +8,7 @@ export class AppHeader {
   readonly limbsLink: Locator;
   readonly powerLink: Locator;
   readonly supportLink: Locator;
+  readonly reserveButton: Locator;
   readonly cartButton: Locator;
   readonly cartCount: Locator;
   private readonly root: Locator;
@@ -20,6 +21,7 @@ export class AppHeader {
     this.limbsLink = this.root.getByRole('link', { name: 'Limbs', exact: true });
     this.powerLink = this.root.getByRole('link', { name: 'Power', exact: true });
     this.supportLink = this.root.locator("//a[@href='#support']");
+    this.reserveButton = this.root.locator("//*[@id='reserveBtn']");
     this.cartButton = this.root.locator("//*[@id='cartBtn']");
     this.cartCount = this.root.locator("//*[@id='badge']");
   }
@@ -31,6 +33,18 @@ export class AppHeader {
 
   async clickNavLink(name: string): Promise<void> {
     await this.navLink(name).click();
+  }
+
+  /**
+   * A button of the header, by the label it shows ("Reserve", "Cart"): their accessible names are longer
+   * ("Reserve parts in bulk"), the visible label is what the user reads.
+   */
+  button(label: string): Locator {
+    return this.root.locator(`//button[.//*[contains(@class,'btn-label')][normalize-space()='${label}']]`);
+  }
+
+  async clickButton(label: string): Promise<void> {
+    await this.button(label).click();
   }
 
   async openCart(): Promise<void> {

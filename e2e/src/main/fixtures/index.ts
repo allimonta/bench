@@ -8,6 +8,8 @@ import { LoginPage } from '@pages/LoginPage';
 import { AppHeader } from '@pages/AppHeader';
 import { CartDrawer } from '@pages/CartDrawer';
 import { ProductDetailView } from '@pages/ProductDetailView';
+import { ReservePartsDrawer } from '@pages/ReservePartsDrawer';
+import { ReservationConfirmation } from '@pages/ReservationConfirmation';
 
 /**
  * Dependency injection, PicoContainer-style, with Playwright fixtures:
@@ -27,6 +29,8 @@ type Fixtures = {
   appHeader: AppHeader;
   cartDrawer: CartDrawer;
   productDetailView: ProductDetailView;
+  reservePartsDrawer: ReservePartsDrawer;
+  reservationConfirmation: ReservationConfirmation;
 };
 
 export const test = base.extend<Fixtures>({
@@ -51,6 +55,8 @@ export const test = base.extend<Fixtures>({
   appHeader: async ({ page }, use) => use(new AppHeader(page)),
   cartDrawer: async ({ page }, use) => use(new CartDrawer(page)),
   productDetailView: async ({ page }, use) => use(new ProductDetailView(page)),
+  reservePartsDrawer: async ({ page }, use) => use(new ReservePartsDrawer(page)),
+  reservationConfirmation: async ({ page }, use) => use(new ReservationConfirmation(page)),
   // Endpoint fixtures look like: householdEndpoint: async ({ api, apiLog }, use) => use(new HouseholdEndpoint(api, apiLog)),
 });
 

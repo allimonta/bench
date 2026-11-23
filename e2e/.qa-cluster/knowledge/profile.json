@@ -1,19 +1,18 @@
 {
-  "updatedAt": "2026-11-23T14:29:45.360Z",
-  "runId": "run-20261123-133227",
+  "updatedAt": "2026-11-23T16:41:30.412Z",
+  "runId": "run-20261123-161259",
   "fingerprint": {
-    "qa-cluster.config.json": "e3a43f732bf04596"
+    "qa-cluster.config.json": "ae4729ab4dcb42c2"
   },
   "recon": {
     "repo": {
       "path": "/Users/adriana_limonta/QA-Demos/partwerk-volume-tests",
-      "commit": "5c40f80",
+      "commit": "1ed99876784b0f07e081e3b2806f40314ed1e9cc",
       "branch": "master"
     },
     "stack": {
       "frontend": "other",
-      "backend": "none",
-      "db": "none"
+      "packageManager": "npm"
     },
     "run": {
       "method": "custom",
@@ -32,7 +31,7 @@
     },
     "routes": [
       {
-        "path": "/",
+        "path": "/#top",
         "requiresAuth": false,
         "sourceFile": "index.html"
       },
@@ -45,25 +44,21 @@
         "path": "/#support",
         "requiresAuth": false,
         "sourceFile": "index.html"
-      },
-      {
-        "path": "/#top",
-        "requiresAuth": false,
-        "sourceFile": "index.html"
       }
     ],
     "testability": {
       "hasTestIds": true,
       "testIdAttribute": "data-testid",
-      "existingTests": []
+      "existingTests": [
+        "e2e/src",
+        "e2e/playwright.config.ts"
+      ]
     },
     "notes": [
-      "Single static page, vanilla JS, no backend, no login, no seed data.",
-      "Cart state lives in localStorage: clear it between tests (fresh browser context).",
-      "Cart drawer, checkout and order confirmation are in-page UI states, not routes.",
-      "Dynamic test ids: add-to-cart-<id>, filter-<category>, qty-*/remove-*/line-total-<id>.",
-      "Page loads Google Fonts from the network (non-blocking).",
-      "Port 4180 must be free; stop command kills whatever listens on it."
+      "Single static page (index.html), no backend, no login, no DB; cart state in localStorage.",
+      "UI overlays (not routes): cart drawer, reserve drawer (bulk reservation form, min 1,000 pieces, transport $45 per 1,000), order confirmation, email preview.",
+      "Google Fonts loaded from external CDN; no other external services.",
+      "App was already running on port 4180 (health 200) when recon started."
     ]
   }
 }

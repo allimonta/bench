@@ -23,3 +23,7 @@ Then('the cart counter increases by {int}', async ({ appHeader, ctx }, increase:
     String(before + increase),
   );
 });
+
+When('the user clicks the header {string} button', async ({ appHeader }, label: string) => {
+  await appHeader.clickButton(label);
+});
