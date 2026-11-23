@@ -177,6 +177,16 @@ header{ position:sticky; top:env(safe-area-inset-top,0px); z-index:20; backgroun
 .email-preview{ border:1px solid var(--line); border-radius:8px; padding:14px 16px; background:#000; color:var(--text); font-size:15px; display:grid; gap:4px; }
 .email-preview h4{ margin:0 0 6px; font-size:14px; color:var(--steel); font-weight:500; }
 .email-preview ul{ margin:2px 0; padding-left:20px; }
+.find-panel{ flex:1; overflow-y:auto; padding:8px 24px 24px; display:grid; gap:18px; align-content:start; }
+.find-form{ display:grid; grid-template-columns:1fr auto; gap:10px; align-items:end; }
+.find-form .cta{ padding:10px 18px; }
+.find-panel h3{ margin:0; font-size:16px; color:var(--steel); font-weight:500; }
+.find-msg{ margin:0; padding:10px 14px; border:1px solid var(--line); border-radius:8px; background:var(--panel-2); font-size:15px; }
+.res-table{ width:100%; border-collapse:collapse; font-size:14px; }
+.res-table th, .res-table td{ text-align:left; padding:8px 6px; border-bottom:1px solid var(--line); vertical-align:top; }
+.res-table th{ color:var(--muted); font-weight:500; }
+.res-table td.num, .res-table th.num{ text-align:right; white-space:nowrap; }
+.res-table .code{ font-family:ui-monospace,Menlo,monospace; white-space:nowrap; }
 
 .toast{ position:fixed; left:50%; bottom:calc(24px + env(safe-area-inset-bottom,0px)); transform:translate(-50%,120px); background:var(--panel-2); border:1px solid var(--amber); padding:12px 20px; border-radius:8px; transition:transform .3s; z-index:50; }
 .toast.show{ transform:translate(-50%,0); }
@@ -198,6 +208,20 @@ footer div{ max-width:1200px; margin:0 auto; padding:24px; display:flex; flex-wr
   .header-actions .cart-btn{ padding:7px 10px; gap:6px; }
   .header-actions .btn-label{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
   .two{ grid-template-columns:1fr; }
+  .find-form{ grid-template-columns:1fr; }
+  .res-table thead{ display:none; }
+  .res-table, .res-table tbody, .res-table tr, .res-table td{ display:block; width:100%; }
+  .res-table tr{ border-bottom:1px solid var(--line); padding:8px 0; }
+  .res-table td{ border:0; padding:2px 0; display:flex; justify-content:space-between; gap:12px; }
+  .res-table td.num{ text-align:right; }
+  .res-table td::before{ content:attr(data-label); color:var(--muted); font-family:var(--body, inherit); }
+}
+@media (max-width:430px){
+  .nav{ gap:6px; padding:12px 10px; }
+  .logo{ font-size:13px; letter-spacing:.02em; gap:6px; }
+  .menu-toggle{ padding:6px 8px; }
+  .header-actions{ gap:4px; }
+  .header-actions .cart-btn{ padding:7px 8px; gap:4px; }
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{ animation:none !important; transition:none !important; }
@@ -218,6 +242,10 @@ footer div{ max-width:1200px; margin:0 auto; padding:24px; display:flex; flex-wr
       <li><a href="#support" data-testid="nav-support">Support</a></li>
     </ul>
     <div class="header-actions">
+      <button class="cart-btn" id="findBtn" aria-label="Find a reservation" data-testid="find-reservation-button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <span class="btn-label">Find</span>
+      </button>
       <button class="cart-btn" id="reserveBtn" aria-label="Reserve parts in bulk" data-testid="reserve-button">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>
         <span class="btn-label">Reserve</span>
@@ -300,6 +328,30 @@ footer div{ max-width:1200px; margin:0 auto; padding:24px; display:flex; flex-wr
     <button class="icon-btn" id="closeReserve" aria-label="Close reservation" data-testid="reserve-close">✕</button>
   </div>
   <div id="reserveBody" style="flex:1;display:flex;flex-direction:column;min-height:0"></div>
+</aside>
+<aside class="drawer wide" id="findDrawer" role="dialog" aria-modal="true" aria-labelledby="findTitle" aria-hidden="true" data-testid="find-drawer">
+  <div class="drawer-head">
+    <h2 id="findTitle">Find a reservation</h2>
+    <button class="icon-btn" id="closeFind" aria-label="Close reservation search" data-testid="find-close">✕</button>
+  </div>
+  <div class="find-panel" id="findBody">
+    <form class="find-form" id="findForm" novalidate role="search" data-testid="find-form">
+      <div class="field">
+        <label for="findQuery">Reservation code or requester name</label>
+        <input id="findQuery" type="search" autocomplete="off" placeholder="PWR-… or name" data-testid="find-query">
+      </div>
+      <button class="cta" type="submit" id="findSubmit" data-testid="find-submit">Search</button>
+    </form>
+    <p class="find-msg" id="findMsg" role="status" data-testid="find-message" hidden></p>
+    <section id="findResults" data-testid="find-results" hidden>
+      <h3 id="findResultsTitle" data-testid="find-results-title">Search results</h3>
+      <div id="findResultsList"></div>
+    </section>
+    <section id="recentSection" data-testid="recent-reservations">
+      <h3>Last 5 reservations</h3>
+      <div id="recentList"></div>
+    </section>
+  </div>
 </aside>
 <div class="toast" id="toast" role="status" aria-live="polite" data-testid="toast"></div>
 
@@ -389,7 +441,7 @@ function renderCart(){
 }
 function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove("show"),1800); }
 function bump(){ const b=$("#badge"); b.classList.remove("bump"); void b.offsetWidth; b.classList.add("bump"); }
-function openCart(){ if($("#reserveDrawer").classList.contains("open")) closeReserve(); $("#drawer").classList.add("open"); $("#overlay").classList.add("open"); $("#drawer").setAttribute("aria-hidden","false"); $("#closeCart").focus(); }
+function openCart(){ if($("#reserveDrawer").classList.contains("open")) closeReserve(); if($("#findDrawer").classList.contains("open")) closeFind(); $("#drawer").classList.add("open"); $("#overlay").classList.add("open"); $("#drawer").setAttribute("aria-hidden","false"); $("#closeCart").focus(); }
 function closeCart(){ $("#drawer").classList.remove("open"); $("#overlay").classList.remove("open"); $("#drawer").setAttribute("aria-hidden","true"); $("#cartBtn").focus(); }
 
 document.addEventListener("click", e=>{
@@ -410,10 +462,11 @@ document.addEventListener("click", e=>{
 });
 $("#cartBtn").addEventListener("click", openCart);
 $("#closeCart").addEventListener("click", closeCart);
-$("#overlay").addEventListener("click", ()=>{ if($("#reserveDrawer").classList.contains("open")) closeReserve(); else closeCart(); });
+$("#overlay").addEventListener("click", ()=>{ if($("#reserveDrawer").classList.contains("open")) closeReserve(); else if($("#findDrawer").classList.contains("open")) closeFind(); else closeCart(); });
 document.addEventListener("keydown", e=>{
   if(e.key!=="Escape") return;
   if($("#reserveDrawer").classList.contains("open")) closeReserve();
+  else if($("#findDrawer").classList.contains("open")) closeFind();
   else if($("#drawer").classList.contains("open")) closeCart();
 });
 
@@ -510,7 +563,7 @@ function submitReserve(e){
     createdAt: new Date().toISOString(),
     company, firstName:first, lastName:last, email,
     payment, paymentLabel: PAYMENT_METHODS.find(([v])=>v===payment)[1],
-    lines: q.lines.map(l=>({...l, name: PRODUCTS.find(p=>p.id===l.id).name})),
+    lines: q.lines.map(l=>{ const p = PRODUCTS.find(p=>p.id===l.id); return {...l, name: p.name, price: p.price}; }),
     pieces: q.pieces, transport: transportCost(q.pieces),
     status: "Awaiting payment"
   };
@@ -546,6 +599,7 @@ function reservationConfirmation(r){
 
 function openReserve(){
   if($("#drawer").classList.contains("open")) closeCart();
+  if($("#findDrawer").classList.contains("open")) closeFind();
   renderReserve();
   $("#reserveDrawer").classList.add("open"); $("#overlay").classList.add("open"); $("#reserveDrawer").setAttribute("aria-hidden","false"); $("#closeReserve").focus();
 }
@@ -556,6 +610,63 @@ $("#closeReserve").addEventListener("click", closeReserve);
 $("#reserveBody").addEventListener("input", e=>{ if(e.target.dataset.reserveQty) updateReserveTotals(); });
 $("#reserveBody").addEventListener("submit", submitReserve);
 $("#reserveBody").addEventListener("click", e=>{ if(e.target.id==="newReservation"){ lastReservation = null; renderReserve(); } });
+/* ---- Find a reservation: by tracking code or requester name; the last 5 reservations, newest first ---- */
+const RECENT_COUNT = 5;
+const partsValue = r => r.lines.reduce((s,l)=>s + l.qty * (l.price ?? (PRODUCTS.find(p=>p.id===l.id)||{price:0}).price), 0);
+const reservationAmount = r => partsValue(r) + r.transport;
+const dateTime = iso => new Intl.DateTimeFormat("en-US",{year:"numeric",month:"short",day:"2-digit",hour:"2-digit",minute:"2-digit"}).format(new Date(iso));
+const norm = s => String(s).trim().replace(/\s+/g," ").toLowerCase();
+const newestFirst = list => [...list].sort((a,b)=>b.createdAt.localeCompare(a.createdAt));
+
+function reservationTable(list, kind){
+  return `<table class="res-table" data-testid="${kind}-table">
+    <thead><tr><th>Date and time</th><th>Company</th><th>Code</th>${kind==="find"?"<th>Requested by</th>":""}<th class="num">Pieces</th><th class="num">Amount</th></tr></thead>
+    <tbody>${list.map(r=>`<tr data-testid="${kind}-row" data-code="${esc(r.tracking)}">
+      <td data-label="Date and time" data-testid="${kind}-date">${dateTime(r.createdAt)}</td>
+      <td data-label="Company" data-testid="${kind}-company">${esc(r.company)}</td>
+      <td data-label="Code" class="code" data-testid="${kind}-code">${esc(r.tracking)}</td>
+      ${kind==="find"?`<td data-label="Requested by" data-testid="find-requester">${esc(r.firstName)} ${esc(r.lastName)}</td>`:""}
+      <td data-label="Pieces" class="num" data-testid="${kind}-pieces">${count0(r.pieces)}</td>
+      <td data-label="Amount" class="num" data-testid="${kind}-amount">${money2(reservationAmount(r))}</td>
+    </tr>`).join("")}</tbody>
+  </table>`;
+}
+
+function renderRecent(){
+  const recent = newestFirst(reservations).slice(0, RECENT_COUNT);
+  $("#recentList").innerHTML = recent.length
+    ? reservationTable(recent, "recent")
+    : `<p class="find-msg" data-testid="recent-empty">No reservations yet.</p>`;
+}
+
+function searchReservations(e){
+  e.preventDefault();
+  const raw = $("#findQuery").value, q = norm(raw);
+  const msg = $("#findMsg"), box = $("#findResults");
+  box.hidden = true; msg.hidden = true;
+  if(!q){ msg.textContent = "Enter a reservation code or a requester name."; msg.hidden = false; return; }
+  const found = newestFirst(reservations).filter(r =>
+    norm(r.tracking) === q ||
+    norm(r.firstName).includes(q) || norm(r.lastName).includes(q) ||
+    norm(`${r.firstName} ${r.lastName}`).includes(q));
+  if(!found.length){ msg.textContent = `No reservation matches "${raw.trim()}".`; msg.hidden = false; return; }
+  $("#findResultsTitle").textContent = `${found.length} reservation${found.length===1?"":"s"} found`;
+  $("#findResultsList").innerHTML = reservationTable(found, "find");
+  box.hidden = false;
+}
+
+function openFind(){
+  if($("#drawer").classList.contains("open")) closeCart();
+  if($("#reserveDrawer").classList.contains("open")) closeReserve();
+  $("#findQuery").value = ""; $("#findMsg").hidden = true; $("#findResults").hidden = true;
+  renderRecent();
+  $("#findDrawer").classList.add("open"); $("#overlay").classList.add("open"); $("#findDrawer").setAttribute("aria-hidden","false"); $("#findQuery").focus();
+}
+function closeFind(){ $("#findDrawer").classList.remove("open"); $("#overlay").classList.remove("open"); $("#findDrawer").setAttribute("aria-hidden","true"); $("#findBtn").focus(); }
+
+$("#findBtn").addEventListener("click", openFind);
+$("#closeFind").addEventListener("click", closeFind);
+$("#findForm").addEventListener("submit", searchReservations);
 $("#menuToggle").addEventListener("click", ()=>{ const m=$("#menu"); const o=m.classList.toggle("open"); $("#menuToggle").setAttribute("aria-expanded",o); });
 
 renderFilters(); renderGrid(); renderCart();
