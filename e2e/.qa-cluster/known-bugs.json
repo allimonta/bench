@@ -1,0 +1,57 @@
+{
+  "BUG-001": {
+    "signature": "the cart shows no checkout form",
+    "title": "Checkout: the cart has no checkout form (email and required fields) instead of validating them",
+    "stage": "assertion"
+  },
+  "BUG-002": {
+    "signature": "getByRole('button', { name: 'Clear filters'",
+    "title": "Shop: no 'Clear filters' control instead of one that restores all products",
+    "stage": "assertion"
+  },
+  "BUG-003": {
+    "signature": "no product is marked as \"Out of stock\"",
+    "title": "Shop: no product has an 'Out of stock' state instead of a disabled 'Add to cart'",
+    "stage": "assertion"
+  },
+  "BUG-004": {
+    "signature": "getByRole('combobox', { name: 'Sort' })",
+    "title": "Shop: no 'Sort' control instead of sorting by price low to high",
+    "stage": "assertion"
+  },
+  "BUG-005": {
+    "signature": "locator.click: Timeout",
+    "title": "Shop catalog: no \"Screens\" category filter exists instead of filtering products by \"Screens\"",
+    "stage": "action"
+  },
+  "BUG-006": {
+    "signature": "locator.fill: Timeout",
+    "title": "Shop catalog: no search box exists instead of letting the user search products",
+    "stage": "action"
+  },
+  "BUG-007": {
+    "signature": "the product detail view shows no description",
+    "title": "Shop catalog: product name does nothing instead of opening a detail view",
+    "stage": "action"
+  },
+  "BUG-008": {
+    "signature": "locator.fill: Timeout",
+    "title": "Cart: no discount code field exists instead of applying discount codes",
+    "stage": "action"
+  },
+  "BUG-009": {
+    "signature": "the cart total is not the sum of the product prices",
+    "title": "Cart: the total adds $150 shipping to the product prices instead of equalling their sum",
+    "stage": "assertion"
+  },
+  "BUG-010": {
+    "signature": "neither stays at quantity",
+    "title": "Cart: − at quantity 1 removes the product with no confirmation instead of keeping quantity 1 or asking first",
+    "stage": "assertion"
+  },
+  "BUG-011": {
+    "signature": "focus left the cart dialog",
+    "title": "Cart drawer: keyboard focus falls to the page body after +, − or Remove instead of staying in the cart dialog",
+    "stage": "action"
+  }
+}

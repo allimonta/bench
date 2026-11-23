@@ -1,0 +1,11 @@
+- [explorer, volume-1] A fresh cart per case: `browser_close` then `browser_navigate` gives a new context with empty localStorage (key `partwerk-cart`); the cart badge starts at 0.
+- [explorer, volume-1] "Add to cart" buttons change their label to "Added" for 1.2 s after a click: locate them by `data-add` / `data-testid="add-to-cart-<id>"`, never by accessible name.
+- [explorer, volume-1] Shipping is $150 below a $10,000 subtotal and free at or above it (row "Shipping (free over $10,000)"), so cart Total = Subtotal + $150 for small carts.
+- [explorer, volume-1] The cart drawer (#drawer) re-renders its content on every add/qty/remove (innerHTML): element refs go stale after each click and focus falls back to <body>.
+- [explorer, volume-1] Features the scenarios assume but the app does not have: checkout form (email/required fields), discount codes, search, sort, "Clear filters", "Screens" category, stock state, product detail view, quantity input (only +/- buttons; - at 1 removes the line silently). Categories: All, Sensors, Limbs, Power, Processing.
+- [explorer, volume-1] "Place order" confirms immediately with a random reference `PW-XXXXXX` (data-testid=order-ref); the order exists only in page memory.
+- [explorer, volume-1] created: cart line — delete: ui (cart drawer "Remove"); created: order — delete: none (client-side only, no backend).
+- [explorer, volume-1] Every page load logs a console 404 for /favicon.ico.
+- [stabilizer] On this machine (load average 38-60 on 8 CPUs from processes outside the suite) one worker per CPU made browser-context teardown (video/trace) exceed the 30 s test timeout in passing scenarios: playwright.config.ts runs 2 workers, and actions time out at 10 s so a missing control is named instead of a bare test timeout.
+- [triage, TC-VOLUME1-001] Cases 001/002/006/010/022 target features Partwerk does not have (checkout form, Clear filters, stock state, Sort); confirmed as missing-implementation bugs BUG-001..004 since the TestGraph Then is the truth.
+- [triage, TC-VOLUME1-004] Product card art is inline SVG wrapped in `.card-art` / `.item-art` with aria-hidden="true" (index.html:298,329): decorative on purpose, the product name is the card heading; adding to cart does not open the drawer.

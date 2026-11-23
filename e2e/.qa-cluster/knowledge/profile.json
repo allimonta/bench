@@ -1,0 +1,69 @@
+{
+  "updatedAt": "2026-11-23T14:29:45.360Z",
+  "runId": "run-20261123-133227",
+  "fingerprint": {
+    "qa-cluster.config.json": "e3a43f732bf04596"
+  },
+  "recon": {
+    "repo": {
+      "path": "/Users/adriana_limonta/QA-Demos/partwerk-volume-tests",
+      "commit": "5c40f80",
+      "branch": "master"
+    },
+    "stack": {
+      "frontend": "other",
+      "backend": "none",
+      "db": "none"
+    },
+    "run": {
+      "method": "custom",
+      "start": [
+        "python3 -m http.server 4180 --bind 127.0.0.1"
+      ],
+      "stop": [
+        "lsof -ti:4180 | xargs kill -9 2>/dev/null || true"
+      ]
+    },
+    "baseURL": "http://localhost:4180",
+    "mode": "app",
+    "configSource": "config-file",
+    "auth": {
+      "type": "none"
+    },
+    "routes": [
+      {
+        "path": "/",
+        "requiresAuth": false,
+        "sourceFile": "index.html"
+      },
+      {
+        "path": "/#shop",
+        "requiresAuth": false,
+        "sourceFile": "index.html"
+      },
+      {
+        "path": "/#support",
+        "requiresAuth": false,
+        "sourceFile": "index.html"
+      },
+      {
+        "path": "/#top",
+        "requiresAuth": false,
+        "sourceFile": "index.html"
+      }
+    ],
+    "testability": {
+      "hasTestIds": true,
+      "testIdAttribute": "data-testid",
+      "existingTests": []
+    },
+    "notes": [
+      "Single static page, vanilla JS, no backend, no login, no seed data.",
+      "Cart state lives in localStorage: clear it between tests (fresh browser context).",
+      "Cart drawer, checkout and order confirmation are in-page UI states, not routes.",
+      "Dynamic test ids: add-to-cart-<id>, filter-<category>, qty-*/remove-*/line-total-<id>.",
+      "Page loads Google Fonts from the network (non-blocking).",
+      "Port 4180 must be free; stop command kills whatever listens on it."
+    ]
+  }
+}

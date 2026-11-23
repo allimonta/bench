@@ -1,0 +1,211 @@
+{
+  "generator": "qa-cluster",
+  "version": "0.25.0",
+  "layout": "src",
+  "createdAt": "2026-11-23T13:40:51.265Z",
+  "updatedAt": "2026-11-23T14:29:38.155Z",
+  "packageManager": "npm",
+  "ciProvider": "github-actions",
+  "ciFiles": [
+    ".github/workflows/qa-cluster-e2e.yml"
+  ],
+  "runs": [
+    {
+      "runId": "run-20261123-133227",
+      "at": "2026-11-23T14:29:38.155Z",
+      "result": "completed",
+      "commit": "5c40f802e3923eb41ffb09aba31d3942757e11c8",
+      "cases": 25,
+      "stable": 8,
+      "bugs": 11,
+      "inconclusive": 0,
+      "iterations": 4,
+      "report": "docs/qa-cluster-report.md"
+    }
+  ],
+  "files": {
+    ".env.example": "d39398f71b10ee2f8300a248085a53e925e30e53af8b66efb5ce13315062c9de",
+    ".gitignore": "7b5af81e4d1728c5a7a00eec1b29c5a059d4cdcbecdd3161b804e853fdfc3fc1",
+    "README.md": "214649054060c02603032606e809679981bd6735fcdd7d534b957086d5ebccd9",
+    "package.json": "6499f73797e7a23ad774e3c7961961ae3fd0d61fb3c955e12a98d56de702825c",
+    "playwright.config.ts": "4cb4cc732a97d21f8f117c41c3e5202db2566ac6a3f0cb50a1452cb50c3b8b22",
+    "src/main/data/factories.ts": "8c37411da2467c7747bc5c9965c927731a8951d846bf4ee0d4c6c99a474fe479",
+    "src/main/data/generators.ts": "2b8fab8f8f6b3e40a217d3335d1673bdb87dd6398312e3c5ec32f3aee831282e",
+    "src/main/endpoints/BaseEndpoint.ts": "0dfe99001a6e0b1e12d9fbfe27b7c6ecbf34f7e2114b219b7f15a5ede04117b9",
+    "src/main/entities/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/main/fixtures/index.ts": "0b78f2d67b87d1a56bde28ec139c1029f841b3e9136540655bea6b830e863553",
+    "src/main/pages/BasePage.ts": "63f9ae7ac176e9036f19d54afeea64456d262a2b448d1d6f07dcde9d22560545",
+    "src/main/pages/HomePage.ts": "94d12740cc32e60af5adfbbc8495890bc4d379c4c61c7bd6118edbbea8ae4a17",
+    "src/main/pages/LoginPage.ts": "e5f4a4bdf34a4cc7c9d806eb9b75dfd8527e58a43dbac1c03f4727cddefcfd4c",
+    "src/main/reporters/summary-reporter.ts": "341a3c708e1273add66440fa13eab813e1e96b0a102109d57ce46dc15031dfb1",
+    "src/main/support/ApiLog.ts": "e617c47238620b30a4de8cb33657d00e291cd96acff19e43c493ad864ff513d1",
+    "src/main/support/ScenarioContext.ts": "346b1066e0f049a8abd629b42e6209b9ab28e783eaac5911fa60cafe8af0fa30",
+    "src/main/utils/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/test/hooks/cleanup.hooks.ts": "bccb069b189d9c45f0e40501ec29f9080c958d7787efa7cba49084ed3de61399",
+    "src/test/hooks/known-bugs.hooks.ts": "2ebe0cf6abf32eff5e276589d3a85914ff80a33630b6181c2bb85f2004a4606e",
+    "src/test/setup/auth.setup.ts": "d344c42c0a680bd23435b5b20af3f21f6e202d049452027f21c51f328fa10b85",
+    "src/test/steps/common.steps.ts": "f4d8ce5d25ff8d51ab50ca0645c93f3fc7f76e7d57147570592e6cf66bdbfe79",
+    "tsconfig.json": "9633511e74ec0869fd1b54ac431a060137163f2f9826a94819195b8bc806ca0e",
+    "src/test/resources/features/volume-1/volume-1.feature": "4e56cc1e08877c3f7f13e61117a1a90e47004f930d089afd299f1181e60a8540",
+    "src/test/steps/volume-1.steps.ts": "8572f27421b28ccc52458a3a305197ea7afe1fa3bed9b21577f37436f89ddad5",
+    "src/test/steps/app-header.steps.ts": "e47e2ec0550c73afa271ddc3946914be02d2e3fec49aa47b72e0625a64078ab8",
+    "src/main/pages/AppHeader.ts": "447cdaa5b603d83673b9aecd2fb67a6c3815609970f9c389f0bfe9cefdd4708a",
+    "src/main/pages/CartDrawer.ts": "10bc22ad6193ed6986bbca38167374439e393af1431248bbe031013aea25f66f",
+    "src/main/pages/ProductDetailView.ts": "b0c2874e0bb7a240c7088a323830877b09d3510622d3a75f2c8963400785a705",
+    "src/main/data/products.ts": "53aa56460ac44b899859d6f4da1e829cdc0408c47a65aec5a31423dab829206c",
+    "src/main/utils/money.ts": "f7fed4d1b53b980d53bc576968ad8868c51186a71ce60199fbae061957577855"
+  },
+  "cases": {
+    "TC-VOLUME1-001": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav40b01py01thpkd5j496",
+      "status": "bug",
+      "bugId": "BUG-001"
+    },
+    "TC-VOLUME1-002": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav40a01px01thohanvcev",
+      "status": "bug",
+      "bugId": "BUG-002"
+    },
+    "TC-VOLUME1-003": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav40401pu01thswyhgsru",
+      "status": "bug",
+      "bugId": "BUG-009"
+    },
+    "TC-VOLUME1-004": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav40201pt01thzuw3ybdu",
+      "status": "stable"
+    },
+    "TC-VOLUME1-005": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav40101ps01thz8u5bwz1",
+      "status": "stable"
+    },
+    "TC-VOLUME1-006": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav3zz01pr01thdod1k8sb",
+      "status": "bug",
+      "bugId": "BUG-003"
+    },
+    "TC-VOLUME1-008": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav3zx01pq01theve3qo6t",
+      "status": "stable"
+    },
+    "TC-VOLUME1-009": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav40601pv01thvt1vdg2c",
+      "status": "stable"
+    },
+    "TC-VOLUME1-010": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav3zw01pp01thxk0wr54s",
+      "status": "bug",
+      "bugId": "BUG-004"
+    },
+    "TC-VOLUME1-011": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav3zu01po01th4nmtvr8l",
+      "status": "bug",
+      "bugId": "BUG-005"
+    },
+    "TC-VOLUME1-012": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav3zs01pn01thma1i7a3u",
+      "status": "bug",
+      "bugId": "BUG-006"
+    },
+    "TC-VOLUME1-013": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav3zr01pm01th1jhhri4c",
+      "status": "bug",
+      "bugId": "BUG-006"
+    },
+    "TC-VOLUME1-014": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav3zp01pl01thmrcdkc0p",
+      "status": "stable"
+    },
+    "TC-VOLUME1-017": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav3zk01pi01thx5a0ctwm",
+      "status": "bug",
+      "bugId": "BUG-007"
+    },
+    "TC-VOLUME1-018": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav3zh01ph01thsd7k0p64",
+      "status": "stable"
+    },
+    "TC-VOLUME1-019": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav3z501pg01th5py3lr6h",
+      "status": "bug",
+      "bugId": "BUG-010"
+    },
+    "TC-VOLUME1-020": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav40m01q401thiibss4jc",
+      "status": "stable"
+    },
+    "TC-VOLUME1-022": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav40j01q201thrc4a1dyt",
+      "status": "bug",
+      "bugId": "BUG-001"
+    },
+    "TC-VOLUME1-023": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav40h01q101th7a0qp1mj",
+      "status": "bug",
+      "bugId": "BUG-008"
+    },
+    "TC-VOLUME1-024": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav40f01q001th1e5a2rel",
+      "status": "bug",
+      "bugId": "BUG-008"
+    },
+    "TC-VOLUME1-025": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav40d01pz01thnf8glmmy",
+      "status": "stable"
+    },
+    "TC-VOLUME1-007": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav40701pw01th3b6sr536",
+      "status": "blocked"
+    },
+    "TC-VOLUME1-015": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav3zn01pk01thnbi0x1y9",
+      "status": "skipped"
+    },
+    "TC-VOLUME1-016": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav3zm01pj01thfwh7jdu5",
+      "status": "skipped"
+    },
+    "TC-VOLUME1-021": {
+      "spec": "src/test/resources/features/volume-1/volume-1.feature",
+      "testCaseId": "cmwtav40k01q301tht4cgbmor",
+      "status": "skipped"
+    }
+  },
+  "lastBugNumber": 11,
+  "testgraph": {
+    "projectId": "cmwmh64un008r01th1gyazrxj",
+    "project": "Bench - QA Cluster",
+    "lastRunId": "cmwtczwuc029v01thk32wjspi",
+    "readOnly": true
+  },
+  "baseCommit": "5c40f802e3923eb41ffb09aba31d3942757e11c8",
+  "finalizedBy": {
+    "by": "manifest-finalize",
+    "runId": "run-20261123-133227",
+    "at": "2026-11-23T14:29:38.155Z"
+  }
+}

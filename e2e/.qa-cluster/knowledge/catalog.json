@@ -1,0 +1,556 @@
+{
+  "updatedAt": "2026-11-23T14:29:45.378Z",
+  "fixtures": [
+    "ctx",
+    "api",
+    "apiLog",
+    "homePage",
+    "loginPage",
+    "appHeader",
+    "cartDrawer",
+    "productDetailView"
+  ],
+  "pages": [
+    {
+      "file": "src/main/pages/AppHeader.ts",
+      "classes": [
+        "AppHeader"
+      ],
+      "methods": [
+        "clickNavLink",
+        "openCart",
+        "cartCountValue"
+      ],
+      "routes": []
+    },
+    {
+      "file": "src/main/pages/BasePage.ts",
+      "classes": [
+        "BasePage"
+      ],
+      "methods": [
+        "goto",
+        "expectLoaded"
+      ],
+      "routes": []
+    },
+    {
+      "file": "src/main/pages/CartDrawer.ts",
+      "classes": [
+        "CartDrawer"
+      ],
+      "methods": [
+        "expectLoaded",
+        "removeProduct",
+        "setQuantity",
+        "totalAmount",
+        "enterEmailAndSubmit",
+        "submitCheckoutForm",
+        "applyDiscountCode"
+      ],
+      "routes": []
+    },
+    {
+      "file": "src/main/pages/HomePage.ts",
+      "classes": [
+        "HomePage"
+      ],
+      "methods": [
+        "expectLoaded",
+        "title",
+        "openShopSection",
+        "reload",
+        "productInfo",
+        "addToCart",
+        "clickProductButton",
+        "openProductDetails",
+        "filterByCategory",
+        "clickButton",
+        "viewProductWithStatus",
+        "sortBy",
+        "priceValues",
+        "search",
+        "productTexts"
+      ],
+      "routes": [
+        "${this.path}#shop"
+      ]
+    },
+    {
+      "file": "src/main/pages/LoginPage.ts",
+      "classes": [
+        "LoginPage"
+      ],
+      "methods": [
+        "login",
+        "expectLoggedIn"
+      ],
+      "routes": []
+    },
+    {
+      "file": "src/main/pages/ProductDetailView.ts",
+      "classes": [
+        "ProductDetailView"
+      ],
+      "methods": [],
+      "routes": []
+    }
+  ],
+  "steps": [
+    {
+      "keyword": "When",
+      "pattern": "the user opens the cart",
+      "file": "src/test/steps/app-header.steps.ts",
+      "pages": [
+        "AppHeader",
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user navigates to the {string} section",
+      "file": "src/test/steps/app-header.steps.ts",
+      "pages": [
+        "AppHeader"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user clicks the {string} link in the navigation menu",
+      "file": "src/test/steps/app-header.steps.ts",
+      "pages": [
+        "AppHeader"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the cart counter increases by {int}",
+      "file": "src/test/steps/app-header.steps.ts",
+      "pages": [
+        "AppHeader"
+      ]
+    },
+    {
+      "keyword": "Given",
+      "pattern": "I open the home page",
+      "file": "src/test/steps/common.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user opens the Android parts shop page",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user is on the home section of the page",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user is on the Shop section",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user has applied a category filter",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user clicks {string}",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user selects the {string} category filter",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user sorts products by {string}",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user searches for {string}",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user clicks {string} on a product",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage",
+        "AppHeader"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user clicks {string} on the same product again",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user clicks on a product name",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "a product is marked as {string}",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user views that product",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user reloads the page",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "all products are displayed again",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "a list of products is displayed with name, image and price",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "products are displayed in ascending price order",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "only products from the {string} category are displayed",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "a {string} message is displayed",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "only products matching {string} are displayed",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the {string} button is disabled",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the product detail view shows description, price and compatibility info",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "ProductDetailView"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the page scrolls to the Shop section and the URL ends with {string}",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user has added two different products to the cart",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user has products in the cart",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user has one product in the cart",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user has a product in the cart",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user has added a product to the cart",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user has a product in the cart with quantity {int}",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user's cart is empty",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage",
+        "AppHeader"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user is on the checkout form",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage",
+        "AppHeader",
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user has a product in the cart and is on the checkout form",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage",
+        "AppHeader",
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user enters {string} in the email field and submits",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user submits the form with empty required fields",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user removes the product from the cart",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "AppHeader",
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user changes the quantity to {int}",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "AppHeader",
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user tries to set the quantity to {int}",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "AppHeader",
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user attempts to proceed to checkout",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "AppHeader",
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user applies the discount code {string}",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "AppHeader",
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "an {string} error message is displayed",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the total equals the sum of both product prices",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the cart is empty and the counter shows {int}",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer",
+        "AppHeader"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the line subtotal updates to {int} times the unit price",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the checkout is not allowed and an empty-cart message is shown",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the cart shows that product with quantity {int}",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "AppHeader",
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the quantity remains at {int} or the product is removed with a confirmation",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the product is still in the cart",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "AppHeader",
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "an {string} message is displayed and the total remains unchanged",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the total is reduced by {int} percent",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "an error message is displayed for each missing field",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,928 @@
+{
+  "cases": {
+    "TC-VOLUME1-001": {
+      "title": "Invalid email is rejected at checkout",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav40b01py01thpkd5j496",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-25-f2d9a34d-9f3d-46a1-978a-eeeb49e13354-1768e56a-706f-4866-a8e9-8a3aa4a5afd1-1c9c56ab-fa07-4824-ba34-1622491eff2e",
+        "pathNodeIds": [
+          "f2d9a34d-9f3d-46a1-978a-eeeb49e13354",
+          "1768e56a-706f-4866-a8e9-8a3aa4a5afd1",
+          "1c9c56ab-fa07-4824-ba34-1622491eff2e"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "1768e56a-706f-4866-a8e9-8a3aa4a5afd1"
+        ],
+        "validationNodeIds": [
+          "1c9c56ab-fa07-4824-ba34-1622491eff2e"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "f203be52a159bba7",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "bug",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [
+        {
+          "id": "BUG-001",
+          "severity": "major",
+          "pattern": "deterministic"
+        }
+      ],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-002": {
+      "title": "Clear all filters",
+      "flow": "volume-1",
+      "priority": "P1",
+      "tier": "smoke",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav40a01px01thohanvcev",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-24-563c068a-8664-4173-95d9-99bddab0f76b-c3d8f49d-ab58-49d5-bb73-05cb49d03055-27e90d29-31d3-48ed-924f-a2c9243dd4e6",
+        "pathNodeIds": [
+          "563c068a-8664-4173-95d9-99bddab0f76b",
+          "c3d8f49d-ab58-49d5-bb73-05cb49d03055",
+          "27e90d29-31d3-48ed-924f-a2c9243dd4e6"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "27e90d29-31d3-48ed-924f-a2c9243dd4e6"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "1a2bed088852f78b",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "bug",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [
+        {
+          "id": "BUG-002",
+          "severity": "minor",
+          "pattern": "deterministic"
+        }
+      ],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-003": {
+      "title": "Cart total is calculated correctly",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav40401pu01thswyhgsru",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-23-a32b78f3-48a7-4728-93cc-51e571590908-23f5b0fa-53c0-4083-b38e-c94ac7c54e54-34b52adb-5b12-4316-af67-bda3af58be5a",
+        "pathNodeIds": [
+          "a32b78f3-48a7-4728-93cc-51e571590908",
+          "23f5b0fa-53c0-4083-b38e-c94ac7c54e54",
+          "34b52adb-5b12-4316-af67-bda3af58be5a"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "34b52adb-5b12-4316-af67-bda3af58be5a"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "fd968dcac31c02ba",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "bug",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [
+        {
+          "id": "BUG-009",
+          "severity": "major",
+          "pattern": "deterministic"
+        }
+      ],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-004": {
+      "title": "Shop section loads with product listing",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav40201pt01thzuw3ybdu",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-22-66408ae1-423d-48c1-a15c-f6c3d32e0d55-b3504184-ef95-4557-9cbd-d71f0e96f02a-073ba5f6-0e17-4b9a-a3ed-a42de4de00f0",
+        "pathNodeIds": [
+          "66408ae1-423d-48c1-a15c-f6c3d32e0d55",
+          "b3504184-ef95-4557-9cbd-d71f0e96f02a",
+          "073ba5f6-0e17-4b9a-a3ed-a42de4de00f0"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "073ba5f6-0e17-4b9a-a3ed-a42de4de00f0"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "ddc2904adc3c492a",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-005": {
+      "title": "Remove a product from the cart",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav40101ps01thz8u5bwz1",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-21-45c2237e-1fba-4d7a-9474-6ab1bc60971e-ac57c5eb-5e09-41e9-9891-7609062624f6-db9af3f8-2df3-4bad-8e32-97922259f423",
+        "pathNodeIds": [
+          "45c2237e-1fba-4d7a-9474-6ab1bc60971e",
+          "ac57c5eb-5e09-41e9-9891-7609062624f6",
+          "db9af3f8-2df3-4bad-8e32-97922259f423"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "db9af3f8-2df3-4bad-8e32-97922259f423"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "3812e4ea75e9c608",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [
+        {
+          "id": "BUG-011",
+          "severity": "minor",
+          "pattern": "deterministic"
+        }
+      ],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-006": {
+      "title": "Out-of-stock product cannot be added to cart",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav3zz01pr01thdod1k8sb",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-20-7b8f2335-f8f5-4a43-95bc-c4c2e176ba7a-c1864360-e355-44e5-8cc3-52b65a6d04e2-dac3539d-97fc-44c4-a244-8795d38eb6a2",
+        "pathNodeIds": [
+          "7b8f2335-f8f5-4a43-95bc-c4c2e176ba7a",
+          "c1864360-e355-44e5-8cc3-52b65a6d04e2",
+          "dac3539d-97fc-44c4-a244-8795d38eb6a2"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "dac3539d-97fc-44c4-a244-8795d38eb6a2"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "efb6318f93b5492a",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "bug",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [
+        {
+          "id": "BUG-003",
+          "severity": "minor",
+          "pattern": "deterministic"
+        }
+      ],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-007": {
+      "title": "Successful order placement",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav40701pw01th3b6sr536",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-19-456092e0-83e3-41fd-a4aa-526bebd8645d-eff2c200-152a-45d7-89ff-7f4823c6f1ec-35e475dc-dbbd-4f0a-bb6a-a445ef0aa5c5",
+        "pathNodeIds": [
+          "456092e0-83e3-41fd-a4aa-526bebd8645d",
+          "eff2c200-152a-45d7-89ff-7f4823c6f1ec",
+          "35e475dc-dbbd-4f0a-bb6a-a445ef0aa5c5"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "35e475dc-dbbd-4f0a-bb6a-a445ef0aa5c5"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "90e641e26f935bfd",
+      "codeRefs": {},
+      "feature": null,
+      "lastStatus": "blocked",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-008": {
+      "title": "Update product quantity in the cart",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav3zx01pq01theve3qo6t",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-18-eaa1d5c1-8a06-456c-807f-5111c7e793fc-a79b14e6-413c-4a30-9266-7b3e191dfc33-4e6cc3a6-e6a0-42f6-8ffe-d7ff9cc59799",
+        "pathNodeIds": [
+          "eaa1d5c1-8a06-456c-807f-5111c7e793fc",
+          "a79b14e6-413c-4a30-9266-7b3e191dfc33",
+          "4e6cc3a6-e6a0-42f6-8ffe-d7ff9cc59799"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "4e6cc3a6-e6a0-42f6-8ffe-d7ff9cc59799"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "17ccae486a56e79a",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-009": {
+      "title": "Checkout is blocked with an empty cart",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav40601pv01thvt1vdg2c",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-17-54d48f46-6daf-4316-a976-dc3a07ebd6d7-9edb5895-2b0b-4c7b-b151-4359fbd3ce6b-4bae45d4-565f-428d-b721-31a78872d2c2",
+        "pathNodeIds": [
+          "54d48f46-6daf-4316-a976-dc3a07ebd6d7",
+          "9edb5895-2b0b-4c7b-b151-4359fbd3ce6b",
+          "4bae45d4-565f-428d-b721-31a78872d2c2"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "4bae45d4-565f-428d-b721-31a78872d2c2"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "dd31978fa1d4a657",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-010": {
+      "title": "Sort products by price ascending",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav3zw01pp01thxk0wr54s",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-16-487f7de1-523d-4e61-a80a-a4e9d6dcf4dc-073e6bdb-7e72-4c80-beac-8f9bf7902e25-1a61dcd6-2cee-4f79-b00f-a68291b457a3",
+        "pathNodeIds": [
+          "487f7de1-523d-4e61-a80a-a4e9d6dcf4dc",
+          "073e6bdb-7e72-4c80-beac-8f9bf7902e25",
+          "1a61dcd6-2cee-4f79-b00f-a68291b457a3"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "1a61dcd6-2cee-4f79-b00f-a68291b457a3"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "30b83de0275f218f",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "bug",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [
+        {
+          "id": "BUG-004",
+          "severity": "minor",
+          "pattern": "deterministic"
+        }
+      ],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-011": {
+      "title": "Filter products by category",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav3zu01po01th4nmtvr8l",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-15-487f7de1-523d-4e61-a80a-a4e9d6dcf4dc-b6e73f54-9139-4e36-9f8c-3f5f1611d44b-e67737a1-b3b8-4ff7-b954-15936c67b18f",
+        "pathNodeIds": [
+          "487f7de1-523d-4e61-a80a-a4e9d6dcf4dc",
+          "b6e73f54-9139-4e36-9f8c-3f5f1611d44b",
+          "e67737a1-b3b8-4ff7-b954-15936c67b18f"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "e67737a1-b3b8-4ff7-b954-15936c67b18f"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "3471943b74765ff8",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "bug",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [
+        {
+          "id": "BUG-005",
+          "severity": "minor",
+          "pattern": "deterministic"
+        }
+      ],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-012": {
+      "title": "Search with no results",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav3zs01pn01thma1i7a3u",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-14-487f7de1-523d-4e61-a80a-a4e9d6dcf4dc-e46332ad-eaa5-4cfb-9d7d-885b8e7c9e05-76a91327-c688-4e51-b05e-2180dc9f5b45",
+        "pathNodeIds": [
+          "487f7de1-523d-4e61-a80a-a4e9d6dcf4dc",
+          "e46332ad-eaa5-4cfb-9d7d-885b8e7c9e05",
+          "76a91327-c688-4e51-b05e-2180dc9f5b45"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "76a91327-c688-4e51-b05e-2180dc9f5b45"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "a97c7a22104200df",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "bug",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [
+        {
+          "id": "BUG-006",
+          "severity": "major",
+          "pattern": "deterministic"
+        }
+      ],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-013": {
+      "title": "Search for an existing product",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav3zr01pm01th1jhhri4c",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-13-487f7de1-523d-4e61-a80a-a4e9d6dcf4dc-927ee3c4-af67-4d49-b0b4-a19085b4f4bc-aab70039-4c56-48c2-96f7-1af53e1962d7",
+        "pathNodeIds": [
+          "487f7de1-523d-4e61-a80a-a4e9d6dcf4dc",
+          "927ee3c4-af67-4d49-b0b4-a19085b4f4bc",
+          "aab70039-4c56-48c2-96f7-1af53e1962d7"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "aab70039-4c56-48c2-96f7-1af53e1962d7"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "e3a2a8adcc9b6ccb",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "bug",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-014": {
+      "title": "Add a product to the cart",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav3zp01pl01thmrcdkc0p",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-12-487f7de1-523d-4e61-a80a-a4e9d6dcf4dc-303709db-1c7c-4f6e-a3ff-32a57d279a1f-5df5b677-b109-4804-b66a-84c03e847ff6",
+        "pathNodeIds": [
+          "487f7de1-523d-4e61-a80a-a4e9d6dcf4dc",
+          "303709db-1c7c-4f6e-a3ff-32a57d279a1f",
+          "5df5b677-b109-4804-b66a-84c03e847ff6"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "5df5b677-b109-4804-b66a-84c03e847ff6"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "691593194465d48b",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-015": {
+      "title": "Prices are displayed in a consistent currency format",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav3zn01pk01thnbi0x1y9",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-11-487f7de1-523d-4e61-a80a-a4e9d6dcf4dc-2d357f3c-4e54-4ef9-9148-ff76db23375a-7641957d-7092-46fc-ad0c-5eeb8666d0c8",
+        "pathNodeIds": [
+          "487f7de1-523d-4e61-a80a-a4e9d6dcf4dc",
+          "2d357f3c-4e54-4ef9-9148-ff76db23375a",
+          "7641957d-7092-46fc-ad0c-5eeb8666d0c8"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "7641957d-7092-46fc-ad0c-5eeb8666d0c8"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "a28e12e86caa3a33",
+      "codeRefs": {},
+      "feature": null,
+      "lastStatus": "skipped",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:28:48.090Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-016": {
+      "title": "Search is case-insensitive",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav3zm01pj01thfwh7jdu5",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-10-487f7de1-523d-4e61-a80a-a4e9d6dcf4dc-d9de19b6-e48f-4d9f-b6f2-bc44cd1b3e21-0344ce30-ae45-4806-89dc-11b0e6b681ab",
+        "pathNodeIds": [
+          "487f7de1-523d-4e61-a80a-a4e9d6dcf4dc",
+          "d9de19b6-e48f-4d9f-b6f2-bc44cd1b3e21",
+          "0344ce30-ae45-4806-89dc-11b0e6b681ab"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "0344ce30-ae45-4806-89dc-11b0e6b681ab"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "978727dd63928026",
+      "codeRefs": {},
+      "feature": null,
+      "lastStatus": "skipped",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:28:48.090Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-017": {
+      "title": "View product details",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav3zk01pi01thx5a0ctwm",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-9-487f7de1-523d-4e61-a80a-a4e9d6dcf4dc-d5f619c3-66e0-4b68-a021-171daa047d89-f8d8f02c-c592-4ad8-a06d-0f2db57c54dd",
+        "pathNodeIds": [
+          "487f7de1-523d-4e61-a80a-a4e9d6dcf4dc",
+          "d5f619c3-66e0-4b68-a021-171daa047d89",
+          "f8d8f02c-c592-4ad8-a06d-0f2db57c54dd"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "f8d8f02c-c592-4ad8-a06d-0f2db57c54dd"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "b31c22e1d47c5b00",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "bug",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [
+        {
+          "id": "BUG-007",
+          "severity": "major",
+          "pattern": "deterministic"
+        }
+      ],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-018": {
+      "title": "Add the same product twice increases quantity",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav3zh01ph01thsd7k0p64",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-8-616d3400-6038-406b-936e-429887806199-d2caff6f-7c81-4b7d-83ba-b4575329a66b-a12318db-7182-43c7-82aa-bfff22509e06",
+        "pathNodeIds": [
+          "616d3400-6038-406b-936e-429887806199",
+          "d2caff6f-7c81-4b7d-83ba-b4575329a66b",
+          "a12318db-7182-43c7-82aa-bfff22509e06"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "a12318db-7182-43c7-82aa-bfff22509e06"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "6ade9fb21a8beef0",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-019": {
+      "title": "Quantity cannot be set below 1",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav3z501pg01th5py3lr6h",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-7-616d3400-6038-406b-936e-429887806199-c25e57ef-2513-4e43-8c41-d476043e09bc-0e7854d8-4606-4e38-b7ed-cd229ac2f4de",
+        "pathNodeIds": [
+          "616d3400-6038-406b-936e-429887806199",
+          "c25e57ef-2513-4e43-8c41-d476043e09bc",
+          "0e7854d8-4606-4e38-b7ed-cd229ac2f4de"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "0e7854d8-4606-4e38-b7ed-cd229ac2f4de"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "6a1a3b0b1fa5b2fe",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "bug",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [
+        {
+          "id": "BUG-010",
+          "severity": "minor",
+          "pattern": "deterministic"
+        }
+      ],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-020": {
+      "title": "Cart persists after page reload",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav40m01q401thiibss4jc",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-6-78a7631a-50bd-4260-956f-01796bed8c13-d874df7b-ca7b-4e1a-8b19-890b431059c5-a84de02a-8123-4c1b-a20f-ffede06a8eb7",
+        "pathNodeIds": [
+          "78a7631a-50bd-4260-956f-01796bed8c13",
+          "d874df7b-ca7b-4e1a-8b19-890b431059c5",
+          "a84de02a-8123-4c1b-a20f-ffede06a8eb7"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "a84de02a-8123-4c1b-a20f-ffede06a8eb7"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "68d1f2e99fdd1c0a",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-021": {
+      "title": "9854092687459867045986",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav40k01q301tht4cgbmor",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-5-d3cb6616-7f7d-4324-9230-6af161bf8690-b1237fa7-32fc-4a91-bcdd-cc4e149ebc9e-be961000-f1b3-4032-91d7-12aa0d1eeebf",
+        "pathNodeIds": [
+          "d3cb6616-7f7d-4324-9230-6af161bf8690",
+          "b1237fa7-32fc-4a91-bcdd-cc4e149ebc9e",
+          "be961000-f1b3-4032-91d7-12aa0d1eeebf"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "be961000-f1b3-4032-91d7-12aa0d1eeebf"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "403f46f38b969d13",
+      "codeRefs": {},
+      "feature": null,
+      "lastStatus": "skipped",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:28:48.090Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-022": {
+      "title": "Checkout form requires all mandatory fields",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav40j01q201thrc4a1dyt",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-4-7d0cde91-fa65-4201-acea-02bc7c07a592-910bc602-b824-4fef-9733-4e7142668e8a-c46163c3-9f80-4e06-baee-8dee843eaf93",
+        "pathNodeIds": [
+          "7d0cde91-fa65-4201-acea-02bc7c07a592",
+          "910bc602-b824-4fef-9733-4e7142668e8a",
+          "c46163c3-9f80-4e06-baee-8dee843eaf93"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "c46163c3-9f80-4e06-baee-8dee843eaf93"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "2e9f1f88d6f648e9",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "bug",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-023": {
+      "title": "Apply an invalid discount code",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav40h01q101th7a0qp1mj",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-3-96f95a7c-eef3-4b16-82e4-452f92f12eba-a2dee198-1679-4771-ad7d-45977989a744-f579e630-5dc2-4a8d-ae2c-565c878442d1",
+        "pathNodeIds": [
+          "96f95a7c-eef3-4b16-82e4-452f92f12eba",
+          "a2dee198-1679-4771-ad7d-45977989a744",
+          "f579e630-5dc2-4a8d-ae2c-565c878442d1"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "f579e630-5dc2-4a8d-ae2c-565c878442d1"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "6bf8adc35f062011",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "bug",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [
+        {
+          "id": "BUG-008",
+          "severity": "major",
+          "pattern": "deterministic"
+        }
+      ],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-024": {
+      "title": "Apply a valid discount code",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav40f01q001th1e5a2rel",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-2-96f95a7c-eef3-4b16-82e4-452f92f12eba-e97a645f-7852-4820-8d44-3f1f2e12409f-bef4fb41-d8d1-402a-85bf-7f6506f999d3",
+        "pathNodeIds": [
+          "96f95a7c-eef3-4b16-82e4-452f92f12eba",
+          "e97a645f-7852-4820-8d44-3f1f2e12409f",
+          "bef4fb41-d8d1-402a-85bf-7f6506f999d3"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "bef4fb41-d8d1-402a-85bf-7f6506f999d3"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "afa953457d3241f5",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "bug",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    },
+    "TC-VOLUME1-025": {
+      "title": "Navigation menu links scroll to the correct section",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwt94tdw01sx01szix8htwm3",
+        "testCaseId": "cmwtav40d01pz01thnf8glmmy",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "scenarioId": "scenario-1-240428d3-69c4-4e13-b34c-83150be0e73c-4fd603b2-0d18-407e-9a82-88f1599e4b67-83ef6cd6-8de4-4fad-b480-77f565bdac36",
+        "pathNodeIds": [
+          "240428d3-69c4-4e13-b34c-83150be0e73c",
+          "4fd603b2-0d18-407e-9a82-88f1599e4b67",
+          "83ef6cd6-8de4-4fad-b480-77f565bdac36"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "83ef6cd6-8de4-4fad-b480-77f565bdac36"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "1ecee1a564de242b",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/volume-1/volume-1.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-133227",
+      "lastRunAt": "2026-11-23T14:29:45.360Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T14:28:48.090Z"
+    }
+  },
+  "repositories": {
+    "this": [
+      "front"
+    ]
+  },
+  "updatedAt": "2026-11-23T14:29:45.360Z"
+}
