@@ -3,7 +3,7 @@
   "version": "0.25.0",
   "layout": "src",
   "createdAt": "2026-11-23T13:40:51.265Z",
-  "updatedAt": "2026-11-23T16:41:18.085Z",
+  "updatedAt": "2026-11-23T17:51:04.077Z",
   "packageManager": "npm",
   "ciProvider": "github-actions",
   "ciFiles": [
@@ -33,6 +33,18 @@
       "inconclusive": 0,
       "iterations": 2,
       "report": "docs/qa-cluster-report.md"
+    },
+    {
+      "runId": "run-20261123-170922",
+      "at": "2026-11-23T17:51:04.077Z",
+      "result": "completed",
+      "commit": "146771f660adc6e54e80286b0b1da039bf032e6d",
+      "cases": 62,
+      "stable": 61,
+      "bugs": 0,
+      "inconclusive": 0,
+      "iterations": 2,
+      "report": "docs/qa-cluster-report.md"
     }
   ],
   "files": {
@@ -47,11 +59,11 @@
     "src/main/entities/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "src/main/fixtures/index.ts": "2509b91c94ac16cc69977a951e54213ef2828f5621e8a4324557daf2fa2f080f",
     "src/main/pages/BasePage.ts": "63f9ae7ac176e9036f19d54afeea64456d262a2b448d1d6f07dcde9d22560545",
-    "src/main/pages/HomePage.ts": "94d12740cc32e60af5adfbbc8495890bc4d379c4c61c7bd6118edbbea8ae4a17",
+    "src/main/pages/HomePage.ts": "b98830bef460f8d4ae375aedc710b15b8de4d54d2d9895fd03d0d6ca100a58d2",
     "src/main/pages/LoginPage.ts": "e5f4a4bdf34a4cc7c9d806eb9b75dfd8527e58a43dbac1c03f4727cddefcfd4c",
     "src/main/reporters/summary-reporter.ts": "341a3c708e1273add66440fa13eab813e1e96b0a102109d57ce46dc15031dfb1",
     "src/main/support/ApiLog.ts": "e617c47238620b30a4de8cb33657d00e291cd96acff19e43c493ad864ff513d1",
-    "src/main/support/ScenarioContext.ts": "346b1066e0f049a8abd629b42e6209b9ab28e783eaac5911fa60cafe8af0fa30",
+    "src/main/support/ScenarioContext.ts": "7bc21dbe73bd90fdcef3c226333e854f938a756c1ab354418fac23472981cfab",
     "src/main/utils/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "src/test/hooks/cleanup.hooks.ts": "bccb069b189d9c45f0e40501ec29f9080c958d7787efa7cba49084ed3de61399",
     "src/test/hooks/known-bugs.hooks.ts": "2ebe0cf6abf32eff5e276589d3a85914ff80a33630b6181c2bb85f2004a4606e",
@@ -59,17 +71,19 @@
     "src/test/steps/common.steps.ts": "f4d8ce5d25ff8d51ab50ca0645c93f3fc7f76e7d57147570592e6cf66bdbfe79",
     "tsconfig.json": "9633511e74ec0869fd1b54ac431a060137163f2f9826a94819195b8bc806ca0e",
     "src/test/resources/features/volume-1/volume-1.feature": "4e56cc1e08877c3f7f13e61117a1a90e47004f930d089afd299f1181e60a8540",
-    "src/test/steps/volume-1.steps.ts": "8572f27421b28ccc52458a3a305197ea7afe1fa3bed9b21577f37436f89ddad5",
-    "src/test/steps/app-header.steps.ts": "35d911394d315f30e4d521fa9d38726126dcda891a71727852cc25e028249674",
-    "src/main/pages/AppHeader.ts": "27ec37fb061bde2535a410f50d3b7983394a365ccd91cc52b6b56bfc2a8b2c03",
+    "src/test/steps/volume-1.steps.ts": "7acfa312f4aed922088bb17eba16f7f33c22494b99a6db175397bc5401d281d7",
+    "src/test/steps/app-header.steps.ts": "5f5165bf0e1cad689196142858266f88f9e375119f3e50b3ad32313a606448e7",
+    "src/main/pages/AppHeader.ts": "c2f0d4e029405872089c55c2a4314874f5e15b79496bfcc72dbfa7863d48e614",
     "src/main/pages/CartDrawer.ts": "10bc22ad6193ed6986bbca38167374439e393af1431248bbe031013aea25f66f",
     "src/main/pages/ProductDetailView.ts": "b0c2874e0bb7a240c7088a323830877b09d3510622d3a75f2c8963400785a705",
     "src/main/data/products.ts": "53aa56460ac44b899859d6f4da1e829cdc0408c47a65aec5a31423dab829206c",
     "src/main/utils/money.ts": "f7fed4d1b53b980d53bc576968ad8868c51186a71ce60199fbae061957577855",
-    "src/main/pages/ReservePartsDrawer.ts": "efbf59b83576f14d643b8c7e33dc728694368ccc81fbf16b311a5fc681f72e47",
-    "src/main/pages/ReservationConfirmation.ts": "26ab42c395b20bfba2f51ab87dcda682ae7807a75110cb9f975507bf1d212663",
-    "src/test/steps/bulk-parts-reservation.steps.ts": "5fca7acd59137cf9c4b84ae1d70c782a1502724ecd20222661304d516829cf67",
-    "src/test/resources/features/bulk-parts-reservation/bulk-parts-reservation.feature": "65ead70e5c425094e405fb2719535f4efaea40bdcf03dd4b8ce24d95305ea020"
+    "src/main/pages/ReservePartsDrawer.ts": "cc17fb36746c13a7cd7026cfeb32b75171bf8b0db4a375c0ff3042dbad2875f8",
+    "src/main/pages/ReservationConfirmation.ts": "aa506c040056fcfbee1514f3cda3190adb9d4f6c3ce77e58eb52ecffe63c5a99",
+    "src/test/steps/bulk-parts-reservation.steps.ts": "de280dff9397677317fdd64bcdbe50a8ba6fc58cc693f3038360b4bfe9387619",
+    "src/test/resources/features/bulk-parts-reservation/bulk-parts-reservation.feature": "65ead70e5c425094e405fb2719535f4efaea40bdcf03dd4b8ce24d95305ea020",
+    "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature": "9f72eec05352abc7ac4fce25af843d1dfba61617ced1f31b1cf34b2cde031d1c",
+    ".qa-cluster/knowledge/observations.md": "4259ded4b4287c5dc2bc7ed92d52d46eb0c57b0f00b112dabe0c6fcb38600979"
   },
   "cases": {
     "TC-VOLUME1-001": {
@@ -244,18 +258,328 @@
       "spec": "src/test/resources/features/bulk-parts-reservation/bulk-parts-reservation.feature",
       "testCaseId": "cmwth1t0p033o01sz7d5b4jmm",
       "status": "stable"
+    },
+    "TC-RESERVEPAR-001": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgum02yh01th5ou0houd",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-002": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipguk02yg01thldgkso9z",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-003": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgui02yf01thvr9kdbjl",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-004": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipguh02ye01th5klfcizy",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-005": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipguf02yd01thyeisn6k1",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-007": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgub02yb01thu060c3iu",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-008": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgu902ya01thly5kt1ji",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-009": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgu802y901thvcmp2wru",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-010": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgu602y801th1dtih10i",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-011": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgu502y701thc8m156m7",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-012": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgu302y601thiq7wrqf5",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-013": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgu202y501th5cbqpfhy",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-014": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgu002y401th5pxfpz89",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-015": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgtz02y301th1nf37kwb",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-016": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgty02y201thv9bx14rm",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-017": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgtw02y101th5gkdjo65",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-018": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgtv02y001the5ysj5y4",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-019": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgtt02xz01thj3rytym7",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-020": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgts02xy01th4v2bbalr",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-021": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgtq02xx01thalmh4l4l",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-022": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgto02xw01thww8r5330",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-023": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgtn02xv01thb959apc9",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-024": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgtl02xu01thcw8igsls",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-025": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgti02xt01thraemhd5k",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-026": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgtg02xs01th9hwsx33l",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-027": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgtf02xr01thkcuzx1iq",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-028": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgtd02xq01thmgmv6gw7",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-029": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgtb02xp01thrtm7zo58",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-030": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgt902xo01theto9dgqj",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-031": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgt802xn01thj4ey53zv",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-032": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgt602xm01thjoluw714",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-033": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgt402xl01thsg90893n",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-034": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgt202xk01thgc58ujm4",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-035": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgt002xj01thhx03zekp",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-036": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgsz02xi01thqdmy3ftt",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-037": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgsx02xh01thy71kti4r",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-038": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgsv02xg01tht9ij5sjk",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-039": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgst02xf01th2zle2fsp",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-040": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgss02xe01th5tiogl3k",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-041": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgsq02xd01thori3gz80",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-042": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgso02xc01th0df93mn4",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-043": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgsn02xb01th14hhx1ks",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-044": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgsl02xa01thqn331fg7",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-045": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgsj02x901thcdimcw0h",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-046": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgsh02x801th7yvuxhgw",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-047": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgsf02x701thb7fau7ad",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-048": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgsd02x601thhdk9hrtc",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-049": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgsb02x501thpk8exa54",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-050": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgs902x401thgoloonsk",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-051": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgs802x301thy7latb5s",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-052": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgs602x201thbsqoo4x8",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-053": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgs402x101th8ai620rf",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-054": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgs202x001thc1ac5j9r",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-055": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgs102wz01thf4e93gmz",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-056": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgrz02wy01thsi0l89nb",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-057": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgrx02wx01th0pksowj3",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-058": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgrv02ww01thjolk3sy8",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-059": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgrt02wv01thn41e57eu",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-060": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgrq02wu01th0o8jk9pv",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-061": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgro02wt01thck0dm6qk",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-062": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgrl02ws01th1uafd4bx",
+      "status": "stable"
+    },
+    "TC-RESERVEPAR-006": {
+      "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "testCaseId": "cmwtipgud02yc01th4t10om4k",
+      "status": "blocked"
     }
   },
   "lastBugNumber": 11,
   "testgraph": {
     "projectId": "cmwmh64un008r01th1gyazrxj",
     "project": "Bench - QA Cluster",
-    "lastRunId": "cmwthnq7302se01thzr9uv7b6"
+    "lastRunId": "cmwtk1r19036t01szoyb0kn8s"
   },
-  "baseCommit": "1ed99876784b0f07e081e3b2806f40314ed1e9cc",
+  "baseCommit": "146771f660adc6e54e80286b0b1da039bf032e6d",
   "finalizedBy": {
     "by": "manifest-finalize",
-    "runId": "run-20261123-161259",
-    "at": "2026-11-23T16:41:18.085Z"
+    "runId": "run-20261123-170922",
+    "at": "2026-11-23T17:51:04.077Z"
   }
 }

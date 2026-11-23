@@ -17,6 +17,10 @@ export interface ContextData {
   stockStatus: string;
   /** The product whose details the scenario opened. */
   viewedProduct: ShopProduct;
+  /** Who made the scenario's reservation and how they pay, for a later reservation "with the same requester". */
+  reservationRequester: { company: string; firstName: string; lastName: string; email: string; payment: string };
+  /** The tracking number of the scenario's first reservation. */
+  firstTrackingNumber: string;
 }
 
 /**

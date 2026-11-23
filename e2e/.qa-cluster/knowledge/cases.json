@@ -1351,6 +1351,2272 @@
       "lastRunAt": "2026-11-23T16:41:30.412Z",
       "bugs": [],
       "firstSeenAt": "2026-11-23T16:40:45.387Z"
+    },
+    "TC-RESERVEPAR-001": {
+      "title": "Payment by credit card is shown in the email",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P1",
+      "tier": "smoke",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgum02yh01th5ou0houd",
+        "scenarioId": "2e98d21c-87d2-431e-b2fb-468f34c349fc::372e108c-7bac-48af-acd1-5176e65c2010",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "adb45777-decd-4e14-b6f6-06fd3d1840df",
+          "372e108c-7bac-48af-acd1-5176e65c2010"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "372e108c-7bac-48af-acd1-5176e65c2010"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "8d35da793686da0e",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-002": {
+      "title": "Payment by bank transfer is shown in the email",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipguk02yg01thldgkso9z",
+        "scenarioId": "67bba767-244e-4a71-b911-2a8433b07288::f66c9dc7-7f5b-461e-8748-cbb6a44a2592",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "7facfe0d-008b-463a-9daa-cf914f447667",
+          "f66c9dc7-7f5b-461e-8748-cbb6a44a2592"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "f66c9dc7-7f5b-461e-8748-cbb6a44a2592"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "6c47e35918d664b8",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-003": {
+      "title": "Payment by check is shown in the email",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgui02yf01thvr9kdbjl",
+        "scenarioId": "178a034f-f14e-4499-bbd4-4ba51850e71c::5cd123a8-2116-481e-b4cd-f89775256af9",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "eb9b1ef0-8d9b-42c3-adab-65d05f5902ef",
+          "5cd123a8-2116-481e-b4cd-f89775256af9"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "5cd123a8-2116-481e-b4cd-f89775256af9"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "49c206d9387f3e82",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-004": {
+      "title": "Names with accents are kept as typed",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipguh02ye01th5klfcizy",
+        "scenarioId": "ae5350ec-a2a4-46d7-b3b4-e9de27f221c7::13ed237d-c908-4937-b166-b1544fe3f236",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "dc200cc1-59b2-488a-9c0b-114b66b11b0a",
+          "13ed237d-c908-4937-b166-b1544fe3f236"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "13ed237d-c908-4937-b166-b1544fe3f236"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "e2c82fb3823f1433",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-005": {
+      "title": "Exactly 1,000 pieces is accepted",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipguf02yd01thyeisn6k1",
+        "scenarioId": "94385dd8-9a42-4e7e-9b73-971abf7876b2::de904178-65e6-49da-b74f-e0fc369a1c40",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "c4112a73-2c63-48ac-ad9b-c7c8666d8956",
+          "de904178-65e6-49da-b74f-e0fc369a1c40"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "de904178-65e6-49da-b74f-e0fc369a1c40"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "f36a7cf05078b448",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-006": {
+      "title": "Make another reservation starts an empty form",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgud02yc01th4t10om4k",
+        "scenarioId": "7c972d53-d278-42d5-9e10-47ef354a7bee::ca367b74-9944-4a39-8882-6353e69db5c5",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "29b57ba5-347e-4493-801b-278dab02003c",
+          "3ea77caa-e8d8-4d39-baef-a7373eb73cab",
+          "ca367b74-9944-4a39-8882-6353e69db5c5"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "ca367b74-9944-4a39-8882-6353e69db5c5"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "bb91b4b8ec91659d",
+      "codeRefs": {},
+      "feature": null,
+      "lastStatus": "blocked",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-007": {
+      "title": "Reopening after a reservation shows an empty form",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgub02yb01thu060c3iu",
+        "scenarioId": "7c972d53-d278-42d5-9e10-47ef354a7bee::02114121-12b8-43f2-9ff9-44bc24155e6b",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "29b57ba5-347e-4493-801b-278dab02003c",
+          "e662f358-df81-40de-9821-dadd5aab42d1",
+          "02114121-12b8-43f2-9ff9-44bc24155e6b"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "02114121-12b8-43f2-9ff9-44bc24155e6b"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "d2023934e096fc80",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-008": {
+      "title": "Reserving parts does not change the cart",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgu902ya01thly5kt1ji",
+        "scenarioId": "7c972d53-d278-42d5-9e10-47ef354a7bee::a74bb08b-cbb2-4c89-8617-853a60f7b6a7",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "29b57ba5-347e-4493-801b-278dab02003c",
+          "2a9ddfd6-7bb9-47dc-8ccd-b0d64f336cfd",
+          "a74bb08b-cbb2-4c89-8617-853a60f7b6a7"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "a74bb08b-cbb2-4c89-8617-853a60f7b6a7"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "e5d2537b5aa648f1",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-009": {
+      "title": "Confirmation says where the email was sent",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgu802y901thvcmp2wru",
+        "scenarioId": "7c972d53-d278-42d5-9e10-47ef354a7bee::480cd4f3-2be0-4186-9a82-01e3825168e3",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "29b57ba5-347e-4493-801b-278dab02003c",
+          "480cd4f3-2be0-4186-9a82-01e3825168e3"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "480cd4f3-2be0-4186-9a82-01e3825168e3"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "2c51e2ab7ea3a0d5",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-010": {
+      "title": "Email is addressed to the requester with the tracking number in the subject",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgu602y801th1dtih10i",
+        "scenarioId": "7c972d53-d278-42d5-9e10-47ef354a7bee::4e697743-6b6d-4d50-acf0-59702ed3755f",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "29b57ba5-347e-4493-801b-278dab02003c",
+          "4e697743-6b6d-4d50-acf0-59702ed3755f"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "4e697743-6b6d-4d50-acf0-59702ed3755f"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "fca8f44c06be868a",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-011": {
+      "title": "Shipment is on hold until the payment is completed",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgu502y701thc8m156m7",
+        "scenarioId": "7c972d53-d278-42d5-9e10-47ef354a7bee::b2f30b37-8f4d-4a3c-9123-4ed8ed98c38c",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "29b57ba5-347e-4493-801b-278dab02003c",
+          "b2f30b37-8f4d-4a3c-9123-4ed8ed98c38c"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "b2f30b37-8f4d-4a3c-9123-4ed8ed98c38c"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "b3637be8fe2ad0fd",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-012": {
+      "title": "New reservation is awaiting payment",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgu302y601thiq7wrqf5",
+        "scenarioId": "7c972d53-d278-42d5-9e10-47ef354a7bee::4e6b8e93-ec15-412e-8a4e-1d09be56b320",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "29b57ba5-347e-4493-801b-278dab02003c",
+          "4e6b8e93-ec15-412e-8a4e-1d09be56b320"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "4e6b8e93-ec15-412e-8a4e-1d09be56b320"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "63c649954ca7c033",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-013": {
+      "title": "Two reservations get different tracking numbers",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgu202y501th5cbqpfhy",
+        "scenarioId": "7c972d53-d278-42d5-9e10-47ef354a7bee::582c94ed-6543-426f-b002-b3c4f658c790",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "29b57ba5-347e-4493-801b-278dab02003c",
+          "d365143f-4416-4900-82f2-2e07fa295283",
+          "582c94ed-6543-426f-b002-b3c4f658c790"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "582c94ed-6543-426f-b002-b3c4f658c790"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "a2a52d25182e06a8",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-014": {
+      "title": "Tracking number has the PWR format",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgu002y401th5pxfpz89",
+        "scenarioId": "7c972d53-d278-42d5-9e10-47ef354a7bee::473a49b9-7f3f-4e3b-addb-9db45e11ad8c",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "29b57ba5-347e-4493-801b-278dab02003c",
+          "473a49b9-7f3f-4e3b-addb-9db45e11ad8c"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "473a49b9-7f3f-4e3b-addb-9db45e11ad8c"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "eca3b44181bbccb5",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-015": {
+      "title": "Reservation confirmation texts are spelled as approved",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgtz02y301th1nf37kwb",
+        "scenarioId": "7c972d53-d278-42d5-9e10-47ef354a7bee::48e7347f-84c8-43d9-8565-f3e0dce59fb3",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "29b57ba5-347e-4493-801b-278dab02003c",
+          "48e7347f-84c8-43d9-8565-f3e0dce59fb3"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "48e7347f-84c8-43d9-8565-f3e0dce59fb3"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "3854adf1abc12f58",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-016": {
+      "title": "Company with HTML is shown as plain text",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgty02y201thv9bx14rm",
+        "scenarioId": "e8946f22-cfab-40b5-82a1-4baccca2d9de::e138be69-43a7-4706-9fdd-98a4f825d5d7",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "0101ccec-a350-4ecd-ac3d-dbf7df3410ac",
+          "e138be69-43a7-4706-9fdd-98a4f825d5d7"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "e138be69-43a7-4706-9fdd-98a4f825d5d7"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "3794462fc2941654",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-017": {
+      "title": "Clearing every quantity returns the totals to zero",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgtw02y101th5gkdjo65",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::ecebe4b6-51f9-4c68-b232-f02f848824ce",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "398235d6-a332-451e-a668-3da6e371ac9d",
+          "6ab615ff-1103-4945-bc41-4e1708caf152",
+          "ecebe4b6-51f9-4c68-b232-f02f848824ce"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "398235d6-a332-451e-a668-3da6e371ac9d"
+        ],
+        "validationNodeIds": [
+          "ecebe4b6-51f9-4c68-b232-f02f848824ce"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "227ecb66ee1df91d",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-018": {
+      "title": "Part set to zero is left out of the email",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgtv02y001the5ysj5y4",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::5c2e170e-0f51-4510-86e2-39c9074e2aad",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "33c4b3f3-c66b-4198-85e4-5b123b3fd90e",
+          "f6fde459-3e49-4305-9694-918ad92cc9af",
+          "c5069f2b-a9c9-4a66-8aa9-dfaeb5fe7c60",
+          "5c2e170e-0f51-4510-86e2-39c9074e2aad"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "33c4b3f3-c66b-4198-85e4-5b123b3fd90e",
+          "f6fde459-3e49-4305-9694-918ad92cc9af"
+        ],
+        "validationNodeIds": [
+          "5c2e170e-0f51-4510-86e2-39c9074e2aad"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "06068e79cc502c49",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-019": {
+      "title": "Clearing a part removes it from the totals and from the email",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgtt02xz01thj3rytym7",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::e6e27605-ee63-4a00-8fe1-e0e515fbb442",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "e6c88d02-5c00-4a1c-ab19-ec6aac9209ed",
+          "0e86b884-9881-4ece-b567-6f3d1a4fe2ea",
+          "471c2a9b-767e-46bb-9cf4-f18ba4263ee8",
+          "e85a22b7-dcac-4035-ac26-8695158aa205",
+          "e6e27605-ee63-4a00-8fe1-e0e515fbb442"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "e6c88d02-5c00-4a1c-ab19-ec6aac9209ed",
+          "471c2a9b-767e-46bb-9cf4-f18ba4263ee8"
+        ],
+        "validationNodeIds": [
+          "e6e27605-ee63-4a00-8fe1-e0e515fbb442"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "3629fb4f5e01c493",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-020": {
+      "title": "Decreasing a quantity below a thousand recalculates the transport cost",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgts02xy01th4v2bbalr",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::6864884f-4732-4e5e-841f-b086ac91351a",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "548f3e94-9398-490b-a92e-863fa895fcb1",
+          "ad91f4af-51ef-4c74-8e84-cd8c12cd387f",
+          "6864884f-4732-4e5e-841f-b086ac91351a"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "548f3e94-9398-490b-a92e-863fa895fcb1"
+        ],
+        "validationNodeIds": [
+          "6864884f-4732-4e5e-841f-b086ac91351a"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "3645e460f72275e0",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-021": {
+      "title": "Increasing a quantity updates the transport cost",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgtq02xx01thalmh4l4l",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::10c3d4b8-88e6-4a8c-a5bf-86482f7999de",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "262ec25d-c471-41f1-ba4a-bc7e9bfa4364",
+          "7fc22592-bdc0-4743-b2d4-a70b80109a28",
+          "10c3d4b8-88e6-4a8c-a5bf-86482f7999de"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "262ec25d-c471-41f1-ba4a-bc7e9bfa4364"
+        ],
+        "validationNodeIds": [
+          "10c3d4b8-88e6-4a8c-a5bf-86482f7999de"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "9a5798c54dbb2d18",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-022": {
+      "title": "Quantities of several parts are added together",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgto02xw01thww8r5330",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::de66a931-2011-45ad-bf1b-8f2d794dfb5f",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "026e174b-e6af-4a3a-a67c-d159bcdb0a82",
+          "de66a931-2011-45ad-bf1b-8f2d794dfb5f"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "026e174b-e6af-4a3a-a67c-d159bcdb0a82"
+        ],
+        "validationNodeIds": [
+          "de66a931-2011-45ad-bf1b-8f2d794dfb5f"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "cfe3ea72f1d45d65",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-023": {
+      "title": "Typing a quantity updates the totals",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgtn02xv01thb959apc9",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::2e966468-3518-45a9-ace3-79647e354268",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "3e1aad6b-dda4-443b-bfa7-5dc792d05f6c",
+          "2e966468-3518-45a9-ace3-79647e354268"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "3e1aad6b-dda4-443b-bfa7-5dc792d05f6c"
+        ],
+        "validationNodeIds": [
+          "2e966468-3518-45a9-ace3-79647e354268"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "dfebbb50f19badce",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-024": {
+      "title": "Focus moves to the close button when the form opens",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgtl02xu01thcw8igsls",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::e9eedb40-295d-4acd-8990-85af9424c8e0",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "e9eedb40-295d-4acd-8990-85af9424c8e0"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "e9eedb40-295d-4acd-8990-85af9424c8e0"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "c60483a7f1d7fdbb",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-025": {
+      "title": "Reservation form closes with the Escape key",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgti02xt01thraemhd5k",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::84114823-1294-43c5-9502-1835b805307a",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "3ba0ce69-3e2f-4652-a76f-ce460f52fa2c",
+          "84114823-1294-43c5-9502-1835b805307a"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "84114823-1294-43c5-9502-1835b805307a"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "0749fd7f78445c52",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-026": {
+      "title": "Reservation form closes when clicking outside it",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgtg02xs01th9hwsx33l",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::61b234c9-d3e9-4510-86e2-f97f464c80fd",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "7f46c86a-79f6-412f-8db8-715028dc840d",
+          "61b234c9-d3e9-4510-86e2-f97f464c80fd"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "61b234c9-d3e9-4510-86e2-f97f464c80fd"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "99608b0384c5c424",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-027": {
+      "title": "Reservation form closes with the close button",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgtf02xr01thkcuzx1iq",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::629daadf-5b87-4de4-b0c2-10095406484c",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "020caa93-4e82-41dd-b44a-dac711217d31",
+          "629daadf-5b87-4de4-b0c2-10095406484c"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "629daadf-5b87-4de4-b0c2-10095406484c"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "cd0c2c85a23a8b2b",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-028": {
+      "title": "Email repeats the totals of the form",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgtd02xq01thmgmv6gw7",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::096602a8-4ce0-4492-8639-72aab6776df1",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "7a234947-cf59-4af3-9020-902337ebbf71",
+          "128f7601-8ef9-4160-8931-a192002c099c",
+          "b37681a1-4606-4d43-bec3-2f0155425b38",
+          "096602a8-4ce0-4492-8639-72aab6776df1"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "7a234947-cf59-4af3-9020-902337ebbf71",
+          "128f7601-8ef9-4160-8931-a192002c099c"
+        ],
+        "validationNodeIds": [
+          "096602a8-4ce0-4492-8639-72aab6776df1"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "8392e98903aca53e",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-029": {
+      "title": "Email lists only the parts with a quantity",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgtb02xp01thrtm7zo58",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::6670d7a0-3956-442e-bb1d-40ef924d8fd3",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "834b6d71-419e-44c9-a1bf-23fbf777a7da",
+          "1e772f1b-8564-4343-b1a6-0f339b8f9753",
+          "d0ce5363-f914-443a-b389-6d0dde59ced0",
+          "6670d7a0-3956-442e-bb1d-40ef924d8fd3"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "834b6d71-419e-44c9-a1bf-23fbf777a7da",
+          "1e772f1b-8564-4343-b1a6-0f339b8f9753"
+        ],
+        "validationNodeIds": [
+          "6670d7a0-3956-442e-bb1d-40ef924d8fd3"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "057d0cd69ab2d433",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-030": {
+      "title": "Empty quantity fields count as zero",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgt902xo01theto9dgqj",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::d9d03be7-8090-40b2-b65f-36473d4535bb",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "82f1e913-8aa2-4a56-bcca-f7277d4609bd",
+          "d9d03be7-8090-40b2-b65f-36473d4535bb"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "82f1e913-8aa2-4a56-bcca-f7277d4609bd"
+        ],
+        "validationNodeIds": [
+          "d9d03be7-8090-40b2-b65f-36473d4535bb"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "37ada4ca51ebcc91",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-031": {
+      "title": "Quantity with leading zeros is read as a number",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgt802xn01thj4ey53zv",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::ff297f9b-fcd4-47af-a613-aa6c359cb236",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "66a0ab11-7d63-4c57-bca6-9c3f6a88db5c",
+          "ff297f9b-fcd4-47af-a613-aa6c359cb236"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "66a0ab11-7d63-4c57-bca6-9c3f6a88db5c"
+        ],
+        "validationNodeIds": [
+          "ff297f9b-fcd4-47af-a613-aa6c359cb236"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "f6482502185137c3",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-032": {
+      "title": "One million pieces are formatted with thousands separators",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgt602xm01thjoluw714",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::da57b698-db01-4fdc-809e-6eb4fa71eac4",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "7d6a4e9d-90d2-4a76-9adc-483cf935193b",
+          "da57b698-db01-4fdc-809e-6eb4fa71eac4"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "7d6a4e9d-90d2-4a76-9adc-483cf935193b"
+        ],
+        "validationNodeIds": [
+          "da57b698-db01-4fdc-809e-6eb4fa71eac4"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "54ee37b35cc0163e",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-033": {
+      "title": "1,000 pieces reached by combining two parts is accepted",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgt402xl01thsg90893n",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::dd2912d4-9ec5-436a-b9c4-a77d07f80fae",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "d4e26ea0-d6c5-4f6d-a2aa-2fc00faf4335",
+          "70985a84-c72d-4e63-ace8-a8057865e49f",
+          "f2819b9f-6bcd-421b-afdd-e18947ce2066",
+          "dd2912d4-9ec5-436a-b9c4-a77d07f80fae"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "d4e26ea0-d6c5-4f6d-a2aa-2fc00faf4335",
+          "70985a84-c72d-4e63-ace8-a8057865e49f"
+        ],
+        "validationNodeIds": [
+          "dd2912d4-9ec5-436a-b9c4-a77d07f80fae"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "ee1c59f09ee7567c",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-034": {
+      "title": "Transport for 2,001 pieces is 135 dollars",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgt202xk01thgc58ujm4",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::b76e64db-1bc4-4331-bd7a-8f28a428ad12",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "0a32c15c-bc5d-42a1-94bd-602a3fb42439",
+          "b76e64db-1bc4-4331-bd7a-8f28a428ad12"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "0a32c15c-bc5d-42a1-94bd-602a3fb42439"
+        ],
+        "validationNodeIds": [
+          "b76e64db-1bc4-4331-bd7a-8f28a428ad12"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "9a3145bcbb71df9a",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-035": {
+      "title": "Transport for 2,000 pieces is 90 dollars",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgt002xj01thhx03zekp",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::72847243-0c22-4d88-919b-03cd767c95ff",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "147a1c37-248c-4b37-a020-56afd69b51b5",
+          "72847243-0c22-4d88-919b-03cd767c95ff"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "147a1c37-248c-4b37-a020-56afd69b51b5"
+        ],
+        "validationNodeIds": [
+          "72847243-0c22-4d88-919b-03cd767c95ff"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "5c5e9fc551b36bf0",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-036": {
+      "title": "Transport for 1,001 pieces is 90 dollars",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgsz02xi01thqdmy3ftt",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::d4e3498e-d617-454b-9991-769992c84ab4",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "7f6beb22-c6e6-4bf9-9a52-6b57427a5d15",
+          "d4e3498e-d617-454b-9991-769992c84ab4"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "7f6beb22-c6e6-4bf9-9a52-6b57427a5d15"
+        ],
+        "validationNodeIds": [
+          "d4e3498e-d617-454b-9991-769992c84ab4"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "619286f50b74a305",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-037": {
+      "title": "Transport for 1,000 pieces is 45 dollars",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgsx02xh01thy71kti4r",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::d3c1fb56-6c77-4dfb-9527-4d2e06ecabad",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "adda4329-38ad-4444-8df0-ea7583fdb27d",
+          "d3c1fb56-6c77-4dfb-9527-4d2e06ecabad"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "adda4329-38ad-4444-8df0-ea7583fdb27d"
+        ],
+        "validationNodeIds": [
+          "d3c1fb56-6c77-4dfb-9527-4d2e06ecabad"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "8797e34dad04fdf2",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-038": {
+      "title": "999 pieces is rejected",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgsv02xg01tht9ij5sjk",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::db6386bd-4061-40d3-b124-5ced730915d8",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "43cfc754-40d6-4b10-9718-d5082927caed",
+          "cee598b5-33bd-4b12-89de-546340a52201",
+          "242470d3-d644-40cd-9938-b69da303a289",
+          "db6386bd-4061-40d3-b124-5ced730915d8"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "43cfc754-40d6-4b10-9718-d5082927caed",
+          "cee598b5-33bd-4b12-89de-546340a52201"
+        ],
+        "validationNodeIds": [
+          "db6386bd-4061-40d3-b124-5ced730915d8"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "76ecb2c0a2078efd",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-039": {
+      "title": "Reservation is submitted with the Enter key",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgst02xf01th2zle2fsp",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::5913c752-9506-4d40-b2be-183bba05d1d4",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "2b53f985-f4ff-4703-8c04-357f909482b5",
+          "f008d249-6caf-41d5-853e-3755928ea539",
+          "3649e033-c3ae-40a0-a1e9-1f8ae84c4464",
+          "5913c752-9506-4d40-b2be-183bba05d1d4"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "2b53f985-f4ff-4703-8c04-357f909482b5",
+          "f008d249-6caf-41d5-853e-3755928ea539"
+        ],
+        "validationNodeIds": [
+          "5913c752-9506-4d40-b2be-183bba05d1d4"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "1fe1245c616e8853",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-040": {
+      "title": "Email with a one-letter domain ending is rejected",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgss02xe01th5tiogl3k",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::dbb6c877-f2d6-4904-9fea-7e5962c6d436",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "2b53f985-f4ff-4703-8c04-357f909482b5",
+          "a21d1851-ba33-46b3-b452-0e4ff8cfd1ff",
+          "b23f6af3-385f-4715-b843-75d4b1587e4c",
+          "dbb6c877-f2d6-4904-9fea-7e5962c6d436"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "2b53f985-f4ff-4703-8c04-357f909482b5",
+          "a21d1851-ba33-46b3-b452-0e4ff8cfd1ff"
+        ],
+        "validationNodeIds": [
+          "dbb6c877-f2d6-4904-9fea-7e5962c6d436"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "3d08227fde836951",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-041": {
+      "title": "Last name is required",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgsq02xd01thori3gz80",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::f9927501-975e-426c-926d-ff54a5dafcbd",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "2b53f985-f4ff-4703-8c04-357f909482b5",
+          "34ad0de8-ad5e-4a78-90fa-65ca2520dffa",
+          "c3edd343-4ab4-40ec-ab41-5bbef2afa6d1",
+          "f9927501-975e-426c-926d-ff54a5dafcbd"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "2b53f985-f4ff-4703-8c04-357f909482b5",
+          "34ad0de8-ad5e-4a78-90fa-65ca2520dffa"
+        ],
+        "validationNodeIds": [
+          "f9927501-975e-426c-926d-ff54a5dafcbd"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "a2941f7153ddb039",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-042": {
+      "title": "First name is required",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgso02xc01th0df93mn4",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::b63cb0ee-930e-4c5a-8e13-4bd370df6f1a",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "2b53f985-f4ff-4703-8c04-357f909482b5",
+          "4be62103-6382-4624-920b-3a91ac5b0349",
+          "028ba253-a656-4357-8984-a7df14b828b4",
+          "b63cb0ee-930e-4c5a-8e13-4bd370df6f1a"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "2b53f985-f4ff-4703-8c04-357f909482b5",
+          "4be62103-6382-4624-920b-3a91ac5b0349"
+        ],
+        "validationNodeIds": [
+          "b63cb0ee-930e-4c5a-8e13-4bd370df6f1a"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "7424a8c233a6c425",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-043": {
+      "title": "Company is required",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgsn02xb01th14hhx1ks",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::ed34b67f-9c4a-4bf0-9865-dca195fc8607",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "2b53f985-f4ff-4703-8c04-357f909482b5",
+          "d80fc768-9a25-4cea-a7a8-ea47e138ab0f",
+          "33770e0d-e263-4f1f-953c-07636aaf3d3a",
+          "ed34b67f-9c4a-4bf0-9865-dca195fc8607"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "2b53f985-f4ff-4703-8c04-357f909482b5",
+          "d80fc768-9a25-4cea-a7a8-ea47e138ab0f"
+        ],
+        "validationNodeIds": [
+          "ed34b67f-9c4a-4bf0-9865-dca195fc8607"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "eab8a988269b967e",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-044": {
+      "title": "Company with only spaces is treated as empty",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgsl02xa01thqn331fg7",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::491138a3-1a85-448f-943a-14f5b42745e0",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "2b53f985-f4ff-4703-8c04-357f909482b5",
+          "ad0a6639-cebd-4bf4-9f32-d26ed613cd44",
+          "2c492829-9ab6-4f7e-a006-a7b005afad7a",
+          "491138a3-1a85-448f-943a-14f5b42745e0"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "2b53f985-f4ff-4703-8c04-357f909482b5",
+          "ad0a6639-cebd-4bf4-9f32-d26ed613cd44"
+        ],
+        "validationNodeIds": [
+          "491138a3-1a85-448f-943a-14f5b42745e0"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "a1a330b75f435adf",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-045": {
+      "title": "Payment method is required",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgsj02x901thcdimcw0h",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::80565b82-0c28-401d-852c-569923e4ec4c",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "2b53f985-f4ff-4703-8c04-357f909482b5",
+          "fac7a944-8131-4c67-8b87-a0b1b1e85fc7",
+          "2bc59fa3-d83e-428e-b38e-997661130e04",
+          "80565b82-0c28-401d-852c-569923e4ec4c"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "2b53f985-f4ff-4703-8c04-357f909482b5",
+          "fac7a944-8131-4c67-8b87-a0b1b1e85fc7"
+        ],
+        "validationNodeIds": [
+          "80565b82-0c28-401d-852c-569923e4ec4c"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "6f7c2092fa418992",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-046": {
+      "title": "Email without a full domain is rejected",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgsh02x801th7yvuxhgw",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::311ae4ed-6ab5-46cf-8d3a-cba3101aeda1",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "2b53f985-f4ff-4703-8c04-357f909482b5",
+          "149d1361-a012-4181-bbd7-fe2df148dd6b",
+          "4cc54b82-7909-480d-85df-79bb144329d6",
+          "311ae4ed-6ab5-46cf-8d3a-cba3101aeda1"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "2b53f985-f4ff-4703-8c04-357f909482b5",
+          "149d1361-a012-4181-bbd7-fe2df148dd6b"
+        ],
+        "validationNodeIds": [
+          "311ae4ed-6ab5-46cf-8d3a-cba3101aeda1"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "d70a0ad7ca5c0476",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-047": {
+      "title": "Email is required",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgsf02x701thb7fau7ad",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::f89fe7aa-d715-49be-97af-e8ea00c8195f",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "2b53f985-f4ff-4703-8c04-357f909482b5",
+          "4e26f643-ebb2-4335-912f-1b02137d88ae",
+          "a4aefebe-9a53-45ef-9116-d497d3ffef36",
+          "f89fe7aa-d715-49be-97af-e8ea00c8195f"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "2b53f985-f4ff-4703-8c04-357f909482b5",
+          "4e26f643-ebb2-4335-912f-1b02137d88ae"
+        ],
+        "validationNodeIds": [
+          "f89fe7aa-d715-49be-97af-e8ea00c8195f"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "a46eda63702d1f30",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-048": {
+      "title": "Decimal quantity is rejected",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgsd02x601thhdk9hrtc",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::0f607a32-2338-415a-9180-309a9fd1330a",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "8ad74274-9bec-4fe0-a081-317cedaae686",
+          "cf242d5f-e942-4242-83d7-c71f6cc5bb88",
+          "98ac2857-54b8-4d61-a209-a86a462590cb",
+          "0f607a32-2338-415a-9180-309a9fd1330a"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "8ad74274-9bec-4fe0-a081-317cedaae686",
+          "cf242d5f-e942-4242-83d7-c71f6cc5bb88"
+        ],
+        "validationNodeIds": [
+          "0f607a32-2338-415a-9180-309a9fd1330a"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "2ca19f1fba25b4fe",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-049": {
+      "title": "Negative quantity is rejected",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgsb02x501thpk8exa54",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::12f70382-3dfa-4490-b205-0e52c73cf51d",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "dae9b291-9ec8-4e71-bb36-fe51c3b2be49",
+          "71e16aac-d4e0-48e9-aa54-3603a0b1a086",
+          "6d84ada9-2247-415a-a426-b43422e7561b",
+          "12f70382-3dfa-4490-b205-0e52c73cf51d"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "dae9b291-9ec8-4e71-bb36-fe51c3b2be49",
+          "71e16aac-d4e0-48e9-aa54-3603a0b1a086"
+        ],
+        "validationNodeIds": [
+          "12f70382-3dfa-4490-b205-0e52c73cf51d"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "cd9c3f88e94de6f9",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-050": {
+      "title": "Reservation of 900 pieces is rejected below the minimum",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgs902x401thgoloonsk",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::82eaff5a-df32-4891-aef3-fc9d68f8a894",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "153f3221-79b0-4604-8aa2-e3d2f60ce1f1",
+          "edd184c8-26e7-4a4b-8250-566ec653e9cd",
+          "b1022e84-46ca-4931-bb1c-988afec05e49",
+          "82eaff5a-df32-4891-aef3-fc9d68f8a894"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "153f3221-79b0-4604-8aa2-e3d2f60ce1f1",
+          "edd184c8-26e7-4a4b-8250-566ec653e9cd"
+        ],
+        "validationNodeIds": [
+          "82eaff5a-df32-4891-aef3-fc9d68f8a894"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "65293ca4f5bc18b9",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-051": {
+      "title": "Empty reservation shows every error at once",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgs802x301thy7latb5s",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::40901920-6744-43e9-bd92-e3e78d809ec4",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "fe5d57ae-4919-4033-b209-c631a720746a",
+          "40901920-6744-43e9-bd92-e3e78d809ec4"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "40901920-6744-43e9-bd92-e3e78d809ec4"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "f5a1f6f3977e4c05",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-052": {
+      "title": "Reservation form lists a quantity field for each part",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgs602x201thbsqoo4x8",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::8fc40225-b5ea-47a8-9108-eba8cc2f591a",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "8fc40225-b5ea-47a8-9108-eba8cc2f591a"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "8fc40225-b5ea-47a8-9108-eba8cc2f591a"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "834bdef1debdf7c7",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-053": {
+      "title": "Reservation form shows its title and the rules hint",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgs402x101th8ai620rf",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::1f9f3aa4-c05d-484d-83fa-b0133f21d5bb",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "1f9f3aa4-c05d-484d-83fa-b0133f21d5bb"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "1f9f3aa4-c05d-484d-83fa-b0133f21d5bb"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "5c9ce03de89f995b",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-054": {
+      "title": "Reservation error messages are spelled as approved",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgs202x001thc1ac5j9r",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::453acb2f-b31f-4871-826f-64df5206a107",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "36f4dd35-7c50-4b5e-a7b3-51d5d26e1b1e",
+          "453acb2f-b31f-4871-826f-64df5206a107"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "453acb2f-b31f-4871-826f-64df5206a107"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "7d0cd98eeb294a50",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-055": {
+      "title": "Reservation form section titles are spelled as approved",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgs102wz01thf4e93gmz",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::7b26973f-a1a2-447c-b4c5-a5327b8a4875",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "7b26973f-a1a2-447c-b4c5-a5327b8a4875"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "7b26973f-a1a2-447c-b4c5-a5327b8a4875"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "9159f007f091d8f3",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-056": {
+      "title": "Payment note and Reserve submit button are displayed",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgrz02wy01thsi0l89nb",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::6cab60ac-8e30-4bd8-ba17-c1214a74e10c",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "6cab60ac-8e30-4bd8-ba17-c1214a74e10c"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "6cab60ac-8e30-4bd8-ba17-c1214a74e10c"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "3f6e8854038ef8ec",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-057": {
+      "title": "Reservation totals start at zero",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgrx02wx01th0pksowj3",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::31e57696-47d2-463e-b6e7-d7ab2cc8cb8e",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "31e57696-47d2-463e-b6e7-d7ab2cc8cb8e"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "31e57696-47d2-463e-b6e7-d7ab2cc8cb8e"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "e6c869c360a81f14",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-058": {
+      "title": "Payment methods are displayed with none selected",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgrv02ww01thjolk3sy8",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::b06eff5b-7ec9-4a38-907e-12d809deea8c",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "b06eff5b-7ec9-4a38-907e-12d809deea8c"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "b06eff5b-7ec9-4a38-907e-12d809deea8c"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "53abe78f8cf03e5d",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-059": {
+      "title": "Requester fields are displayed with their labels",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgrt02wv01thn41e57eu",
+        "scenarioId": "4f8175d9-e7f9-40e7-9d9e-a7f15c4d2690::c4207dff-23c0-4bde-9e58-6996ab9f2587",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "8f8fd856-40fc-4a67-b3c8-fddd872cf1e3",
+          "c4207dff-23c0-4bde-9e58-6996ab9f2587"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "c4207dff-23c0-4bde-9e58-6996ab9f2587"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "ca269a419f4eeccb",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-060": {
+      "title": "Reservation form fits a 375px wide screen",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgrq02wu01th0o8jk9pv",
+        "scenarioId": "27070d30-ba5b-4fd8-a4fa-39341352946b::b9684f47-183e-4ce1-a1ba-879a357a13d4",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "d0bfe3ec-1958-46a2-b5da-b3c7e93be7f8",
+          "3523956b-deb0-4a4f-81ab-592afa9e0bf0",
+          "b9684f47-183e-4ce1-a1ba-879a357a13d4"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "b9684f47-183e-4ce1-a1ba-879a357a13d4"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "2dbf80cae1eedee3",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-061": {
+      "title": "Reserve button shows only its icon on a 375px wide screen",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgro02wt01thck0dm6qk",
+        "scenarioId": "27070d30-ba5b-4fd8-a4fa-39341352946b::3dd1f77c-6093-4011-8e0a-49645b4a343d",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "d0bfe3ec-1958-46a2-b5da-b3c7e93be7f8",
+          "3dd1f77c-6093-4011-8e0a-49645b4a343d"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "3dd1f77c-6093-4011-8e0a-49645b4a343d"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "0f8aaade297482e5",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-RESERVEPAR-062": {
+      "title": "Reserve button is shown next to the Cart button",
+      "flow": "reserve-parts-manual-cases",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwtipbow02wr01th56kxtrzq",
+        "testCaseId": "cmwtipgrl02ws01th1uafd4bx",
+        "scenarioId": "eb998cdb-87f1-4893-acc8-ecf0d717e105::530cf6a4-7594-4f11-87d1-4ee4de63be0b",
+        "feature": "Reserve parts manual cases",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "f5e89a1d-0d61-4048-a892-d9a2b6e6d759",
+          "b17c8f24-e04d-45a7-bbed-95a069b0c229",
+          "530cf6a4-7594-4f11-87d1-4ee4de63be0b"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "530cf6a4-7594-4f11-87d1-4ee4de63be0b"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "a72ec907364b7983",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-170922",
+      "lastRunAt": "2026-11-23T17:51:12.867Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T17:51:12.867Z"
     }
   },
   "repositories": {
@@ -1358,5 +3624,5 @@
       "front"
     ]
   },
-  "updatedAt": "2026-11-23T16:41:30.412Z"
+  "updatedAt": "2026-11-23T17:51:12.867Z"
 }

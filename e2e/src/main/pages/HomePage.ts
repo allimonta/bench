@@ -65,6 +65,12 @@ export class HomePage extends BasePage {
     await expect(this.shopSection).toBeInViewport();
   }
 
+  /** Opens the shop on a viewport of the given width (812 px high, a phone's, as the explorer measured it). */
+  async openOnViewport(width: number): Promise<void> {
+    await this.page.setViewportSize({ width, height: 812 });
+    await this.goto();
+  }
+
   async reload(): Promise<void> {
     await this.page.reload();
     await this.expectLoaded();

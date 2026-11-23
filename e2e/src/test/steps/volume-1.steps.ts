@@ -318,3 +318,13 @@ Then('an error message is displayed for each missing field', async ({ cartDrawer
     required,
   );
 });
+
+// ---- Shop page (reserve-parts-manual-cases) ----
+
+When('the user is on the Partwerk shop page', async ({ homePage }) => {
+  await homePage.goto();
+});
+
+When('the user opens the page on a {int}px wide viewport', async ({ homePage }, width: number) => {
+  await homePage.openOnViewport(width);
+});

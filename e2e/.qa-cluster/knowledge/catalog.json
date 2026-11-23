@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T16:41:30.604Z",
+  "updatedAt": "2026-11-23T17:51:12.889Z",
   "fixtures": [
     "ctx",
     "api",
@@ -21,6 +21,11 @@
       "methods": [
         "clickNavLink",
         "clickButton",
+        "expectLoaded",
+        "openReserve",
+        "buttonLabelSize",
+        "horizontalOverflow",
+        "buttonsSideBySide",
         "openCart",
         "cartCountValue"
       ],
@@ -62,6 +67,7 @@
         "expectLoaded",
         "title",
         "openShopSection",
+        "openOnViewport",
         "reload",
         "productInfo",
         "addToCart",
@@ -104,6 +110,10 @@
         "ReservationConfirmation"
       ],
       "methods": [
+        "expectLoaded",
+        "trackingNumberText",
+        "makeAnotherReservation",
+        "close",
         "clickButton"
       ],
       "routes": []
@@ -114,6 +124,18 @@
         "ReservePartsDrawer"
       ],
       "methods": [
+        "expectSettled",
+        "clearQuantity",
+        "clearAllQuantities",
+        "fillRequester",
+        "submit",
+        "pressEnterInEmail",
+        "pressEscape",
+        "clickOutside",
+        "close",
+        "enteredValues",
+        "horizontalOverflow",
+        "nameFieldsStacked",
         "expectLoaded",
         "enterQuantity",
         "enterCompany",
@@ -163,6 +185,56 @@
     {
       "keyword": "When",
       "pattern": "the user clicks the header {string} button",
+      "file": "src/test/steps/app-header.steps.ts",
+      "pages": [
+        "AppHeader"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user opens the reservation form",
+      "file": "src/test/steps/app-header.steps.ts",
+      "pages": [
+        "AppHeader",
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user opens the reservation form on the small screen",
+      "file": "src/test/steps/app-header.steps.ts",
+      "pages": [
+        "AppHeader",
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user looks at the page header",
+      "file": "src/test/steps/app-header.steps.ts",
+      "pages": [
+        "AppHeader"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the cart counter still shows {string}",
+      "file": "src/test/steps/app-header.steps.ts",
+      "pages": [
+        "AppHeader"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the {string} button shows its icon without the label and the header has no horizontal scroll",
+      "file": "src/test/steps/app-header.steps.ts",
+      "pages": [
+        "AppHeader"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "a {string} button is displayed next to the {string} button",
       "file": "src/test/steps/app-header.steps.ts",
       "pages": [
         "AppHeader"
@@ -336,6 +408,466 @@
     {
       "keyword": "Then",
       "pattern": "the email sent shows the payment method {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user reserves {int} {string} as {string} {string} of {string} with email {string} paying by {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "AppHeader",
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user enters {word} {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user enters {word} {string} and {word} {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user enters {word} {string}, {word} {string} and {word} {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user enters {word} {string} and leaves every other part empty",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user clears every quantity",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user clears the {string} quantity",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user changes the {string} quantity to {int}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user fills the requester {string}, {string}, {string}, {string} and the payment {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user fills the requester {string}, {string}, {string}, {string} and no payment method",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user submits the reservation",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user submits the reservation with no field filled",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user submits the reservation with every field empty",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user presses Enter in the email field",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user presses Escape",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user clicks outside the reservation form",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user clicks the close button of the reservation form",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "{string} shows {string} and {string} shows {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "{string} shows {string} and {string} shows {string} after clearing",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "{string} shows {string} and {string} shows {string} for the three parts",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "{string} shows {string} for the quantity with leading zeros",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the keyboard focus is on the close button of the reservation form",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation form is hidden after Escape",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation form is hidden after the outside click",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation form is hidden",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the error {string} is displayed",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the error {string} is displayed for the one-letter domain",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the error {string} is displayed for the blank company",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the error {string} is displayed for the decimal quantity",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "{int} error messages are displayed",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the error messages read exactly {string}, {string}, {string}, {string}, {string} and {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "a quantity field is displayed for {string}, {string}, {string}, {string}, {string}, {string}, {string} and {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the title {string} and the hint {string} are displayed",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the section titles read exactly {string}, {string} and {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the note {string} and the {string} submit button are displayed",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the payment options {string}, {string} and {string} are displayed and none is selected",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the fields {string}, {string}, {string} and {string} are displayed",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "an empty reservation form is displayed",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation form has no horizontal scroll and the name fields are stacked",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user closes the reservation form",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user closes the reservation form and opens it again",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation",
+        "AppHeader",
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user makes another reservation of {int} {string} with the same requester",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation",
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the email sent shows the requester {string} and the company {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation is confirmed with a tracking number",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation is confirmed after pressing Enter",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation of {word} combined pieces is confirmed",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the confirmation says {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the email sent is to {string} with the subject {string} followed by the tracking number",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation status is {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the second tracking number is different from the first",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the tracking number is {string} followed by {int} uppercase letters or digits",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the confirmation reads {string}, {string}, {string} and the email section reads {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the email sent shows the company as the literal text {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the email sent does not list {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the email sent lists only {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the email sent lists {string} and {string} and no other part",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the email sent shows total pieces {string} and transport cost {string}",
       "file": "src/test/steps/bulk-parts-reservation.steps.ts",
       "pages": [
         "ReservationConfirmation"
@@ -761,6 +1293,22 @@
       "file": "src/test/steps/volume-1.steps.ts",
       "pages": [
         "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user is on the Partwerk shop page",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user opens the page on a {int}px wide viewport",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
       ]
     }
   ]
