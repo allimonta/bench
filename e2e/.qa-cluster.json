@@ -3,7 +3,7 @@
   "version": "0.29.0",
   "layout": "src",
   "createdAt": "2026-11-23T13:40:51.265Z",
-  "updatedAt": "2026-11-24T13:14:30.147Z",
+  "updatedAt": "2026-11-24T14:02:31.338Z",
   "packageManager": "npm",
   "ciProvider": "github-actions",
   "ciFiles": [
@@ -81,6 +81,18 @@
       "inconclusive": 0,
       "iterations": 2,
       "report": "docs/qa-cluster-report.md"
+    },
+    {
+      "runId": "run-20261124-133452",
+      "at": "2026-11-24T14:02:31.338Z",
+      "result": "completed",
+      "commit": "ed6e198161c2fcedc9848b9696e27e9ff136509c",
+      "cases": 6,
+      "stable": 6,
+      "bugs": 0,
+      "inconclusive": 0,
+      "iterations": 2,
+      "report": "docs/qa-cluster-report.md"
     }
   ],
   "files": {
@@ -121,10 +133,12 @@
     "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature": "9f72eec05352abc7ac4fce25af843d1dfba61617ced1f31b1cf34b2cde031d1c",
     ".qa-cluster/knowledge/observations.md": "4259ded4b4287c5dc2bc7ed92d52d46eb0c57b0f00b112dabe0c6fcb38600979",
     "src/test/resources/features/volume-1/volume-1-empty-cart-illustration.feature": "5950f4235f443e25a78ab98f64aa89a4ff09c05a0e6849fd25e7d43107490ea9",
-    "src/main/pages/FindReservationDrawer.ts": "fe59e989d424525a3ccc11cb47f57b184ad6205bec70f0091c8ecb460975edaf",
+    "src/main/pages/FindReservationDrawer.ts": "b495e6b1b6674739db96fa326508a353777e1bfb889107972db263e1e09ccfa8",
     "src/test/steps/weird-names.steps.ts": "46cb3c054fe97550fc52c0913fe0df7419e4ec2d639eafee27e0ce74f230b8a2",
     "src/test/resources/features/weird-names/weird-names.feature": "e90564cb23beaec16ad68fc5a10569863e400092a0c1d6be3769a48dd5beba77",
-    "src/test/resources/features/find-a-reservation/find-a-reservation.feature": "c2776bb4bad4669e674b0c508eb60f74822e51c5cf3009693281c902202aa024"
+    "src/test/resources/features/find-a-reservation/find-a-reservation.feature": "c2776bb4bad4669e674b0c508eb60f74822e51c5cf3009693281c902202aa024",
+    "src/test/resources/features/find-a-reservation/find-a-reservation-search-variants.feature": "db831df619b4f8e33570366a6aa222d2a839989ccd0edb4f51c2f43d84f26c45",
+    "src/test/steps/local-find.steps.ts": "6c50d80b5f44a6817c0a1a102a5551a78c75b82d666dc69df3edf6c18a31e0f8"
   },
   "cases": {
     "TC-VOLUME1-001": {
@@ -769,20 +783,50 @@
       "spec": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
       "testCaseId": "cmwupc03p002j01sivqdc465u",
       "status": "stable"
+    },
+    "TC-FINDARESER-009": {
+      "spec": "src/test/resources/features/find-a-reservation/find-a-reservation-search-variants.feature",
+      "testCaseId": "cmwuqs8zt003f01sit39rbas9",
+      "status": "stable"
+    },
+    "TC-FINDARESER-010": {
+      "spec": "src/test/resources/features/find-a-reservation/find-a-reservation-search-variants.feature",
+      "testCaseId": "cmwuqs9ac008u01tumi1prxrb",
+      "status": "stable"
+    },
+    "TC-FINDARESER-011": {
+      "spec": "src/test/resources/features/find-a-reservation/find-a-reservation-search-variants.feature",
+      "testCaseId": "cmwuqs9jr003g01sih53ua0xy",
+      "status": "stable"
+    },
+    "TC-FINDARESER-012": {
+      "spec": "src/test/resources/features/find-a-reservation/find-a-reservation-search-variants.feature",
+      "testCaseId": "cmwuqs9sw008v01tu6ks17m77",
+      "status": "stable"
+    },
+    "TC-FINDARESER-013": {
+      "spec": "src/test/resources/features/find-a-reservation/find-a-reservation-search-variants.feature",
+      "testCaseId": "cmwuqsa22003h01siqyvtahek",
+      "status": "stable"
+    },
+    "TC-FINDARESER-014": {
+      "spec": "src/test/resources/features/find-a-reservation/find-a-reservation-search-variants.feature",
+      "testCaseId": "cmwuqsab2008w01tukqulo7fx",
+      "status": "stable"
     }
   },
   "lastBugNumber": 11,
   "testgraph": {
     "projectId": "cmwmh64un008r01th1gyazrxj",
     "project": "Bench - QA Cluster",
-    "lastRunId": "cmwuprksb005s01tu2pi7sj2k",
+    "lastRunId": "cmwurhqr2003w01sipszvubit",
     "url": "https://testgraph.internal.qubika.com/projects/cmwmh64un008r01th1gyazrxj"
   },
-  "baseCommit": "826575751dcc5f2ac7bf8a992a54b0c84e6965b2",
+  "baseCommit": "ed6e198161c2fcedc9848b9696e27e9ff136509c",
   "finalizedBy": {
     "by": "manifest-finalize",
-    "runId": "run-20261124-125247",
-    "at": "2026-11-24T13:14:30.147Z"
+    "runId": "run-20261124-133452",
+    "at": "2026-11-24T14:02:31.338Z"
   },
   "shapes": {
     "src/test/steps/volume-1.steps.ts": {
@@ -806,8 +850,8 @@
       "sha": "d4ac1c1466007dc65425d4eda9d1ba0093119099bca44c50572805b539b3c410"
     },
     "src/main/pages/FindReservationDrawer.ts": {
-      "of": "fe59e989d424525a3ccc11cb47f57b184ad6205bec70f0091c8ecb460975edaf",
-      "sha": "933a676d3c8b5886d19e0c623486fc3cb84b4a4085c1f9510dfeaa13f8225b9b"
+      "of": "b495e6b1b6674739db96fa326508a353777e1bfb889107972db263e1e09ccfa8",
+      "sha": "33026d0e4aa6f21feebe4160e2db8bf01ee96efc70f1dd30f60936ddc6cecd3b"
     },
     "src/main/fixtures/index.ts": {
       "of": "adf4a677bda97ad0b4253d67d06074ef5761d2ac6f96461d1797589105736e85",
@@ -820,6 +864,10 @@
     "src/test/steps/weird-names.steps.ts": {
       "of": "46cb3c054fe97550fc52c0913fe0df7419e4ec2d639eafee27e0ce74f230b8a2",
       "sha": "d66802d99434e277b23cbe3ed646c5a870af70f122b1a7b4a4def9003fe42755"
+    },
+    "src/test/steps/local-find.steps.ts": {
+      "of": "6c50d80b5f44a6817c0a1a102a5551a78c75b82d666dc69df3edf6c18a31e0f8",
+      "sha": "c40c33bd3bbbe9d8ecce7ebf6d93249931da978f2d580c5c7751dec66842c9f7"
     }
   }
 }

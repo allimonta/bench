@@ -17,10 +17,13 @@ export class FindReservationDrawer {
   readonly reservationsTable: Locator;
   /** The Company cell of every listed row, in the order shown (newest first). */
   readonly rowCompanies: Locator;
+  /** The panel itself (<aside id="findDrawer">): aria-hidden "true" while it is closed. */
+  readonly panel: Locator;
   private readonly root: Locator;
 
   constructor(page: Page) {
     this.root = page.locator("//*[@id='findDrawer']");
+    this.panel = this.root;
     this.title = this.root.locator("//*[@id='findTitle']");
     this.closeButton = this.root.locator("//*[@id='closeFind']");
     this.queryField = this.root.locator("//*[@id='findQuery']");

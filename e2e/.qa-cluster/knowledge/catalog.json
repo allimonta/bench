@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T13:14:37.169Z",
+  "updatedAt": "2026-11-24T14:02:39.940Z",
   "fixtures": [
     "ctx",
     "api",
@@ -1001,6 +1001,30 @@
       "file": "src/test/steps/common.steps.ts",
       "pages": [
         "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user presses Escape in the reservation search",
+      "file": "src/test/steps/local-find.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation search is closed",
+      "file": "src/test/steps/local-find.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the keyboard focus is on the header {string} button",
+      "file": "src/test/steps/local-find.steps.ts",
+      "pages": [
+        "AppHeader"
       ]
     },
     {

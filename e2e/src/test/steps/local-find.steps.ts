@@ -8,8 +8,8 @@ When('the user presses Escape in the reservation search', async ({ page, findRes
   await page.keyboard.press('Escape');
 });
 
-Then('the reservation search is closed', async ({ page }) => {
-  await expect(page.locator('#findDrawer'), 'the reservation search is still open').toHaveAttribute('aria-hidden', 'true');
+Then('the reservation search is closed', async ({ findReservationDrawer }) => {
+  await expect(findReservationDrawer.panel, 'the reservation search is still open').toHaveAttribute('aria-hidden', 'true');
 });
 
 Then('the keyboard focus is on the header {string} button', async ({ appHeader }, label: string) => {
