@@ -87,3 +87,24 @@ Then('a {string} button is displayed next to the {string} button', async ({ appH
 Then('the cart counter shows {string}', async ({ appHeader }, count: string) => {
   await expect(appHeader.cartCount, `the cart counter does not show "${count}"`).toHaveText(count);
 });
+
+// ---- Navigation menu on a narrow screen and the cart button (weird-names) ----
+
+// Below 820 px the menu links are hidden behind the Menu toggle: the shop is opened again at that width, then the
+// toggle is pressed.
+When('the user opens the menu on a {int}px wide viewport', async ({ homePage, appHeader }, width: number) => {
+  await homePage.openOnViewport(width);
+  await appHeader.openMenu();
+});
+
+// expected[0]: the navigation links are displayed
+Then('the navigation links are displayed', async ({ appHeader }) => {
+  await expect
+    .poll(async () => appHeader.navigationLinksShown(), { message: 'the navigation links of the menu are not displayed' })
+    .toBe(true);
+});
+
+When('the user opens the cart without adding parts', async ({ appHeader, cartDrawer }) => {
+  await appHeader.openCart();
+  await cartDrawer.expectLoaded();
+});

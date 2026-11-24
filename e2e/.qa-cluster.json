@@ -3,7 +3,7 @@
   "version": "0.29.0",
   "layout": "src",
   "createdAt": "2026-11-23T13:40:51.265Z",
-  "updatedAt": "2026-11-23T21:45:44.751Z",
+  "updatedAt": "2026-11-24T12:31:50.832Z",
   "packageManager": "npm",
   "ciProvider": "github-actions",
   "ciFiles": [
@@ -57,6 +57,18 @@
       "inconclusive": 0,
       "iterations": 2,
       "report": "docs/qa-cluster-report.md"
+    },
+    {
+      "runId": "run-20261124-121524",
+      "at": "2026-11-24T12:31:50.832Z",
+      "result": "completed",
+      "commit": "dd3a6a8db8555a1c5a9eac5ba34475a2509e8c61",
+      "cases": 20,
+      "stable": 20,
+      "bugs": 0,
+      "inconclusive": 0,
+      "iterations": 2,
+      "report": "docs/qa-cluster-report.md"
     }
   ],
   "files": {
@@ -69,9 +81,9 @@
     "src/main/data/generators.ts": "2b8fab8f8f6b3e40a217d3335d1673bdb87dd6398312e3c5ec32f3aee831282e",
     "src/main/endpoints/BaseEndpoint.ts": "0dfe99001a6e0b1e12d9fbfe27b7c6ecbf34f7e2114b219b7f15a5ede04117b9",
     "src/main/entities/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "src/main/fixtures/index.ts": "2509b91c94ac16cc69977a951e54213ef2828f5621e8a4324557daf2fa2f080f",
+    "src/main/fixtures/index.ts": "adf4a677bda97ad0b4253d67d06074ef5761d2ac6f96461d1797589105736e85",
     "src/main/pages/BasePage.ts": "63f9ae7ac176e9036f19d54afeea64456d262a2b448d1d6f07dcde9d22560545",
-    "src/main/pages/HomePage.ts": "177d39d2f2219925bf601bad6b9e42d4e82ea2e29ea41ae72f8d38fc7eaf6cbb",
+    "src/main/pages/HomePage.ts": "8ab3e2c0bf03a223b72c276733aac76e6dc5e99fa8890762a5cbdd12a9beb828",
     "src/main/pages/LoginPage.ts": "e5f4a4bdf34a4cc7c9d806eb9b75dfd8527e58a43dbac1c03f4727cddefcfd4c",
     "src/main/reporters/summary-reporter.ts": "341a3c708e1273add66440fa13eab813e1e96b0a102109d57ce46dc15031dfb1",
     "src/main/support/ApiLog.ts": "e617c47238620b30a4de8cb33657d00e291cd96acff19e43c493ad864ff513d1",
@@ -83,20 +95,23 @@
     "src/test/steps/common.steps.ts": "f4d8ce5d25ff8d51ab50ca0645c93f3fc7f76e7d57147570592e6cf66bdbfe79",
     "tsconfig.json": "9633511e74ec0869fd1b54ac431a060137163f2f9826a94819195b8bc806ca0e",
     "src/test/resources/features/volume-1/volume-1.feature": "4e56cc1e08877c3f7f13e61117a1a90e47004f930d089afd299f1181e60a8540",
-    "src/test/steps/volume-1.steps.ts": "2883e8e35a4824fdbb2f14efa74a3db550c40e65dfac992a3f2869c0c1a6925b",
-    "src/test/steps/app-header.steps.ts": "c863b852efa1e7347dfba4f4ed514b53c55579c106680058d0f12b48ced6ad77",
-    "src/main/pages/AppHeader.ts": "c2f0d4e029405872089c55c2a4314874f5e15b79496bfcc72dbfa7863d48e614",
-    "src/main/pages/CartDrawer.ts": "29a5b77fdcf0385efe3690d60b1c4af9610b6f51554e8a2bf90ac78a262f3c94",
+    "src/test/steps/volume-1.steps.ts": "44c18afe670a266cd39365eb221411719ed723d30ad686562d76af64e385b4b0",
+    "src/test/steps/app-header.steps.ts": "9015a45b4475aed972d101ce50bd8708124cfc11445c86584dcae2467c69cbbc",
+    "src/main/pages/AppHeader.ts": "7ff92734b48ef4d092dfcfd9cea08ceb8b7f3b374c3888fb2325c811b7bbedf9",
+    "src/main/pages/CartDrawer.ts": "42fc42775f4adf5538bff53718f36a8791ddaa5cec88a4988b00ce9d875edd37",
     "src/main/pages/ProductDetailView.ts": "b0c2874e0bb7a240c7088a323830877b09d3510622d3a75f2c8963400785a705",
     "src/main/data/products.ts": "53aa56460ac44b899859d6f4da1e829cdc0408c47a65aec5a31423dab829206c",
     "src/main/utils/money.ts": "f7fed4d1b53b980d53bc576968ad8868c51186a71ce60199fbae061957577855",
     "src/main/pages/ReservePartsDrawer.ts": "cc17fb36746c13a7cd7026cfeb32b75171bf8b0db4a375c0ff3042dbad2875f8",
     "src/main/pages/ReservationConfirmation.ts": "aa506c040056fcfbee1514f3cda3190adb9d4f6c3ce77e58eb52ecffe63c5a99",
-    "src/test/steps/bulk-parts-reservation.steps.ts": "de280dff9397677317fdd64bcdbe50a8ba6fc58cc693f3038360b4bfe9387619",
+    "src/test/steps/bulk-parts-reservation.steps.ts": "028d77048953c025e9b14c24766b8e36fbdedcc50fa0fe1620e5144861fc52cf",
     "src/test/resources/features/bulk-parts-reservation/bulk-parts-reservation.feature": "65ead70e5c425094e405fb2719535f4efaea40bdcf03dd4b8ce24d95305ea020",
     "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature": "9f72eec05352abc7ac4fce25af843d1dfba61617ced1f31b1cf34b2cde031d1c",
     ".qa-cluster/knowledge/observations.md": "4259ded4b4287c5dc2bc7ed92d52d46eb0c57b0f00b112dabe0c6fcb38600979",
-    "src/test/resources/features/volume-1/volume-1-empty-cart-illustration.feature": "5950f4235f443e25a78ab98f64aa89a4ff09c05a0e6849fd25e7d43107490ea9"
+    "src/test/resources/features/volume-1/volume-1-empty-cart-illustration.feature": "5950f4235f443e25a78ab98f64aa89a4ff09c05a0e6849fd25e7d43107490ea9",
+    "src/main/pages/FindReservationDrawer.ts": "e11d7329f15031bfe26a288c423a64588492e5e351ba3b2e5ebf97bc93cb30cf",
+    "src/test/steps/weird-names.steps.ts": "c683a4d591895610f2512919ebfee5b7140bb7573d7e6aca3ce199cb0d57c652",
+    "src/test/resources/features/weird-names/weird-names.feature": "e90564cb23beaec16ad68fc5a10569863e400092a0c1d6be3769a48dd5beba77"
   },
   "cases": {
     "TC-VOLUME1-001": {
@@ -601,37 +616,157 @@
       "spec": "src/test/resources/features/volume-1/volume-1-empty-cart-illustration.feature",
       "testCaseId": "cmwts8adb03yr01szfe2ukuup",
       "status": "stable"
+    },
+    "TC-WEIRDNAMES-001": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn4g001u01si0kv4wx0h",
+      "status": "stable"
+    },
+    "TC-WEIRDNAMES-002": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn4f001t01si5jmp38zi",
+      "status": "stable"
+    },
+    "TC-WEIRDNAMES-003": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn4e001s01si5yhfudmw",
+      "status": "stable"
+    },
+    "TC-WEIRDNAMES-004": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn4c001r01sixhevxgz3",
+      "status": "stable"
+    },
+    "TC-WEIRDNAMES-005": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn4b001q01sift2s5qtj",
+      "status": "stable"
+    },
+    "TC-WEIRDNAMES-006": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn4a001p01silbgzwu3f",
+      "status": "stable"
+    },
+    "TC-WEIRDNAMES-007": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn49001o01siyzn358gv",
+      "status": "stable"
+    },
+    "TC-WEIRDNAMES-008": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn48001n01siw8rp03vx",
+      "status": "stable"
+    },
+    "TC-WEIRDNAMES-009": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn47001m01siedo8sh17",
+      "status": "stable"
+    },
+    "TC-WEIRDNAMES-010": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn46001l01sivmkg4k96",
+      "status": "stable"
+    },
+    "TC-WEIRDNAMES-011": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn45001k01sixxalk0s6",
+      "status": "stable"
+    },
+    "TC-WEIRDNAMES-012": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn43001j01sigl0lpt4q",
+      "status": "stable"
+    },
+    "TC-WEIRDNAMES-013": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn42001i01si4wnrs5rs",
+      "status": "stable"
+    },
+    "TC-WEIRDNAMES-014": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn41001h01sioh8155cv",
+      "status": "stable"
+    },
+    "TC-WEIRDNAMES-015": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn3z001g01si6u2ozikh",
+      "status": "stable"
+    },
+    "TC-WEIRDNAMES-016": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn3y001f01siyj9url5a",
+      "status": "stable"
+    },
+    "TC-WEIRDNAMES-017": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn3w001e01si5jdx1vpk",
+      "status": "stable"
+    },
+    "TC-WEIRDNAMES-018": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn3v001d01sinq14hxkn",
+      "status": "stable"
+    },
+    "TC-WEIRDNAMES-019": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn3u001c01si1m6h2gw0",
+      "status": "stable"
+    },
+    "TC-WEIRDNAMES-020": {
+      "spec": "src/test/resources/features/weird-names/weird-names.feature",
+      "testCaseId": "cmwunkn3r001b01siu50oxf9u",
+      "status": "stable"
     }
   },
   "lastBugNumber": 11,
   "testgraph": {
     "projectId": "cmwmh64un008r01th1gyazrxj",
     "project": "Bench - QA Cluster",
-    "lastRunId": "cmwtsmq5803ga01th9hl8qgbx",
+    "lastRunId": "cmwuo9ab8002p01tucse5mvnf",
     "url": "https://testgraph.internal.qubika.com/projects/cmwmh64un008r01th1gyazrxj"
   },
-  "baseCommit": "4d07d40285906820d3c6f7e22e484d54b3f11210",
+  "baseCommit": "dd3a6a8db8555a1c5a9eac5ba34475a2509e8c61",
   "finalizedBy": {
     "by": "manifest-finalize",
-    "runId": "run-20261123-212523",
-    "at": "2026-11-23T21:45:44.751Z"
+    "runId": "run-20261124-121524",
+    "at": "2026-11-24T12:31:50.832Z"
   },
   "shapes": {
     "src/test/steps/volume-1.steps.ts": {
-      "of": "2883e8e35a4824fdbb2f14efa74a3db550c40e65dfac992a3f2869c0c1a6925b",
-      "sha": "b1e9a850f5e17e7887186bef836b93f43d1bb3b5b60718c8b899c6dba5313d7d"
+      "of": "44c18afe670a266cd39365eb221411719ed723d30ad686562d76af64e385b4b0",
+      "sha": "bf0de5998784f27fded798c21ad59ac13a2b9218a4690ea03030d0041dc2d1da"
     },
     "src/test/steps/app-header.steps.ts": {
-      "of": "c863b852efa1e7347dfba4f4ed514b53c55579c106680058d0f12b48ced6ad77",
-      "sha": "962f4e152891b4c118bb129c0ef4255180b7cffa5eb57ee5db649778360f78eb"
+      "of": "9015a45b4475aed972d101ce50bd8708124cfc11445c86584dcae2467c69cbbc",
+      "sha": "5ef051c315d3b5f51963e3b0bef3a7cbfc991f9b0c563c4b78da13eb08828601"
     },
     "src/main/pages/HomePage.ts": {
-      "of": "177d39d2f2219925bf601bad6b9e42d4e82ea2e29ea41ae72f8d38fc7eaf6cbb",
-      "sha": "c5a8b21e3632a7744ee329b854bc7c96f7cf3d04d3d829c0d544e25ee9a61e6b"
+      "of": "8ab3e2c0bf03a223b72c276733aac76e6dc5e99fa8890762a5cbdd12a9beb828",
+      "sha": "2f372824b060750a270646fec331aba8a4c3d96e796fd000143d70b702cdb9cb"
     },
     "src/main/pages/CartDrawer.ts": {
-      "of": "29a5b77fdcf0385efe3690d60b1c4af9610b6f51554e8a2bf90ac78a262f3c94",
-      "sha": "0f34c70d565942026e48186bd71d2ab95d60d49dc6eb1c7b987d4b8964959fad"
+      "of": "42fc42775f4adf5538bff53718f36a8791ddaa5cec88a4988b00ce9d875edd37",
+      "sha": "65d37c4b31fdb4a85d633d2f8a559c458ea5c3dfb7c11638be26cabdc9baa871"
+    },
+    "src/main/pages/AppHeader.ts": {
+      "of": "7ff92734b48ef4d092dfcfd9cea08ceb8b7f3b374c3888fb2325c811b7bbedf9",
+      "sha": "d4ac1c1466007dc65425d4eda9d1ba0093119099bca44c50572805b539b3c410"
+    },
+    "src/main/pages/FindReservationDrawer.ts": {
+      "of": "e11d7329f15031bfe26a288c423a64588492e5e351ba3b2e5ebf97bc93cb30cf",
+      "sha": "32fa13d91a8c7bd74d31bc57449624fc7162d62f866b7a007a96397a783599b3"
+    },
+    "src/main/fixtures/index.ts": {
+      "of": "adf4a677bda97ad0b4253d67d06074ef5761d2ac6f96461d1797589105736e85",
+      "sha": "1bab815fa617bd38932fa7ab445d4286b7dd34606eac0c5348d21060bda728c5"
+    },
+    "src/test/steps/bulk-parts-reservation.steps.ts": {
+      "of": "028d77048953c025e9b14c24766b8e36fbdedcc50fa0fe1620e5144861fc52cf",
+      "sha": "0b9f9116f23b97961e2dba22e7569f4d41a9e9f9a4ac3bf707c72ceb1b02e422"
+    },
+    "src/test/steps/weird-names.steps.ts": {
+      "of": "c683a4d591895610f2512919ebfee5b7140bb7573d7e6aca3ce199cb0d57c652",
+      "sha": "01206e67ae332d0ba1633ae0341a6f99e20a4cb2b15292c0da172ad3ff4451b1"
     }
   }
 }

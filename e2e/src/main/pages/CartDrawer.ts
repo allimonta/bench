@@ -26,6 +26,10 @@ export class CartDrawer {
   readonly applyDiscountButton: Locator;
   // TODO(testability): the cart asks no confirmation before removing a line (TC-VOLUME1-019).
   readonly removalConfirmation: Locator;
+  /** The reference of a placed order ("PW-" and a random code), inside the order confirmation. */
+  readonly orderReference: Locator;
+  /** The cart's heading as assistive technology exposes it: hidden once the cart closes (it becomes aria-hidden). */
+  readonly exposedHeading: Locator;
   private readonly root: Locator;
 
   constructor(page: Page) {
@@ -48,6 +52,8 @@ export class CartDrawer {
     this.discountCodeField = this.root.getByRole('textbox', { name: 'Discount code' });
     this.applyDiscountButton = this.root.getByRole('button', { name: 'Apply', exact: true });
     this.removalConfirmation = this.root.getByRole('alertdialog');
+    this.orderReference = this.orderConfirmation.getByTestId('order-ref');
+    this.exposedHeading = this.root.getByRole('heading', { name: 'Your cart', exact: true });
   }
 
   /** Synchronization: the cart is open. */
@@ -137,5 +143,28 @@ export class CartDrawer {
   /** A message the checkout form shows. */
   formMessage(text: string): Locator {
     return this.checkoutForm.getByText(text);
+  }
+
+  /** The "Increase quantity" button of a line, by the name of its part. */
+  increaseButtonOf(part: string): Locator {
+    return this.root.locator(`//button[@aria-label='Increase quantity of ${part}']`);
+  }
+
+  /** Raises the quantity of a line by one, by the name of its part (the cart re-renders, the pop-up stays open). */
+  async increaseQuantityOf(part: string): Promise<void> {
+    await this.increaseButtonOf(part).click();
+  }
+
+  /** The quantity a line shows, by the name of its part. */
+  lineQuantity(part: string): Locator {
+    return this.lineNamed(part).locator("//div[contains(@class,'qty')]/span");
+  }
+
+  async placeOrder(): Promise<void> {
+    await this.placeOrderButton.click();
+  }
+
+  async close(): Promise<void> {
+    await this.closeButton.click();
   }
 }

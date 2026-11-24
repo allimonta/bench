@@ -367,3 +367,75 @@ Then('the cart shows the empty-cart illustration', async ({ cartDrawer }) => {
 Then('the cart does not show the empty-cart illustration', async ({ cartDrawer }) => {
   await expect(cartDrawer.emptyImage, 'the cart still shows the empty-cart illustration').toBeHidden();
 });
+
+// ---- Shop and cart (weird-names) ----
+
+When('the user clicks the {string} button in the banner', async ({ homePage }, name: string) => {
+  await homePage.clickBannerAction(name);
+});
+
+// expected[0]: the parts catalog section is shown
+Then('the parts catalog section is shown', async ({ homePage }) => {
+  await expect(homePage.shopSection, 'the parts catalog section is not shown').toBeInViewport();
+});
+
+When('the user filters the catalog by {string}', async ({ homePage }, category: string) => {
+  await homePage.filterByCategory(category);
+});
+
+// expected[0]: only parts of the "<category>" category are listed
+Then('only parts of the {string} category are listed', async ({ homePage }, category: string) => {
+  await expect
+    .poll(async () => homePage.listedCategories(), { message: `the catalog does not list only parts of the "${category}" category` })
+    .toEqual([category]);
+});
+
+When('the user adds the {string} part to the cart twice', async ({ homePage }, part: string) => {
+  await homePage.addToCartByName(part);
+  await homePage.addToCartByName(part);
+});
+
+When('the user adds the {string} part to the cart and increases its quantity', async ({ homePage, appHeader, cartDrawer }, part: string) => {
+  await homePage.addToCartByName(part);
+  await appHeader.openCart();
+  await cartDrawer.expectLoaded();
+  await cartDrawer.increaseQuantityOf(part);
+});
+
+// expected[0]: the cart lists the "<part>" part with quantity <quantity>
+Then('the cart lists the {string} part with quantity {int}', async ({ cartDrawer }, part: string, quantity: number) => {
+  await expect(cartDrawer.lineQuantity(part), `the cart does not list the "${part}" part with quantity ${quantity}`).toHaveText(
+    String(quantity),
+  );
+});
+
+When('the user adds the {string} part to the cart and removes it', async ({ homePage, appHeader, cartDrawer }, part: string) => {
+  await homePage.addToCartByName(part);
+  await appHeader.openCart();
+  await cartDrawer.expectLoaded();
+  await cartDrawer.removePart(part);
+});
+
+// The order lives only in the browser (no screen or endpoint deletes it): it goes with the scenario's browser context.
+When('the user places an order with the {string} part in the cart', async ({ homePage, appHeader, cartDrawer }, part: string) => {
+  await homePage.addToCartByName(part);
+  await appHeader.openCart();
+  await cartDrawer.expectLoaded();
+  await cartDrawer.placeOrder();
+});
+
+// expected[0]: an order confirmation with an order reference is displayed (the reference is random: its format is checked)
+Then('an order confirmation with an order reference is displayed', async ({ cartDrawer }) => {
+  await expect(cartDrawer.orderReference, 'no order confirmation with an order reference is displayed').toHaveText(/^PW-[A-Z0-9]+$/);
+});
+
+When('the user opens the cart and closes it with the close button', async ({ appHeader, cartDrawer }) => {
+  await appHeader.openCart();
+  await cartDrawer.expectLoaded();
+  await cartDrawer.close();
+});
+
+// expected[0]: the cart drawer is hidden
+Then('the cart drawer is hidden', async ({ cartDrawer }) => {
+  await expect(cartDrawer.exposedHeading, 'the cart drawer is still shown').toBeHidden();
+});

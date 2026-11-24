@@ -1,5 +1,7 @@
 import { expect } from '@playwright/test';
 import { When, Then } from '@fixtures';
+import type { ReservePartsDrawer } from '@pages/ReservePartsDrawer';
+import type { FindReservationDrawer } from '@pages/FindReservationDrawer';
 
 // Steps of the "Reserve parts" panel: the reservation form and, after a valid submit, the reservation confirmation.
 // Reservations live in the browser's localStorage and cannot be cancelled (no screen and no endpoint deletes one):
@@ -531,3 +533,49 @@ Then(
     await expect(reservationConfirmation.emailTransportCost, `the email sent does not show transport cost "${cost}"`).toHaveText(cost);
   },
 );
+
+// ---- Reservation form (weird-names) ----
+
+When('the user enters {int} pieces of {string} in the reservation form', async ({ appHeader, reservePartsDrawer }, pieces: number, part: string) => {
+  await appHeader.openReserve();
+  await reservePartsDrawer.expectLoaded();
+  await reservePartsDrawer.enterQuantity(part, String(pieces));
+});
+
+When('the user opens the reservation form and enters {int} pieces of {string}', async ({ appHeader, reservePartsDrawer }, pieces: number, part: string) => {
+  await appHeader.openReserve();
+  await reservePartsDrawer.expectLoaded();
+  await reservePartsDrawer.enterQuantity(part, String(pieces));
+});
+
+When('the user opens the reservation form and presses Escape', async ({ appHeader, reservePartsDrawer }) => {
+  await appHeader.openReserve();
+  await reservePartsDrawer.expectLoaded();
+  await reservePartsDrawer.pressEscape();
+});
+
+// expected[0]: the transport cost shows "<cost>"
+Then('the transport cost shows {string}', async ({ reservePartsDrawer }, cost: string) => {
+  await expect(reservePartsDrawer.transportCost, `the transport cost does not show "${cost}"`).toHaveText(cost);
+});
+
+// expected[0]: the total pieces show "<pieces>"
+Then('the total pieces show {string}', async ({ reservePartsDrawer }, pieces: string) => {
+  await expect(reservePartsDrawer.totalPieces, `the total pieces do not show "${pieces}"`).toHaveText(pieces);
+});
+
+// The title names the panel (skill step-definitions, the same description on more than one screen): the step picks the
+// panel by it, and that panel checks its own title.
+const panelByTitle = (title: string, panels: { reservePartsDrawer: ReservePartsDrawer; findReservationDrawer: FindReservationDrawer }) => {
+  const byTitle: Record<string, ReservePartsDrawer | FindReservationDrawer> = {
+    'Reserve parts': panels.reservePartsDrawer,
+    'Find a reservation': panels.findReservationDrawer,
+  };
+  if (!Object.hasOwn(byTitle, title)) throw new Error(`no panel titled "${title}": this step knows ${Object.keys(byTitle).join(', ')}`);
+  return byTitle[title];
+};
+
+// expected[0]: the title "<title>" is displayed
+Then('the title {string} is displayed', async ({ reservePartsDrawer, findReservationDrawer }, title: string) => {
+  await expect(panelByTitle(title, { reservePartsDrawer, findReservationDrawer }).title, `the title "${title}" is not displayed`).toHaveText(title);
+});

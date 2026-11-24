@@ -11,6 +11,11 @@ export class AppHeader {
   readonly reserveButton: Locator;
   readonly cartButton: Locator;
   readonly cartCount: Locator;
+  readonly menuToggle: Locator;
+  readonly menu: Locator;
+  readonly menuLinks: Locator;
+  readonly findButton: Locator;
+  readonly actionButtons: Locator;
   private readonly root: Locator;
 
   constructor(page: Page) {
@@ -24,6 +29,12 @@ export class AppHeader {
     this.reserveButton = this.root.locator("//*[@id='reserveBtn']");
     this.cartButton = this.root.locator("//*[@id='cartBtn']");
     this.cartCount = this.root.locator("//*[@id='badge']");
+    // Below 820 px the menu links are hidden until the Menu toggle is pressed.
+    this.menuToggle = this.root.locator("//*[@id='menuToggle']");
+    this.menu = this.root.locator("//*[@id='menu']");
+    this.menuLinks = this.menu.locator('//a'); // a list: one link per section of the navigation menu
+    this.findButton = this.root.locator("//*[@id='findBtn']");
+    this.actionButtons = this.root.locator("//button[contains(@class,'cart-btn')]"); // a list: Find, Reserve, Cart
   }
 
   /** A link of the navigation menu, by the words of its name ("Shop" finds "Shop parts"). */
@@ -99,5 +110,23 @@ export class AppHeader {
   async cartCountValue(): Promise<number> {
     await expect(this.cartCount).toHaveText(/^\d+$/);
     return Number(await this.cartCount.textContent());
+  }
+
+  /** Opens the navigation menu with its toggle (the toggle only shows on a narrow screen). */
+  async openMenu(): Promise<void> {
+    await this.menuToggle.click();
+  }
+
+  /** Whether the navigation menu has links and every one of them is on screen. */
+  async navigationLinksShown(): Promise<boolean> {
+    const links = await this.menuLinks.all();
+    if (links.length === 0) return false;
+    for (const link of links) if (!(await link.isVisible())) return false;
+    return true;
+  }
+
+  /** Opens the "Find a reservation" panel. */
+  async openFind(): Promise<void> {
+    await this.findButton.click();
   }
 }

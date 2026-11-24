@@ -26,6 +26,8 @@ export class HomePage extends BasePage {
   readonly sortSelect: Locator;
   // TODO(testability): the shop has no search field yet (TC-VOLUME1-012/013): suggest an id for it when it is built.
   readonly searchBox: Locator;
+  readonly banner: Locator;
+  readonly productCategories: Locator;
   private readonly root: Locator;
 
   constructor(page: Page) {
@@ -49,6 +51,8 @@ export class HomePage extends BasePage {
     this.productPrices = this.root.getByTestId('product-price');
     this.sortSelect = this.root.getByRole('combobox', { name: 'Sort' });
     this.searchBox = this.root.getByRole('searchbox', { name: 'Search' });
+    this.banner = this.root.locator("//section[contains(@class,'banner')]");
+    this.productCategories = this.productCards.locator("//*[contains(@class,'card-cat')]"); // a list: one per listed card
   }
 
   async expectLoaded(): Promise<void> {
@@ -190,5 +194,16 @@ export class HomePage extends BasePage {
   /** A message the Shop section shows. */
   message(text: string): Locator {
     return this.root.getByText(text);
+  }
+
+  /** Clicks a call to action of the banner, by its visible name ("Shop parts" is a link to the Shop section). */
+  async clickBannerAction(name: string): Promise<void> {
+    await this.banner.getByRole('link', { name, exact: true }).click();
+  }
+
+  /** The distinct categories of the listed product cards, in the order they first appear. */
+  async listedCategories(): Promise<string[]> {
+    const categories = (await this.productCategories.allTextContents()).map((text) => text.trim());
+    return [...new Set(categories)];
   }
 }

@@ -3816,6 +3816,691 @@
       "lastRunAt": "2026-11-23T21:45:52.484Z",
       "bugs": [],
       "firstSeenAt": "2026-11-23T21:45:11.563Z"
+    },
+    "TC-WEIRDNAMES-001": {
+      "title": "👻",
+      "flow": "weird-names",
+      "priority": "P1",
+      "tier": "smoke",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn4g001u01si0kv4wx0h",
+        "scenarioId": "a64ea8d8-a27d-43a7-bfa0-5e4ab8b41d50::bed5cc98-caea-448e-81df-67811ef7c8b4",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "57f44e63-a326-49b2-94f7-a99eb5183fa4",
+          "bed5cc98-caea-448e-81df-67811ef7c8b4"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "bed5cc98-caea-448e-81df-67811ef7c8b4"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "3ad237771c22a941",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-WEIRDNAMES-002": {
+      "title": "Remove — the last part — with em dashes",
+      "flow": "weird-names",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn4f001t01si5jmp38zi",
+        "scenarioId": "6a76a5f0-578a-492c-b2d3-66747bcbd022::8ec84046-293b-41a0-a3d5-ca7d9254a6d1",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "d09c9b1c-d7a2-4125-82f7-c11ab54942c9",
+          "8ec84046-293b-41a0-a3d5-ca7d9254a6d1"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "d09c9b1c-d7a2-4125-82f7-c11ab54942c9"
+        ],
+        "validationNodeIds": [
+          "8ec84046-293b-41a0-a3d5-ca7d9254a6d1"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "b5fddfe72d8a3a94",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-WEIRDNAMES-003": {
+      "title": "../../etc/passwd",
+      "flow": "weird-names",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn4e001s01si5yhfudmw",
+        "scenarioId": "c2c5d00d-12ca-469d-ab91-95f7ed5f32f9::84960918-09a9-4ed4-8bda-a81452c4c4a8",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "d826a6f1-97b9-4e5e-9765-d3fdc26f8f2f",
+          "84960918-09a9-4ed4-8bda-a81452c4c4a8"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [
+          "d826a6f1-97b9-4e5e-9765-d3fdc26f8f2f"
+        ],
+        "validationNodeIds": [
+          "84960918-09a9-4ed4-8bda-a81452c4c4a8"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "e421e3d0ea0c46bb",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-WEIRDNAMES-004": {
+      "title": "Quotes \"double\" and 'single' in the title",
+      "flow": "weird-names",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn4c001r01sixhevxgz3",
+        "scenarioId": "39e6292a-4610-4701-9f10-48a1429b0ef7::f13d1ed0-1ee5-4ec2-9111-eac894afc0f3",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "e63e2418-3dee-4324-93c9-4d1cec0d2d0d",
+          "f13d1ed0-1ee5-4ec2-9111-eac894afc0f3"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "f13d1ed0-1ee5-4ec2-9111-eac894afc0f3"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "7176d539a56a9868",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-WEIRDNAMES-005": {
+      "title": "pipe | separated | title",
+      "flow": "weird-names",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn4b001q01sift2s5qtj",
+        "scenarioId": "5f3877d4-f10e-413b-b2e7-c84cb4390217::9701b42f-3c64-4161-8228-1149b9a3587f",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "d70efea8-5f08-4b4c-aa5c-9215e7174baa",
+          "9701b42f-3c64-4161-8228-1149b9a3587f"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "9701b42f-3c64-4161-8228-1149b9a3587f"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "7835071830a289c4",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-WEIRDNAMES-006": {
+      "title": "undefined",
+      "flow": "weird-names",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn4a001p01silbgzwu3f",
+        "scenarioId": "e99d4c36-7f16-4a84-983e-807782bbd942::725082f9-75c5-471a-8c68-fad0ba12220f",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "10604527-4bb5-42b2-9027-2f469e7ac29b",
+          "725082f9-75c5-471a-8c68-fad0ba12220f"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "725082f9-75c5-471a-8c68-fad0ba12220f"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "2beb2b5695e09ebd",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-WEIRDNAMES-007": {
+      "title": "null",
+      "flow": "weird-names",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn49001o01siyzn358gv",
+        "scenarioId": "bf34ecde-de1e-4720-8112-375a35ba90c8::2bc5f58b-d53b-47df-a7ba-d7f8bafb865b",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "fe593f30-2161-4a0b-afcd-b933af1c27d5",
+          "2bc5f58b-d53b-47df-a7ba-d7f8bafb865b"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "2bc5f58b-d53b-47df-a7ba-d7f8bafb865b"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "f068577a76a167f6",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-WEIRDNAMES-008": {
+      "title": "9854092687459867045986",
+      "flow": "weird-names",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn48001n01siw8rp03vx",
+        "scenarioId": "43e7e776-9ad7-4625-8213-0887af27a301::580f5704-537f-4414-9d8f-599cc403837b",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "5ba6360e-ee90-4633-8b49-d8bf1e537487",
+          "580f5704-537f-4414-9d8f-599cc403837b"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "580f5704-537f-4414-9d8f-599cc403837b"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "029e778e56eb7eb1",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-WEIRDNAMES-009": {
+      "title": "日本語のテスト名",
+      "flow": "weird-names",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn47001m01siedo8sh17",
+        "scenarioId": "2915d07f-c4fe-4fdc-86db-1861bc419044::7987af66-bd85-4715-8dab-0add35bb9dd4",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "c209fd4a-d0f3-49e2-ae54-5998665d4a6c",
+          "7987af66-bd85-4715-8dab-0add35bb9dd4"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "7987af66-bd85-4715-8dab-0add35bb9dd4"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "5f4b8d4cdff20fec",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-WEIRDNAMES-010": {
+      "title": "# looks like a comment",
+      "flow": "weird-names",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn46001l01sivmkg4k96",
+        "scenarioId": "de776b48-4715-4f55-8528-fb00db97d9f5::24b282d2-969b-4e6f-90e1-135c297827ad",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "0789fd5b-fb30-484f-ab63-69c10f4c42c6",
+          "24b282d2-969b-4e6f-90e1-135c297827ad"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "24b282d2-969b-4e6f-90e1-135c297827ad"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "b888534fa3933802",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-WEIRDNAMES-011": {
+      "title": "TC-VOLUME1-001",
+      "flow": "weird-names",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn45001k01sixxalk0s6",
+        "scenarioId": "ee7e7393-e7e0-43fe-96e2-949d24a4b25c::28ae8fe0-269f-4b4c-9328-1af83d012599",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "8860ebb2-126b-4c61-9aaf-02aa22604dc0",
+          "28ae8fe0-269f-4b4c-9328-1af83d012599"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "28ae8fe0-269f-4b4c-9328-1af83d012599"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "198b23bebed48223",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-WEIRDNAMES-012": {
+      "title": "x",
+      "flow": "weird-names",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn43001j01sigl0lpt4q",
+        "scenarioId": "3ba14cb4-af48-4bad-b634-c30e0f9f043f::c6446b32-7a1a-4939-b385-c6d4ba4b7efe",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "37d4506f-d407-4aba-b32b-9d64a33ba087",
+          "c6446b32-7a1a-4939-b385-c6d4ba4b7efe"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "c6446b32-7a1a-4939-b385-c6d4ba4b7efe"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "e835634d3d283c0d",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-WEIRDNAMES-013": {
+      "title": "Very long title aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "flow": "weird-names",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn42001i01si4wnrs5rs",
+        "scenarioId": "3b91b7ca-534b-45c2-bd84-df9e8701c5be::b613a002-6fec-43a1-aad6-b430e2198e5e",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "7b4bcfa4-0312-4fa4-bb51-1a4c8ac623cb",
+          "b613a002-6fec-43a1-aad6-b430e2198e5e"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "b613a002-6fec-43a1-aad6-b430e2198e5e"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "62dc40da0962edfe",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-WEIRDNAMES-014": {
+      "title": "@smoke looks like a tag",
+      "flow": "weird-names",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn41001h01sioh8155cv",
+        "scenarioId": "e771224d-b9af-4937-a3ee-bc0bbfd15b19::86d63f19-75fa-4750-81d8-f379ebefced9",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "10b091f2-88fb-4824-95c3-d7443749cdfe",
+          "86d63f19-75fa-4750-81d8-f379ebefced9"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "86d63f19-75fa-4750-81d8-f379ebefced9"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "4322fb677a1d1fba",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-WEIRDNAMES-015": {
+      "title": "🛒🛒🛒 add to cart 🤖",
+      "flow": "weird-names",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn3z001g01si6u2ozikh",
+        "scenarioId": "1453ca19-d063-4435-91ac-fe8f1a72c4d3::068aeb51-b0ac-4a2c-bf90-7343a51e636d",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "121a4f4e-b8dd-4940-871c-aad7b094eefe",
+          "9f2756ff-a966-4ea4-98e0-8733d79e65b6",
+          "068aeb51-b0ac-4a2c-bf90-7343a51e636d"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "068aeb51-b0ac-4a2c-bf90-7343a51e636d"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "0bf0f2139880a491",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-WEIRDNAMES-016": {
+      "title": "test",
+      "flow": "weird-names",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn3y001f01siyj9url5a",
+        "scenarioId": "650ac465-cd01-4455-b0ad-924eb7fb4f08::8013f794-cd02-4239-bbe5-1c00f21d49ba",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "d6b5b7f5-26df-4f22-bfab-f7939c403b04",
+          "8013f794-cd02-4239-bbe5-1c00f21d49ba"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "8013f794-cd02-4239-bbe5-1c00f21d49ba"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "664c4b0a1eb15237",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-WEIRDNAMES-017": {
+      "title": "Ñandú añade piezas: ¿funciona con acentos?",
+      "flow": "weird-names",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn3w001e01si5jdx1vpk",
+        "scenarioId": "d82d03e8-ad91-43e9-a67c-4017acba7648::ac49ca71-1903-436e-96bf-3d986ddc4016",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "3e61c056-287d-4b2d-82d4-caea0efbe9ba",
+          "ac49ca71-1903-436e-96bf-3d986ddc4016"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "ac49ca71-1903-436e-96bf-3d986ddc4016"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "22d9a27c2a1eff0d",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-WEIRDNAMES-018": {
+      "title": "!!!@@@###$$$%%%",
+      "flow": "weird-names",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn3v001d01sinq14hxkn",
+        "scenarioId": "8af793cd-06d0-4ab6-ae74-27377bb9482c::d0e7a720-e27f-41ff-8cc3-1f63b75a9db1",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "f766f87b-3b12-4f94-be52-bb419ece471e",
+          "d0e7a720-e27f-41ff-8cc3-1f63b75a9db1"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "d0e7a720-e27f-41ff-8cc3-1f63b75a9db1"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "157e0ebdb2948936",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-WEIRDNAMES-019": {
+      "title": "<script>alert('xss')</script>",
+      "flow": "weird-names",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn3u001c01si1m6h2gw0",
+        "scenarioId": "04c6c6f9-eda5-4113-83ed-3da9feb9ef33::405000ac-fd53-4146-ada1-33d8a447d84b",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "44d34137-3c92-49e5-b668-d579b445381a",
+          "405000ac-fd53-4146-ada1-33d8a447d84b"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "405000ac-fd53-4146-ada1-33d8a447d84b"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "42586a98a63100e4",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-WEIRDNAMES-020": {
+      "title": "Scenario: nested keyword in the title",
+      "flow": "weird-names",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwunkgis001a01siyvo85fyw",
+        "testCaseId": "cmwunkn3r001b01siu50oxf9u",
+        "scenarioId": "97fa02c9-d024-4bd4-b866-1c22430ca5c5::7e74060a-93bc-4ec1-b5ab-3962f51fb92d",
+        "feature": "Weird names",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "e182de36-416c-426b-a5d0-0b005bd2a473",
+          "993a1df0-6b18-46b1-b85e-05c0d40cdc5f",
+          "7e74060a-93bc-4ec1-b5ab-3962f51fb92d"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "7e74060a-93bc-4ec1-b5ab-3962f51fb92d"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "23655fcff4727950",
+      "codeRefs": {},
+      "feature": "src/test/resources/features/weird-names/weird-names.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-121524",
+      "lastRunAt": "2026-11-24T12:32:00.488Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T12:32:00.488Z"
     }
   },
   "repositories": {
@@ -3823,5 +4508,5 @@
       "front"
     ]
   },
-  "updatedAt": "2026-11-23T21:45:52.484Z"
+  "updatedAt": "2026-11-24T12:32:00.488Z"
 }

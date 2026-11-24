@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T21:45:52.524Z",
+  "updatedAt": "2026-11-24T12:32:00.509Z",
   "fixtures": [
     "ctx",
     "api",
@@ -10,7 +10,8 @@
     "cartDrawer",
     "productDetailView",
     "reservePartsDrawer",
-    "reservationConfirmation"
+    "reservationConfirmation",
+    "findReservationDrawer"
   ],
   "pages": [
     {
@@ -27,7 +28,10 @@
         "horizontalOverflow",
         "buttonsSideBySide",
         "openCart",
-        "cartCountValue"
+        "cartCountValue",
+        "openMenu",
+        "navigationLinksShown",
+        "openFind"
       ],
       "routes": []
     },
@@ -55,7 +59,22 @@
         "totalAmount",
         "enterEmailAndSubmit",
         "submitCheckoutForm",
-        "applyDiscountCode"
+        "applyDiscountCode",
+        "increaseQuantityOf",
+        "placeOrder",
+        "close"
+      ],
+      "routes": []
+    },
+    {
+      "file": "src/main/pages/FindReservationDrawer.ts",
+      "classes": [
+        "FindReservationDrawer"
+      ],
+      "methods": [
+        "expectLoaded",
+        "search",
+        "close"
       ],
       "routes": []
     },
@@ -81,7 +100,9 @@
         "sortBy",
         "priceValues",
         "search",
-        "productTexts"
+        "productTexts",
+        "clickBannerAction",
+        "listedCategories"
       ],
       "routes": [
         "${this.path}#shop"
@@ -248,6 +269,32 @@
       "file": "src/test/steps/app-header.steps.ts",
       "pages": [
         "AppHeader"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user opens the menu on a {int}px wide viewport",
+      "file": "src/test/steps/app-header.steps.ts",
+      "pages": [
+        "HomePage",
+        "AppHeader"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the navigation links are displayed",
+      "file": "src/test/steps/app-header.steps.ts",
+      "pages": [
+        "AppHeader"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user opens the cart without adding parts",
+      "file": "src/test/steps/app-header.steps.ts",
+      "pages": [
+        "AppHeader",
+        "CartDrawer"
       ]
     },
     {
@@ -884,6 +931,58 @@
       ]
     },
     {
+      "keyword": "When",
+      "pattern": "the user enters {int} pieces of {string} in the reservation form",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "AppHeader",
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user opens the reservation form and enters {int} pieces of {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "AppHeader",
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user opens the reservation form and presses Escape",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "AppHeader",
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the transport cost shows {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the total pieces show {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the title {string} is displayed",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "ReservePartsDrawer",
+        "FindReservationDrawer"
+      ]
+    },
+    {
       "keyword": "Given",
       "pattern": "I open the home page",
       "file": "src/test/steps/common.steps.ts",
@@ -1380,6 +1479,152 @@
       "file": "src/test/steps/volume-1.steps.ts",
       "pages": [
         "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user clicks the {string} button in the banner",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the parts catalog section is shown",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user filters the catalog by {string}",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "only parts of the {string} category are listed",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user adds the {string} part to the cart twice",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user adds the {string} part to the cart and increases its quantity",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage",
+        "AppHeader",
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the cart lists the {string} part with quantity {int}",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user adds the {string} part to the cart and removes it",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage",
+        "AppHeader",
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user places an order with the {string} part in the cart",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage",
+        "AppHeader",
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "an order confirmation with an order reference is displayed",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user opens the cart and closes it with the close button",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "AppHeader",
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the cart drawer is hidden",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user opens the reservation search",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "AppHeader",
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user opens the reservation search with no reservations",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "AppHeader",
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user searches for a reservation with an empty field",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "AppHeader",
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "every reservation is listed",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the message {string} is displayed",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
       ]
     }
   ]
