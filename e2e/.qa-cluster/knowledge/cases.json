@@ -5248,6 +5248,349 @@
       "lastRunAt": "2026-11-24T14:02:39.909Z",
       "bugs": [],
       "firstSeenAt": "2026-11-24T13:59:22.802Z"
+    },
+    "TC-CARTVOLUME-001": {
+      "title": "Three different parts in the cart — the volume discount is applied",
+      "flow": "cart-volume-discount",
+      "priority": "P1",
+      "tier": "smoke",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwv21jfp014n01sidtvs6w2y",
+        "testCaseId": "cmwv22e0400fj01tu20hc2fpm",
+        "scenarioId": "e517099d-a7ab-4447-92e1-3ffa785292ef::e5445d1b-5aeb-441a-8ad7-b85a8f8b9b44",
+        "feature": "Cart volume discount",
+        "area": "Volume Test",
+        "dataNodeIds": [
+          "c88c0252-f0c4-45d5-935a-a1381c33a62a"
+        ],
+        "validationNodeIds": [
+          "a4ff7682-304c-4c99-a21c-ba5f000e4fc3",
+          "cedef82c-b167-4e99-92d9-b409c5eed256",
+          "d9f5c066-8da0-412f-a5e5-eee47f743729",
+          "3a9d622a-27a8-413f-ae01-4326bff3d659",
+          "5ac28286-219e-4a95-a951-5e5d19537331",
+          "6f8b48c4-976e-4fd7-a15b-01e287ac4d41",
+          "e5445d1b-5aeb-441a-8ad7-b85a8f8b9b44"
+        ],
+        "pathNodeIds": [
+          "7247aac8-1ba7-49bf-9cdf-35caf13d59e9",
+          "a4ff7682-304c-4c99-a21c-ba5f000e4fc3",
+          "341ec047-8d00-4502-a454-edf05e6837f6",
+          "c88c0252-f0c4-45d5-935a-a1381c33a62a",
+          "cedef82c-b167-4e99-92d9-b409c5eed256",
+          "348e901a-e928-4910-b0c6-add796bfc5f3",
+          "d9f5c066-8da0-412f-a5e5-eee47f743729",
+          "3a9d622a-27a8-413f-ae01-4326bff3d659",
+          "5ac28286-219e-4a95-a951-5e5d19537331",
+          "6f8b48c4-976e-4fd7-a15b-01e287ac4d41",
+          "e5445d1b-5aeb-441a-8ad7-b85a8f8b9b44"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "341ec047-8d00-4502-a454-edf05e6837f6"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "ec1e9a4147cd7373",
+      "codeRefs": {
+        "index.html": "83cb16c57a1283bc"
+      },
+      "feature": "src/test/resources/features/cart-volume-discount/cart-volume-discount.feature",
+      "lastStatus": "bug",
+      "lastRunId": "run-20261124-184916",
+      "lastRunAt": "2026-11-24T19:11:30.244Z",
+      "bugs": [
+        {
+          "id": "BUG-012",
+          "severity": "major",
+          "pattern": "deterministic"
+        }
+      ],
+      "firstSeenAt": "2026-11-24T19:11:17.937Z"
+    },
+    "TC-CARTVOLUME-002": {
+      "title": "Two different parts in the cart — no volume discount",
+      "flow": "cart-volume-discount",
+      "priority": "P1",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwv21jfp014n01sidtvs6w2y",
+        "testCaseId": "cmwv22eav014o01sieu53p5sa",
+        "scenarioId": "2490b951-2216-4651-97d0-a348aaeb7510::062fd2e9-6225-42bd-8e8d-93677a8fb0ea",
+        "feature": "Cart volume discount",
+        "area": "Volume Test",
+        "dataNodeIds": [
+          "56e766f7-3ff6-4393-bb66-8b4fd1453f83"
+        ],
+        "validationNodeIds": [
+          "a4ff7682-304c-4c99-a21c-ba5f000e4fc3",
+          "5d9edb5c-0f5b-40ac-af2a-0df83e751aa4",
+          "1f818c06-0f6a-475f-8940-6cefa7d923ca",
+          "86e064cc-130f-4e8b-a46b-26d7eb92f02e",
+          "08a901b4-6a1f-44e0-a242-d7d01b6d0ef1",
+          "95220c71-5d59-4f93-b5c1-62142979bfe4",
+          "062fd2e9-6225-42bd-8e8d-93677a8fb0ea"
+        ],
+        "pathNodeIds": [
+          "7247aac8-1ba7-49bf-9cdf-35caf13d59e9",
+          "a4ff7682-304c-4c99-a21c-ba5f000e4fc3",
+          "341ec047-8d00-4502-a454-edf05e6837f6",
+          "56e766f7-3ff6-4393-bb66-8b4fd1453f83",
+          "5d9edb5c-0f5b-40ac-af2a-0df83e751aa4",
+          "05fcc135-3408-40d9-b1ce-3ae220b7e2f4",
+          "1f818c06-0f6a-475f-8940-6cefa7d923ca",
+          "86e064cc-130f-4e8b-a46b-26d7eb92f02e",
+          "08a901b4-6a1f-44e0-a242-d7d01b6d0ef1",
+          "95220c71-5d59-4f93-b5c1-62142979bfe4",
+          "062fd2e9-6225-42bd-8e8d-93677a8fb0ea"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "341ec047-8d00-4502-a454-edf05e6837f6"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "ec6e2ea4bc00e1f5",
+      "codeRefs": {
+        "index.html": "83cb16c57a1283bc"
+      },
+      "feature": "src/test/resources/features/cart-volume-discount/cart-volume-discount.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-184916",
+      "lastRunAt": "2026-11-24T19:11:30.244Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T19:11:17.937Z"
+    },
+    "TC-CARTVOLUME-003": {
+      "title": "One part with quantity 3 — the volume discount is applied",
+      "flow": "cart-volume-discount",
+      "priority": "P1",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwv21jfp014n01sidtvs6w2y",
+        "testCaseId": "cmwv22ek200fk01tuarrw39nt",
+        "scenarioId": "cc52e9b3-16c4-43c5-b16c-5cd5b4c1a14d::ba0d9b6c-0d17-46e9-9290-4dbd2410f4b3",
+        "feature": "Cart volume discount",
+        "area": "Volume Test",
+        "dataNodeIds": [
+          "f06d5775-4ee1-4dc2-9849-9f711ae3bc95"
+        ],
+        "validationNodeIds": [
+          "a4ff7682-304c-4c99-a21c-ba5f000e4fc3",
+          "23528312-27bd-4b9b-9add-b136751798bc",
+          "aa04f1d0-d50a-4922-89e0-d335f8904ca2",
+          "8c50a1b9-fa12-4172-bf5f-6b8fb1d2c471",
+          "e7f6490a-a21c-4e2b-a313-b42b7f5abd55",
+          "79988e63-d240-4c33-81e0-9cd8c3befa11",
+          "9a430890-0de6-4d4d-9c15-5f340f798be4",
+          "0e3c120a-9808-406d-8ea9-c684c6816723",
+          "d88b9082-6749-42d8-a33a-1597239684fe",
+          "ba0d9b6c-0d17-46e9-9290-4dbd2410f4b3"
+        ],
+        "pathNodeIds": [
+          "7247aac8-1ba7-49bf-9cdf-35caf13d59e9",
+          "a4ff7682-304c-4c99-a21c-ba5f000e4fc3",
+          "341ec047-8d00-4502-a454-edf05e6837f6",
+          "f06d5775-4ee1-4dc2-9849-9f711ae3bc95",
+          "23528312-27bd-4b9b-9add-b136751798bc",
+          "a690edc4-9e69-4aad-beb5-79b925806e8f",
+          "aa04f1d0-d50a-4922-89e0-d335f8904ca2",
+          "9790e61f-8ff7-47fa-baa3-ccc259fb09d7",
+          "8c50a1b9-fa12-4172-bf5f-6b8fb1d2c471",
+          "73e938ea-51ec-4af2-b832-01215ce2a339",
+          "e7f6490a-a21c-4e2b-a313-b42b7f5abd55",
+          "79988e63-d240-4c33-81e0-9cd8c3befa11",
+          "9a430890-0de6-4d4d-9c15-5f340f798be4",
+          "0e3c120a-9808-406d-8ea9-c684c6816723",
+          "d88b9082-6749-42d8-a33a-1597239684fe",
+          "ba0d9b6c-0d17-46e9-9290-4dbd2410f4b3"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "341ec047-8d00-4502-a454-edf05e6837f6"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "760ef9fe8cfbcc24",
+      "codeRefs": {
+        "index.html": "83cb16c57a1283bc"
+      },
+      "feature": "src/test/resources/features/cart-volume-discount/cart-volume-discount.feature",
+      "lastStatus": "bug",
+      "lastRunId": "run-20261124-184916",
+      "lastRunAt": "2026-11-24T19:11:30.244Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T19:11:17.937Z"
+    },
+    "TC-CARTVOLUME-004": {
+      "title": "One part with quantity 2 — no volume discount",
+      "flow": "cart-volume-discount",
+      "priority": "P1",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwv21jfp014n01sidtvs6w2y",
+        "testCaseId": "cmwv22et0014p01sidauieoj9",
+        "scenarioId": "f7c1d3a2-1ad7-4360-aa57-e0aa5d2d50f1::a2a0db56-cd9a-4c77-9f68-4ddc0df1bf9a",
+        "feature": "Cart volume discount",
+        "area": "Volume Test",
+        "dataNodeIds": [
+          "727576e3-f9e8-49a3-824f-ecb2fa1e19a0"
+        ],
+        "validationNodeIds": [
+          "a4ff7682-304c-4c99-a21c-ba5f000e4fc3",
+          "ee8661a6-58e1-4dc8-b3b1-3298b4cb0d41",
+          "6d934a22-633a-448f-b37a-b4325cbd8763",
+          "700d156d-2a36-4915-a701-b16e05025681",
+          "a0da68a9-848d-4c50-925a-a4b8ce833f7c",
+          "355cc20c-2c93-4f01-b922-f881fff81d18",
+          "63206544-b9f0-4057-ac61-b74427123fb6",
+          "cd50ef40-b876-4886-b5be-f772ea61a29e",
+          "a2a0db56-cd9a-4c77-9f68-4ddc0df1bf9a"
+        ],
+        "pathNodeIds": [
+          "7247aac8-1ba7-49bf-9cdf-35caf13d59e9",
+          "a4ff7682-304c-4c99-a21c-ba5f000e4fc3",
+          "341ec047-8d00-4502-a454-edf05e6837f6",
+          "727576e3-f9e8-49a3-824f-ecb2fa1e19a0",
+          "ee8661a6-58e1-4dc8-b3b1-3298b4cb0d41",
+          "ee9e19c5-5d12-4a5d-ad8c-367db3450720",
+          "6d934a22-633a-448f-b37a-b4325cbd8763",
+          "3afef98f-3a45-46ca-a3ae-a44aef1f9c6d",
+          "700d156d-2a36-4915-a701-b16e05025681",
+          "a0da68a9-848d-4c50-925a-a4b8ce833f7c",
+          "355cc20c-2c93-4f01-b922-f881fff81d18",
+          "63206544-b9f0-4057-ac61-b74427123fb6",
+          "cd50ef40-b876-4886-b5be-f772ea61a29e",
+          "a2a0db56-cd9a-4c77-9f68-4ddc0df1bf9a"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "341ec047-8d00-4502-a454-edf05e6837f6"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "d0e94e292bf63120",
+      "codeRefs": {
+        "index.html": "83cb16c57a1283bc"
+      },
+      "feature": "src/test/resources/features/cart-volume-discount/cart-volume-discount.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-184916",
+      "lastRunAt": "2026-11-24T19:11:30.244Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T19:11:17.937Z"
+    },
+    "TC-CARTVOLUME-005": {
+      "title": "Four parts in the cart — the volume discount is rounded to the dollar",
+      "flow": "cart-volume-discount",
+      "priority": "P1",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwv21jfp014n01sidtvs6w2y",
+        "testCaseId": "cmwv22f2u00fl01tuzdd9g1ao",
+        "scenarioId": "2dac3566-e982-4c36-bf62-3a33df5a6231::e38e8fd9-ac3a-41ee-b9c8-fe223f92411e",
+        "feature": "Cart volume discount",
+        "area": "Volume Test",
+        "dataNodeIds": [
+          "5a7df4ef-4c67-42d8-a882-edadd9768783"
+        ],
+        "validationNodeIds": [
+          "a4ff7682-304c-4c99-a21c-ba5f000e4fc3",
+          "1e375a78-d5b9-45f6-af70-3b2515d7399a",
+          "bef6f6e1-8698-474f-855f-b58a17a2c7d1",
+          "6f611080-4123-4b07-9659-f80057cf247f",
+          "12dc0f20-fb70-43ea-97b9-73204832cfb6",
+          "10966d2a-533e-46b2-86ae-fcaab846b144",
+          "e38e8fd9-ac3a-41ee-b9c8-fe223f92411e"
+        ],
+        "pathNodeIds": [
+          "7247aac8-1ba7-49bf-9cdf-35caf13d59e9",
+          "a4ff7682-304c-4c99-a21c-ba5f000e4fc3",
+          "341ec047-8d00-4502-a454-edf05e6837f6",
+          "5a7df4ef-4c67-42d8-a882-edadd9768783",
+          "1e375a78-d5b9-45f6-af70-3b2515d7399a",
+          "a32e35bc-1909-42a2-80d4-88b35339abb3",
+          "bef6f6e1-8698-474f-855f-b58a17a2c7d1",
+          "6f611080-4123-4b07-9659-f80057cf247f",
+          "12dc0f20-fb70-43ea-97b9-73204832cfb6",
+          "10966d2a-533e-46b2-86ae-fcaab846b144",
+          "e38e8fd9-ac3a-41ee-b9c8-fe223f92411e"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "341ec047-8d00-4502-a454-edf05e6837f6"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "f2ad283bd7370708",
+      "codeRefs": {
+        "index.html": "83cb16c57a1283bc"
+      },
+      "feature": "src/test/resources/features/cart-volume-discount/cart-volume-discount.feature",
+      "lastStatus": "bug",
+      "lastRunId": "run-20261124-184916",
+      "lastRunAt": "2026-11-24T19:11:30.244Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T19:11:17.937Z"
+    },
+    "TC-CARTVOLUME-006": {
+      "title": "One part in the cart — the note asks for 2 more parts",
+      "flow": "cart-volume-discount",
+      "priority": "P1",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwv21jfp014n01sidtvs6w2y",
+        "testCaseId": "cmwv22fca014q01si046klnos",
+        "scenarioId": "ea7ff413-e7c2-4d20-9413-196cdd24f9eb::dee0bf29-2d2c-452b-9423-178b26082ade",
+        "feature": "Cart volume discount",
+        "area": "Volume Test",
+        "dataNodeIds": [
+          "ff279f39-8caf-4075-9529-bd0800d05ffd"
+        ],
+        "validationNodeIds": [
+          "a4ff7682-304c-4c99-a21c-ba5f000e4fc3",
+          "1b96c80d-d019-4d9d-ba4a-5b1c718aacd1",
+          "26b53a06-1cb8-4746-bab3-cada53e23122",
+          "64b0de91-36be-4395-9a6b-bb2b060b5ceb",
+          "4a6ac1bf-f4da-4e83-9e63-e8ad33077c73",
+          "c466ffdc-4262-4c13-8406-b92606419d66",
+          "dee0bf29-2d2c-452b-9423-178b26082ade"
+        ],
+        "pathNodeIds": [
+          "7247aac8-1ba7-49bf-9cdf-35caf13d59e9",
+          "a4ff7682-304c-4c99-a21c-ba5f000e4fc3",
+          "341ec047-8d00-4502-a454-edf05e6837f6",
+          "ff279f39-8caf-4075-9529-bd0800d05ffd",
+          "1b96c80d-d019-4d9d-ba4a-5b1c718aacd1",
+          "c92014e3-f2b1-41a1-af1e-1ef7fe2af6eb",
+          "26b53a06-1cb8-4746-bab3-cada53e23122",
+          "64b0de91-36be-4395-9a6b-bb2b060b5ceb",
+          "4a6ac1bf-f4da-4e83-9e63-e8ad33077c73",
+          "c466ffdc-4262-4c13-8406-b92606419d66",
+          "dee0bf29-2d2c-452b-9423-178b26082ade"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "341ec047-8d00-4502-a454-edf05e6837f6"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "85a41e694b1ce804",
+      "codeRefs": {
+        "index.html": "83cb16c57a1283bc"
+      },
+      "feature": "src/test/resources/features/cart-volume-discount/cart-volume-discount.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-184916",
+      "lastRunAt": "2026-11-24T19:11:30.244Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T19:11:17.937Z"
     }
   },
   "repositories": {
@@ -5255,5 +5598,5 @@
       "front"
     ]
   },
-  "updatedAt": "2026-11-24T17:52:46.552Z"
+  "updatedAt": "2026-11-24T19:11:30.244Z"
 }

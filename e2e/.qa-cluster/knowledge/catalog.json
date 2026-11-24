@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T14:02:39.940Z",
+  "updatedAt": "2026-11-24T19:11:30.275Z",
   "fixtures": [
     "ctx",
     "api",
@@ -95,6 +95,7 @@
         "productInfo",
         "addToCart",
         "addToCartByName",
+        "addPartsToCart",
         "clickProductButton",
         "openProductDetails",
         "filterByCategory",
@@ -1616,6 +1617,75 @@
     {
       "keyword": "Then",
       "pattern": "the cart drawer is hidden",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "Does the cart hold 3 or more parts?",
+      "file": "src/test/steps/volume-1.steps.ts"
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user fills the cart with {string}",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user increases the quantity of the {string} part in the cart",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the cart subtotal is {string}",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the cart shows a volume discount of {string}",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the cart does not show a volume discount",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the cart shipping is {string}",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the cart total is {string}",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the cart volume discount note reads {string}",
       "file": "src/test/steps/volume-1.steps.ts",
       "pages": [
         "CartDrawer"

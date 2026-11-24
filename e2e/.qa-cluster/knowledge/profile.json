@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-11-24T14:02:39.909Z",
-  "runId": "run-20261124-133452",
+  "updatedAt": "2026-11-24T19:11:30.244Z",
+  "runId": "run-20261124-184916",
   "fingerprint": {
     "qa-cluster.config.json": "ae4729ab4dcb42c2"
   },
   "recon": {
     "repo": {
       "path": "/Users/adriana_limonta/QA-Demos/partwerk-volume-tests",
-      "commit": "1ed99876784b0f07e081e3b2806f40314ed1e9cc",
+      "commit": "a3bfd69eb334d66241cf463b671b4395ee64a30a",
       "branch": "master"
     },
     "stack": {

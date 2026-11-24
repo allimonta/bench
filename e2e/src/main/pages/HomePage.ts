@@ -120,6 +120,11 @@ export class HomePage extends BasePage {
     await this.productCardNamed(name).locator('//button[@data-add]').click();
   }
 
+  /** Adds each part once, in order, by the name its card shows. */
+  async addPartsToCart(names: string[]): Promise<void> {
+    for (const name of names) await this.addToCartByName(name);
+  }
+
   async clickProductButton(id: string, name: string): Promise<void> {
     await this.productButton(id, name).click();
   }

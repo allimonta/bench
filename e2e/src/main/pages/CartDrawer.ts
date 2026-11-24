@@ -13,6 +13,11 @@ export class CartDrawer {
   readonly emptyImage: Locator;
   readonly subtotal: Locator;
   readonly total: Locator;
+  /** The volume discount amount (row "Volume discount (5%)", shown only at 3 or more pieces, with a leading "−"). */
+  readonly discount: Locator;
+  readonly shipping: Locator;
+  /** The volume discount note under the summary ("Add N more part(s) to get 5% off." / "Volume discount applied: …"). */
+  readonly volumeNote: Locator;
   readonly placeOrderButton: Locator;
   readonly orderConfirmation: Locator;
   readonly continueShoppingButton: Locator;
@@ -42,6 +47,9 @@ export class CartDrawer {
     this.emptyImage = this.root.getByTestId('cart-empty-image');
     this.subtotal = this.root.getByTestId('cart-subtotal');
     this.total = this.root.getByTestId('cart-total');
+    this.discount = this.root.getByTestId('cart-discount');
+    this.shipping = this.root.getByTestId('cart-shipping');
+    this.volumeNote = this.root.locator("//p[contains(@class,'volume-note')]");
     this.placeOrderButton = this.root.locator("//*[@id='checkout']");
     this.orderConfirmation = this.root.locator("//div[contains(@class,'confirm')]");
     this.continueShoppingButton = this.root.locator("//*[@id='continue']");

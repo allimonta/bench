@@ -439,3 +439,49 @@ When('the user opens the cart and closes it with the close button', async ({ app
 Then('the cart drawer is hidden', async ({ cartDrawer }) => {
   await expect(cartDrawer.exposedHeading, 'the cart drawer is still shown').toBeHidden();
 });
+
+// ---- Cart volume discount (cart-volume-discount) ----
+
+// TestGraph decision node (the last step of the shared Background): it asks a question the scenario's own steps answer,
+// so there is nothing to do here. Each scenario is one answer.
+When('Does the cart hold 3 or more parts?', async () => {});
+
+// The parts are comma-separated part names; each one is added once with its card's "Add to cart" button.
+When('the user fills the cart with {string}', async ({ homePage }, parts: string) => {
+  await homePage.addPartsToCart(parts.split(',').map((name) => name.trim()).filter(Boolean));
+});
+
+When('the user increases the quantity of the {string} part in the cart', async ({ cartDrawer }, part: string) => {
+  await cartDrawer.increaseQuantityOf(part);
+});
+
+// expected: the cart subtotal is "<amount>"
+Then('the cart subtotal is {string}', async ({ cartDrawer }, amount: string) => {
+  await expect(cartDrawer.subtotal, `the cart subtotal is not "${amount}"`).toHaveText(amount);
+});
+
+// expected: the cart shows a volume discount of "<amount>" (the app writes it with a leading minus sign, U+2212)
+Then('the cart shows a volume discount of {string}', async ({ cartDrawer }, amount: string) => {
+  const escaped = amount.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  await expect(cartDrawer.discount, `the cart does not show a volume discount of "${amount}"`).toHaveText(new RegExp(`^\\s*[−-]?${escaped}\\s*$`));
+});
+
+// expected: the cart does not show a volume discount
+Then('the cart does not show a volume discount', async ({ cartDrawer }) => {
+  await expect(cartDrawer.discount, 'the cart shows a volume discount').toBeHidden();
+});
+
+// expected: the cart shipping is "<amount>"
+Then('the cart shipping is {string}', async ({ cartDrawer }, amount: string) => {
+  await expect(cartDrawer.shipping, `the cart shipping is not "${amount}"`).toHaveText(amount);
+});
+
+// expected: the cart total is "<amount>"
+Then('the cart total is {string}', async ({ cartDrawer }, amount: string) => {
+  await expect(cartDrawer.total, `the cart total is not "${amount}"`).toHaveText(amount);
+});
+
+// expected: the cart volume discount note reads "<note>"
+Then('the cart volume discount note reads {string}', async ({ cartDrawer }, note: string) => {
+  await expect(cartDrawer.volumeNote, `the cart volume discount note does not read "${note}"`).toHaveText(note);
+});
