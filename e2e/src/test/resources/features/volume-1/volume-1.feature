@@ -49,7 +49,7 @@ Feature: Volume 1
     And the user attempts to proceed to checkout
     Then the checkout is not allowed and an empty-cart message is shown
 
-  @TC-VOLUME1-010 @P2 @regression @tg-cmwtav3zw01pp01thxk0wr54s @fail @BUG-004
+  @TC-VOLUME1-010 @P2 @regression @tg-cmwtav3zw01pp01thxk0wr54s
   Scenario: TC-VOLUME1-010 Sort products by price ascending
     When the user is on the Shop section
     And the user sorts products by "Price: Low to High"

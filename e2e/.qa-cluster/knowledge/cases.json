@@ -366,16 +366,10 @@
       "gherkinHash": "30b83de0275f218f",
       "codeRefs": {},
       "feature": "src/test/resources/features/volume-1/volume-1.feature",
-      "lastStatus": "bug",
-      "lastRunId": "run-20261123-133227",
-      "lastRunAt": "2026-11-23T14:29:45.360Z",
-      "bugs": [
-        {
-          "id": "BUG-004",
-          "severity": "minor",
-          "pattern": "deterministic"
-        }
-      ],
+      "lastStatus": "stable",
+      "lastRunId": "test-20261124-175246",
+      "lastRunAt": "2026-11-24T17:52:46.552Z",
+      "bugs": [],
       "firstSeenAt": "2026-11-23T14:28:48.090Z"
     },
     "TC-VOLUME1-011": {
@@ -5261,5 +5255,5 @@
       "front"
     ]
   },
-  "updatedAt": "2026-11-24T14:02:39.909Z"
+  "updatedAt": "2026-11-24T17:52:46.552Z"
 }

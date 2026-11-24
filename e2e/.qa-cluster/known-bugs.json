@@ -14,11 +14,6 @@
     "title": "Shop: no product has an 'Out of stock' state instead of a disabled 'Add to cart'",
     "stage": "assertion"
   },
-  "BUG-004": {
-    "signature": "getByRole('combobox', { name: 'Sort' })",
-    "title": "Shop: no 'Sort' control instead of sorting by price low to high",
-    "stage": "assertion"
-  },
   "BUG-005": {
     "signature": "locator.click: Timeout",
     "title": "Shop catalog: no \"Screens\" category filter exists instead of filtering products by \"Screens\"",
