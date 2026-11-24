@@ -4870,9 +4870,9 @@
         "index.html": "9059ba6dde2f9f07"
       },
       "feature": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
-      "lastStatus": "stable",
-      "lastRunId": "run-20261124-125247",
-      "lastRunAt": "2026-11-24T13:14:37.134Z",
+      "lastStatus": "failed",
+      "lastRunId": "test-20261124-193357",
+      "lastRunAt": "2026-11-24T19:33:57.072Z",
       "bugs": [],
       "firstSeenAt": "2026-11-24T13:14:03.724Z"
     },
@@ -5598,5 +5598,5 @@
       "front"
     ]
   },
-  "updatedAt": "2026-11-24T19:11:30.244Z"
+  "updatedAt": "2026-11-24T19:33:57.072Z"
 }
