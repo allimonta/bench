@@ -488,7 +488,7 @@ document.addEventListener("click", e=>{
   }
   if(t.dataset.inc){ cart[t.dataset.inc]++; save(); renderCart(); }
   if(t.dataset.dec){ const id=t.dataset.dec; cart[id]--; if(cart[id]<=0) delete cart[id]; save(); renderCart(); }
-  if(t.dataset.remove){ save(); renderCart(); toast("Part removed"); }
+  if(t.dataset.remove){ delete cart[t.dataset.remove]; save(); renderCart(); toast("Part removed"); }
   if(t.id==="checkout"){ confirmed="PW-"+Math.random().toString(36).slice(2,8).toUpperCase(); cart={}; save(); renderCart(); }
   if(t.id==="continue"){ confirmed=null; renderCart(); closeCart(); }
 });
