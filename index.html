@@ -365,7 +365,7 @@ footer div{ max-width:1200px; margin:0 auto; padding:24px; display:flex; flex-wr
       </div>
       <div class="find-actions">
         <button class="cta" type="submit" id="findSubmit" data-testid="find-submit">Search</button>
-        <button class="ghost-btn" type="button" id="findClear" data-testid="find-clear" hidden>Show all</button>
+        <button class="ghost-btn" type="button" id="findReset" data-testid="find-reset" hidden>Clear search</button>
       </div>
     </form>
     <section id="reservationsSection" data-testid="reservations-list">
@@ -685,7 +685,7 @@ function renderReservations(){
   const all = newestFirst(reservations), q = norm(findQuery);
   const list = q ? all.filter(r=>matches(r,q)) : all;
   const msg = $("#findMsg"), table = $("#reservationsTable");
-  $("#findClear").hidden = !q;
+  $("#findReset").hidden = !q;
   msg.hidden = true; table.innerHTML = "";
   if(!all.length){
     $("#reservationsTitle").textContent = "All reservations";
@@ -713,7 +713,7 @@ function closeFind(){ $("#findDrawer").classList.remove("open"); $("#overlay").c
 $("#findBtn").addEventListener("click", openFind);
 $("#closeFind").addEventListener("click", closeFind);
 $("#findForm").addEventListener("submit", searchReservations);
-$("#findClear").addEventListener("click", clearSearch);
+$("#findReset").addEventListener("click", clearSearch);
 $("#menuToggle").addEventListener("click", ()=>{ const m=$("#menu"); const o=m.classList.toggle("open"); $("#menuToggle").setAttribute("aria-expanded",o); });
 
 $("#sortSelect").addEventListener("change", e=>{ sort = e.target.value; renderGrid(); });
