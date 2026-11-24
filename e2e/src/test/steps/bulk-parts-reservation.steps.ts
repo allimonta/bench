@@ -1,5 +1,6 @@
 import { expect } from '@playwright/test';
-import { When, Then } from '@fixtures';
+import { Given, When, Then } from '@fixtures';
+import { email } from '@data/generators';
 import type { ReservePartsDrawer } from '@pages/ReservePartsDrawer';
 import type { FindReservationDrawer } from '@pages/FindReservationDrawer';
 
@@ -579,3 +580,24 @@ const panelByTitle = (title: string, panels: { reservePartsDrawer: ReservePartsD
 Then('the title {string} is displayed', async ({ reservePartsDrawer, findReservationDrawer }, title: string) => {
   await expect(panelByTitle(title, { reservePartsDrawer, findReservationDrawer }).title, `the title "${title}" is not displayed`).toHaveText(title);
 });
+
+// ---- A reservation as a precondition (find-a-reservation) ----
+
+// Creates the reservation through the "Reserve parts" panel, paying by credit card with a generated confirmation email,
+// then closes the panel (it would cover the header). "Ana Torres": the first word is the first name, the rest the last
+// name(s). No ctx.own and no cleanup: reservations live in this scenario's own browser context (localStorage) and no
+// screen deletes one, so nothing is shared with another execution and nothing is left behind.
+Given(
+  'a reservation of {int} {string} pieces exists for {string} requested by {string}',
+  async ({ appHeader, reservePartsDrawer, reservationConfirmation }, quantity: number, part: string, company: string, requester: string) => {
+    const [firstName, ...lastNames] = requester.trim().split(/\s+/);
+    await appHeader.openReserve();
+    await reservePartsDrawer.expectLoaded();
+    await reservePartsDrawer.enterQuantity(part, String(quantity));
+    await reservePartsDrawer.fillRequester(company, firstName, lastNames.join(' '), email('reservation'));
+    await reservePartsDrawer.choosePaymentMethod('Credit card');
+    await reservePartsDrawer.submit();
+    await reservationConfirmation.expectLoaded();
+    await reservationConfirmation.close();
+  },
+);

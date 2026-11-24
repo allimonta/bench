@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T12:32:00.509Z",
+  "updatedAt": "2026-11-24T13:14:37.169Z",
   "fixtures": [
     "ctx",
     "api",
@@ -74,7 +74,10 @@
       "methods": [
         "expectLoaded",
         "search",
-        "close"
+        "close",
+        "enterQuery",
+        "clickButton",
+        "codeOf"
       ],
       "routes": []
     },
@@ -984,6 +987,16 @@
     },
     {
       "keyword": "Given",
+      "pattern": "a reservation of {int} {string} pieces exists for {string} requested by {string}",
+      "file": "src/test/steps/bulk-parts-reservation.steps.ts",
+      "pages": [
+        "AppHeader",
+        "ReservePartsDrawer",
+        "ReservationConfirmation"
+      ]
+    },
+    {
+      "keyword": "Given",
       "pattern": "I open the home page",
       "file": "src/test/steps/common.steps.ts",
       "pages": [
@@ -1622,6 +1635,115 @@
     {
       "keyword": "Then",
       "pattern": "the message {string} is displayed",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "Does a reservation match the search?",
+      "file": "src/test/steps/weird-names.steps.ts"
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user enters the reservation search {string}",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user clicks the reservation search {string} button",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user enters the code of the {string} reservation in the reservation search",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation list title reads {string}",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the first listed reservation is from {string}",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation list title says {string} of {string} reservations match {string}",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation list shows only the {string} reservation",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the listed {string} reservation shows {string} pieces",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the listed {string} reservation shows the amount {string}",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the listed {string} reservation shows the requester {string}",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation search reports no match for {string}",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation list shows no reservation",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation search field is empty",
       "file": "src/test/steps/weird-names.steps.ts",
       "pages": [
         "FindReservationDrawer"

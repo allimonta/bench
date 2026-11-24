@@ -3,7 +3,7 @@
   "version": "0.29.0",
   "layout": "src",
   "createdAt": "2026-11-23T13:40:51.265Z",
-  "updatedAt": "2026-11-24T12:31:50.832Z",
+  "updatedAt": "2026-11-24T13:14:30.147Z",
   "packageManager": "npm",
   "ciProvider": "github-actions",
   "ciFiles": [
@@ -69,6 +69,18 @@
       "inconclusive": 0,
       "iterations": 2,
       "report": "docs/qa-cluster-report.md"
+    },
+    {
+      "runId": "run-20261124-125247",
+      "at": "2026-11-24T13:14:30.147Z",
+      "result": "completed",
+      "commit": "826575751dcc5f2ac7bf8a992a54b0c84e6965b2",
+      "cases": 8,
+      "stable": 8,
+      "bugs": 0,
+      "inconclusive": 0,
+      "iterations": 2,
+      "report": "docs/qa-cluster-report.md"
     }
   ],
   "files": {
@@ -104,14 +116,15 @@
     "src/main/utils/money.ts": "f7fed4d1b53b980d53bc576968ad8868c51186a71ce60199fbae061957577855",
     "src/main/pages/ReservePartsDrawer.ts": "cc17fb36746c13a7cd7026cfeb32b75171bf8b0db4a375c0ff3042dbad2875f8",
     "src/main/pages/ReservationConfirmation.ts": "aa506c040056fcfbee1514f3cda3190adb9d4f6c3ce77e58eb52ecffe63c5a99",
-    "src/test/steps/bulk-parts-reservation.steps.ts": "028d77048953c025e9b14c24766b8e36fbdedcc50fa0fe1620e5144861fc52cf",
+    "src/test/steps/bulk-parts-reservation.steps.ts": "05b98d15c2069ee6aed188d387af38d5617293b2ad5d905c38873ee89e24d903",
     "src/test/resources/features/bulk-parts-reservation/bulk-parts-reservation.feature": "65ead70e5c425094e405fb2719535f4efaea40bdcf03dd4b8ce24d95305ea020",
     "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature": "9f72eec05352abc7ac4fce25af843d1dfba61617ced1f31b1cf34b2cde031d1c",
     ".qa-cluster/knowledge/observations.md": "4259ded4b4287c5dc2bc7ed92d52d46eb0c57b0f00b112dabe0c6fcb38600979",
     "src/test/resources/features/volume-1/volume-1-empty-cart-illustration.feature": "5950f4235f443e25a78ab98f64aa89a4ff09c05a0e6849fd25e7d43107490ea9",
-    "src/main/pages/FindReservationDrawer.ts": "e11d7329f15031bfe26a288c423a64588492e5e351ba3b2e5ebf97bc93cb30cf",
-    "src/test/steps/weird-names.steps.ts": "c683a4d591895610f2512919ebfee5b7140bb7573d7e6aca3ce199cb0d57c652",
-    "src/test/resources/features/weird-names/weird-names.feature": "e90564cb23beaec16ad68fc5a10569863e400092a0c1d6be3769a48dd5beba77"
+    "src/main/pages/FindReservationDrawer.ts": "fe59e989d424525a3ccc11cb47f57b184ad6205bec70f0091c8ecb460975edaf",
+    "src/test/steps/weird-names.steps.ts": "46cb3c054fe97550fc52c0913fe0df7419e4ec2d639eafee27e0ce74f230b8a2",
+    "src/test/resources/features/weird-names/weird-names.feature": "e90564cb23beaec16ad68fc5a10569863e400092a0c1d6be3769a48dd5beba77",
+    "src/test/resources/features/find-a-reservation/find-a-reservation.feature": "c2776bb4bad4669e674b0c508eb60f74822e51c5cf3009693281c902202aa024"
   },
   "cases": {
     "TC-VOLUME1-001": {
@@ -716,20 +729,60 @@
       "spec": "src/test/resources/features/weird-names/weird-names.feature",
       "testCaseId": "cmwunkn3r001b01siu50oxf9u",
       "status": "stable"
+    },
+    "TC-FINDARESER-001": {
+      "spec": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
+      "testCaseId": "cmwupbyad005001tuxla8evsh",
+      "status": "stable"
+    },
+    "TC-FINDARESER-002": {
+      "spec": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
+      "testCaseId": "cmwupbyju002g01si5ezuessg",
+      "status": "stable"
+    },
+    "TC-FINDARESER-003": {
+      "spec": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
+      "testCaseId": "cmwupbytu005101tu50yakw3s",
+      "status": "stable"
+    },
+    "TC-FINDARESER-004": {
+      "spec": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
+      "testCaseId": "cmwupbz3g002h01siywu4m0uf",
+      "status": "stable"
+    },
+    "TC-FINDARESER-005": {
+      "spec": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
+      "testCaseId": "cmwupbzcj005201tukh5tvwo9",
+      "status": "stable"
+    },
+    "TC-FINDARESER-006": {
+      "spec": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
+      "testCaseId": "cmwupbzlc002i01sikubcm9p5",
+      "status": "stable"
+    },
+    "TC-FINDARESER-007": {
+      "spec": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
+      "testCaseId": "cmwupbzuq005301tuxhkkc9u6",
+      "status": "stable"
+    },
+    "TC-FINDARESER-008": {
+      "spec": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
+      "testCaseId": "cmwupc03p002j01sivqdc465u",
+      "status": "stable"
     }
   },
   "lastBugNumber": 11,
   "testgraph": {
     "projectId": "cmwmh64un008r01th1gyazrxj",
     "project": "Bench - QA Cluster",
-    "lastRunId": "cmwuo9ab8002p01tucse5mvnf",
+    "lastRunId": "cmwuprksb005s01tu2pi7sj2k",
     "url": "https://testgraph.internal.qubika.com/projects/cmwmh64un008r01th1gyazrxj"
   },
-  "baseCommit": "dd3a6a8db8555a1c5a9eac5ba34475a2509e8c61",
+  "baseCommit": "826575751dcc5f2ac7bf8a992a54b0c84e6965b2",
   "finalizedBy": {
     "by": "manifest-finalize",
-    "runId": "run-20261124-121524",
-    "at": "2026-11-24T12:31:50.832Z"
+    "runId": "run-20261124-125247",
+    "at": "2026-11-24T13:14:30.147Z"
   },
   "shapes": {
     "src/test/steps/volume-1.steps.ts": {
@@ -753,20 +806,20 @@
       "sha": "d4ac1c1466007dc65425d4eda9d1ba0093119099bca44c50572805b539b3c410"
     },
     "src/main/pages/FindReservationDrawer.ts": {
-      "of": "e11d7329f15031bfe26a288c423a64588492e5e351ba3b2e5ebf97bc93cb30cf",
-      "sha": "32fa13d91a8c7bd74d31bc57449624fc7162d62f866b7a007a96397a783599b3"
+      "of": "fe59e989d424525a3ccc11cb47f57b184ad6205bec70f0091c8ecb460975edaf",
+      "sha": "933a676d3c8b5886d19e0c623486fc3cb84b4a4085c1f9510dfeaa13f8225b9b"
     },
     "src/main/fixtures/index.ts": {
       "of": "adf4a677bda97ad0b4253d67d06074ef5761d2ac6f96461d1797589105736e85",
       "sha": "1bab815fa617bd38932fa7ab445d4286b7dd34606eac0c5348d21060bda728c5"
     },
     "src/test/steps/bulk-parts-reservation.steps.ts": {
-      "of": "028d77048953c025e9b14c24766b8e36fbdedcc50fa0fe1620e5144861fc52cf",
-      "sha": "0b9f9116f23b97961e2dba22e7569f4d41a9e9f9a4ac3bf707c72ceb1b02e422"
+      "of": "05b98d15c2069ee6aed188d387af38d5617293b2ad5d905c38873ee89e24d903",
+      "sha": "8af16051514c9a3ea00ae5c459666c9f3a1d1be749af144e106b8552229d3de3"
     },
     "src/test/steps/weird-names.steps.ts": {
-      "of": "c683a4d591895610f2512919ebfee5b7140bb7573d7e6aca3ce199cb0d57c652",
-      "sha": "01206e67ae332d0ba1633ae0341a6f99e20a4cb2b15292c0da172ad3ff4451b1"
+      "of": "46cb3c054fe97550fc52c0913fe0df7419e4ec2d639eafee27e0ce74f230b8a2",
+      "sha": "d66802d99434e277b23cbe3ed646c5a870af70f122b1a7b4a4def9003fe42755"
     }
   }
 }

@@ -13,6 +13,10 @@ export class FindReservationDrawer {
   /** The status line: "No reservations yet." or "No reservation matches …". */
   readonly message: Locator;
   readonly reservationRows: Locator;
+  /** The table of the listed reservations: not rendered when nothing is listed. */
+  readonly reservationsTable: Locator;
+  /** The Company cell of every listed row, in the order shown (newest first). */
+  readonly rowCompanies: Locator;
   private readonly root: Locator;
 
   constructor(page: Page) {
@@ -25,6 +29,8 @@ export class FindReservationDrawer {
     this.reservationsTitle = this.root.locator("//*[@id='reservationsTitle']");
     this.message = this.root.locator("//*[@id='findMsg']");
     this.reservationRows = this.root.getByTestId('reservation-row'); // a list: one row per listed reservation
+    this.reservationsTable = this.root.getByTestId('reservations-table');
+    this.rowCompanies = this.reservationRows.getByTestId('reservation-company'); // a list: one cell per listed row
   }
 
   /** The panel is open: its heading is exposed (a closed panel is aria-hidden). */
@@ -40,5 +46,44 @@ export class FindReservationDrawer {
 
   async close(): Promise<void> {
     await this.closeButton.click();
+  }
+
+  /** Types a value in the search field without searching. */
+  async enterQuery(query: string): Promise<void> {
+    await this.queryField.fill(query);
+  }
+
+  /** A button of the search form, by its visible name ("Search", "Show all"). */
+  button(name: string): Locator {
+    return this.root.getByRole('button', { name, exact: true });
+  }
+
+  async clickButton(name: string): Promise<void> {
+    await this.button(name).click();
+  }
+
+  /** The listed row of a reservation, by its company (the Company cell holds exactly that text). */
+  rowOf(company: string): Locator {
+    const exact = new RegExp(`^\\s*${company.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*$`);
+    return this.reservationRows.filter({
+      has: this.root.page().getByTestId('reservation-company').filter({ hasText: exact }),
+    });
+  }
+
+  /** A cell of a reservation's row, by the company and the cell's column ("code", "requester", "pieces", "amount"). */
+  cellOf(company: string, column: 'date' | 'company' | 'code' | 'requester' | 'pieces' | 'amount'): Locator {
+    return this.rowOf(company).getByTestId(`reservation-${column}`);
+  }
+
+  /** The tracking code a listed reservation shows (a random value the app gives every reservation). */
+  async codeOf(company: string): Promise<string> {
+    const cell = this.cellOf(company, 'code');
+    await expect(cell, `no listed reservation is from "${company}"`).toHaveText(/\S/);
+    return (await cell.innerText()).trim();
+  }
+
+  /** The Company cell of the first listed row: the list is newest first, so the order is what is checked. */
+  firstRowCompany(): Locator {
+    return this.rowCompanies.first(); // the order is part of the case: the newest reservation comes first
   }
 }

@@ -4501,6 +4501,439 @@
       "lastRunAt": "2026-11-24T12:32:00.488Z",
       "bugs": [],
       "firstSeenAt": "2026-11-24T12:32:00.488Z"
+    },
+    "TC-FINDARESER-001": {
+      "title": "Search by company — only that reservation is listed",
+      "flow": "find-a-reservation",
+      "priority": "P1",
+      "tier": "smoke",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwupaw0h004z01tukle1qxo5",
+        "testCaseId": "cmwupbyad005001tuxla8evsh",
+        "scenarioId": "2ffa3f85-fa49-423b-98ab-cacf07ce8571::38b399b4-27ef-4682-b48d-2770ca3d044b",
+        "feature": "Find a reservation",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "c8c99e65-89d9-4299-a587-985a7500a2a4",
+          "653224f0-d3db-4749-9650-ad31c02d293c",
+          "49291b78-c2b5-4929-8e47-ad73b41cb09c",
+          "756e41ce-4ae8-418f-b4da-af2059d82e2f",
+          "1a7e412b-9a94-4d21-b861-c8b7e5664b1e",
+          "c311601a-e1d1-4f9e-9e3d-670c78ebf17d",
+          "dff924d3-c8ef-435f-a155-90bdff68fefa",
+          "6ec7904a-3c9e-41de-86c8-2f701f835529",
+          "97859b29-d6ac-4b6a-84c9-2ad48ff85c67",
+          "044b1ad8-a82f-4f47-ac6b-5dd5cc442486",
+          "7d8d8d11-7e09-4a01-b197-a42553de63d5",
+          "b4e6f7d4-4d64-4fea-a908-5bda38bf5a09",
+          "247f1fc6-6390-4a46-b361-4da769384778",
+          "38b399b4-27ef-4682-b48d-2770ca3d044b"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "6ec7904a-3c9e-41de-86c8-2f701f835529"
+        ],
+        "dataNodeIds": [
+          "97859b29-d6ac-4b6a-84c9-2ad48ff85c67"
+        ],
+        "validationNodeIds": [
+          "1a7e412b-9a94-4d21-b861-c8b7e5664b1e",
+          "c311601a-e1d1-4f9e-9e3d-670c78ebf17d",
+          "dff924d3-c8ef-435f-a155-90bdff68fefa",
+          "7d8d8d11-7e09-4a01-b197-a42553de63d5",
+          "b4e6f7d4-4d64-4fea-a908-5bda38bf5a09",
+          "247f1fc6-6390-4a46-b361-4da769384778",
+          "38b399b4-27ef-4682-b48d-2770ca3d044b"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "e5f8969318093f32",
+      "codeRefs": {
+        "index.html": "9059ba6dde2f9f07"
+      },
+      "feature": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-125247",
+      "lastRunAt": "2026-11-24T13:14:37.134Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T13:14:03.724Z"
+    },
+    "TC-FINDARESER-002": {
+      "title": "Search for an unknown company — no reservation matches",
+      "flow": "find-a-reservation",
+      "priority": "P1",
+      "tier": "smoke",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwupaw0h004z01tukle1qxo5",
+        "testCaseId": "cmwupbyju002g01si5ezuessg",
+        "scenarioId": "14056fd8-6109-40c9-ba3e-a1cd660a70b0::5809339e-1e48-47b9-ad9f-b154365faf1b",
+        "feature": "Find a reservation",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "c8c99e65-89d9-4299-a587-985a7500a2a4",
+          "653224f0-d3db-4749-9650-ad31c02d293c",
+          "49291b78-c2b5-4929-8e47-ad73b41cb09c",
+          "756e41ce-4ae8-418f-b4da-af2059d82e2f",
+          "1a7e412b-9a94-4d21-b861-c8b7e5664b1e",
+          "c311601a-e1d1-4f9e-9e3d-670c78ebf17d",
+          "dff924d3-c8ef-435f-a155-90bdff68fefa",
+          "6ec7904a-3c9e-41de-86c8-2f701f835529",
+          "3b331343-d828-43ff-9baa-a97011484f57",
+          "b6cf9139-540f-436f-b1ed-1e7b4a29d915",
+          "83f4b6d4-96de-41e7-bc3c-0a68ce7f8039",
+          "b40c3c2e-b129-4544-a894-3d33d3c3a506",
+          "5809339e-1e48-47b9-ad9f-b154365faf1b"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "6ec7904a-3c9e-41de-86c8-2f701f835529"
+        ],
+        "dataNodeIds": [
+          "3b331343-d828-43ff-9baa-a97011484f57"
+        ],
+        "validationNodeIds": [
+          "1a7e412b-9a94-4d21-b861-c8b7e5664b1e",
+          "c311601a-e1d1-4f9e-9e3d-670c78ebf17d",
+          "dff924d3-c8ef-435f-a155-90bdff68fefa",
+          "83f4b6d4-96de-41e7-bc3c-0a68ce7f8039",
+          "b40c3c2e-b129-4544-a894-3d33d3c3a506",
+          "5809339e-1e48-47b9-ad9f-b154365faf1b"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "2322d9d4e43997c1",
+      "codeRefs": {
+        "index.html": "9059ba6dde2f9f07"
+      },
+      "feature": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-125247",
+      "lastRunAt": "2026-11-24T13:14:37.134Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T13:14:03.724Z"
+    },
+    "TC-FINDARESER-003": {
+      "title": "Search by tracking code — only that reservation is listed",
+      "flow": "find-a-reservation",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwupaw0h004z01tukle1qxo5",
+        "testCaseId": "cmwupbytu005101tu50yakw3s",
+        "scenarioId": "986ce693-4565-4d0a-955c-9641148d7dd3::cf0fcbb3-8f33-4479-8576-a5e15d6ec253",
+        "feature": "Find a reservation",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "c8c99e65-89d9-4299-a587-985a7500a2a4",
+          "653224f0-d3db-4749-9650-ad31c02d293c",
+          "49291b78-c2b5-4929-8e47-ad73b41cb09c",
+          "756e41ce-4ae8-418f-b4da-af2059d82e2f",
+          "1a7e412b-9a94-4d21-b861-c8b7e5664b1e",
+          "c311601a-e1d1-4f9e-9e3d-670c78ebf17d",
+          "dff924d3-c8ef-435f-a155-90bdff68fefa",
+          "6ec7904a-3c9e-41de-86c8-2f701f835529",
+          "bc02e8cf-195b-4d90-aceb-3546a062da46",
+          "2b2915f2-d41a-4598-98e4-428ea62c63fe",
+          "38664255-58c3-4670-9901-e0fb01525af5",
+          "cf0fcbb3-8f33-4479-8576-a5e15d6ec253"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "6ec7904a-3c9e-41de-86c8-2f701f835529"
+        ],
+        "dataNodeIds": [
+          "bc02e8cf-195b-4d90-aceb-3546a062da46"
+        ],
+        "validationNodeIds": [
+          "1a7e412b-9a94-4d21-b861-c8b7e5664b1e",
+          "c311601a-e1d1-4f9e-9e3d-670c78ebf17d",
+          "dff924d3-c8ef-435f-a155-90bdff68fefa",
+          "38664255-58c3-4670-9901-e0fb01525af5",
+          "cf0fcbb3-8f33-4479-8576-a5e15d6ec253"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "4e7f03d88d876221",
+      "codeRefs": {
+        "index.html": "9059ba6dde2f9f07"
+      },
+      "feature": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-125247",
+      "lastRunAt": "2026-11-24T13:14:37.134Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T13:14:03.724Z"
+    },
+    "TC-FINDARESER-004": {
+      "title": "Search for an unknown tracking code — no reservation matches",
+      "flow": "find-a-reservation",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwupaw0h004z01tukle1qxo5",
+        "testCaseId": "cmwupbz3g002h01siywu4m0uf",
+        "scenarioId": "13ba9e43-5478-46dc-b90f-5f2a57501631::3da7c444-9484-4bde-9ba3-f253c7eb0d62",
+        "feature": "Find a reservation",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "c8c99e65-89d9-4299-a587-985a7500a2a4",
+          "653224f0-d3db-4749-9650-ad31c02d293c",
+          "49291b78-c2b5-4929-8e47-ad73b41cb09c",
+          "756e41ce-4ae8-418f-b4da-af2059d82e2f",
+          "1a7e412b-9a94-4d21-b861-c8b7e5664b1e",
+          "c311601a-e1d1-4f9e-9e3d-670c78ebf17d",
+          "dff924d3-c8ef-435f-a155-90bdff68fefa",
+          "6ec7904a-3c9e-41de-86c8-2f701f835529",
+          "4410ac76-f6e6-447c-a5ca-3892142ed1c9",
+          "5889f315-ff39-41ac-93d6-958c55f0e3dd",
+          "d4f535a1-0f03-46c1-82f3-9a17217cd92e",
+          "3da7c444-9484-4bde-9ba3-f253c7eb0d62"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "6ec7904a-3c9e-41de-86c8-2f701f835529"
+        ],
+        "dataNodeIds": [
+          "4410ac76-f6e6-447c-a5ca-3892142ed1c9"
+        ],
+        "validationNodeIds": [
+          "1a7e412b-9a94-4d21-b861-c8b7e5664b1e",
+          "c311601a-e1d1-4f9e-9e3d-670c78ebf17d",
+          "dff924d3-c8ef-435f-a155-90bdff68fefa",
+          "d4f535a1-0f03-46c1-82f3-9a17217cd92e",
+          "3da7c444-9484-4bde-9ba3-f253c7eb0d62"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "05a1671cf8d2e112",
+      "codeRefs": {
+        "index.html": "9059ba6dde2f9f07"
+      },
+      "feature": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-125247",
+      "lastRunAt": "2026-11-24T13:14:37.134Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T13:14:03.724Z"
+    },
+    "TC-FINDARESER-005": {
+      "title": "Search by number of pieces — only the reservation with that quantity is listed",
+      "flow": "find-a-reservation",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwupaw0h004z01tukle1qxo5",
+        "testCaseId": "cmwupbzcj005201tukh5tvwo9",
+        "scenarioId": "d1068110-fa5d-4597-b2e7-434de8be22f7::11f9d0a5-7295-4fa5-8f01-fa89ccb197fe",
+        "feature": "Find a reservation",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "c8c99e65-89d9-4299-a587-985a7500a2a4",
+          "653224f0-d3db-4749-9650-ad31c02d293c",
+          "49291b78-c2b5-4929-8e47-ad73b41cb09c",
+          "756e41ce-4ae8-418f-b4da-af2059d82e2f",
+          "1a7e412b-9a94-4d21-b861-c8b7e5664b1e",
+          "c311601a-e1d1-4f9e-9e3d-670c78ebf17d",
+          "dff924d3-c8ef-435f-a155-90bdff68fefa",
+          "6ec7904a-3c9e-41de-86c8-2f701f835529",
+          "5b98bf6b-6504-4d63-b6ab-0b12fe9f0903",
+          "c91c54e8-9668-4f07-b0fc-61869f8c31b4",
+          "68ec7804-17cf-4495-aac2-f80de194a802",
+          "11f9d0a5-7295-4fa5-8f01-fa89ccb197fe"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "6ec7904a-3c9e-41de-86c8-2f701f835529"
+        ],
+        "dataNodeIds": [
+          "5b98bf6b-6504-4d63-b6ab-0b12fe9f0903"
+        ],
+        "validationNodeIds": [
+          "1a7e412b-9a94-4d21-b861-c8b7e5664b1e",
+          "c311601a-e1d1-4f9e-9e3d-670c78ebf17d",
+          "dff924d3-c8ef-435f-a155-90bdff68fefa",
+          "68ec7804-17cf-4495-aac2-f80de194a802",
+          "11f9d0a5-7295-4fa5-8f01-fa89ccb197fe"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "a9e9e81de687ded1",
+      "codeRefs": {
+        "index.html": "9059ba6dde2f9f07"
+      },
+      "feature": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-125247",
+      "lastRunAt": "2026-11-24T13:14:37.134Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T13:14:03.724Z"
+    },
+    "TC-FINDARESER-006": {
+      "title": "Search for a number of pieces no reservation has — no reservation matches",
+      "flow": "find-a-reservation",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwupaw0h004z01tukle1qxo5",
+        "testCaseId": "cmwupbzlc002i01sikubcm9p5",
+        "scenarioId": "233c05fa-6d64-4072-a8ce-c180b33335ac::e9711094-6993-4431-a94a-18fc1c9c9abb",
+        "feature": "Find a reservation",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "c8c99e65-89d9-4299-a587-985a7500a2a4",
+          "653224f0-d3db-4749-9650-ad31c02d293c",
+          "49291b78-c2b5-4929-8e47-ad73b41cb09c",
+          "756e41ce-4ae8-418f-b4da-af2059d82e2f",
+          "1a7e412b-9a94-4d21-b861-c8b7e5664b1e",
+          "c311601a-e1d1-4f9e-9e3d-670c78ebf17d",
+          "dff924d3-c8ef-435f-a155-90bdff68fefa",
+          "6ec7904a-3c9e-41de-86c8-2f701f835529",
+          "e78aaec3-f2d6-4e09-8284-510c5dff0c64",
+          "40efda98-0b91-4655-b033-64e8995a591f",
+          "f74c3750-cd18-4594-9934-b10283a4841d",
+          "e9711094-6993-4431-a94a-18fc1c9c9abb"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "6ec7904a-3c9e-41de-86c8-2f701f835529"
+        ],
+        "dataNodeIds": [
+          "e78aaec3-f2d6-4e09-8284-510c5dff0c64"
+        ],
+        "validationNodeIds": [
+          "1a7e412b-9a94-4d21-b861-c8b7e5664b1e",
+          "c311601a-e1d1-4f9e-9e3d-670c78ebf17d",
+          "dff924d3-c8ef-435f-a155-90bdff68fefa",
+          "f74c3750-cd18-4594-9934-b10283a4841d",
+          "e9711094-6993-4431-a94a-18fc1c9c9abb"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "5af13a7d49d39a8f",
+      "codeRefs": {
+        "index.html": "9059ba6dde2f9f07"
+      },
+      "feature": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-125247",
+      "lastRunAt": "2026-11-24T13:14:37.134Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T13:14:03.724Z"
+    },
+    "TC-FINDARESER-007": {
+      "title": "Show all after a search — every reservation is listed again",
+      "flow": "find-a-reservation",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwupaw0h004z01tukle1qxo5",
+        "testCaseId": "cmwupbzuq005301tuxhkkc9u6",
+        "scenarioId": "d64b56c2-4265-488e-b810-e692ed3fddbc::672b06c4-1703-47f8-af16-1d397ead45e2",
+        "feature": "Find a reservation",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "c8c99e65-89d9-4299-a587-985a7500a2a4",
+          "653224f0-d3db-4749-9650-ad31c02d293c",
+          "49291b78-c2b5-4929-8e47-ad73b41cb09c",
+          "756e41ce-4ae8-418f-b4da-af2059d82e2f",
+          "1a7e412b-9a94-4d21-b861-c8b7e5664b1e",
+          "c311601a-e1d1-4f9e-9e3d-670c78ebf17d",
+          "dff924d3-c8ef-435f-a155-90bdff68fefa",
+          "6ec7904a-3c9e-41de-86c8-2f701f835529",
+          "1512abee-bb01-4bc7-aa99-f7a131ca2277",
+          "eaa5a9c4-ed27-4f91-988d-072e2fc79f04",
+          "a4906c27-523f-46ab-ba7e-568776fd3697",
+          "a2714028-9615-4a31-a223-00961fb3951b",
+          "a7cb706d-57af-4d37-8f56-942b0d036f53",
+          "672b06c4-1703-47f8-af16-1d397ead45e2"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "6ec7904a-3c9e-41de-86c8-2f701f835529"
+        ],
+        "dataNodeIds": [
+          "1512abee-bb01-4bc7-aa99-f7a131ca2277"
+        ],
+        "validationNodeIds": [
+          "1a7e412b-9a94-4d21-b861-c8b7e5664b1e",
+          "c311601a-e1d1-4f9e-9e3d-670c78ebf17d",
+          "dff924d3-c8ef-435f-a155-90bdff68fefa",
+          "a4906c27-523f-46ab-ba7e-568776fd3697",
+          "a7cb706d-57af-4d37-8f56-942b0d036f53",
+          "672b06c4-1703-47f8-af16-1d397ead45e2"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "e742f5b3eddd7835",
+      "codeRefs": {
+        "index.html": "9059ba6dde2f9f07"
+      },
+      "feature": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-125247",
+      "lastRunAt": "2026-11-24T13:14:37.134Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T13:14:03.724Z"
+    },
+    "TC-FINDARESER-008": {
+      "title": "Search by requester name — no reservation matches",
+      "flow": "find-a-reservation",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwupaw0h004z01tukle1qxo5",
+        "testCaseId": "cmwupc03p002j01sivqdc465u",
+        "scenarioId": "a0825c11-a7d7-4ace-9c86-4eb15bc7c4bf::4d53fd72-2175-49be-a3a9-bbd9567774c2",
+        "feature": "Find a reservation",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "c8c99e65-89d9-4299-a587-985a7500a2a4",
+          "653224f0-d3db-4749-9650-ad31c02d293c",
+          "49291b78-c2b5-4929-8e47-ad73b41cb09c",
+          "756e41ce-4ae8-418f-b4da-af2059d82e2f",
+          "1a7e412b-9a94-4d21-b861-c8b7e5664b1e",
+          "c311601a-e1d1-4f9e-9e3d-670c78ebf17d",
+          "dff924d3-c8ef-435f-a155-90bdff68fefa",
+          "6ec7904a-3c9e-41de-86c8-2f701f835529",
+          "3e603288-2ca5-4a25-8771-4adb42082fb1",
+          "3d1140a0-a7b4-4852-a186-ef1b754e1312",
+          "2a5a5c2f-42a0-4fd0-94f8-49b375798f10",
+          "4d53fd72-2175-49be-a3a9-bbd9567774c2"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "6ec7904a-3c9e-41de-86c8-2f701f835529"
+        ],
+        "dataNodeIds": [
+          "3e603288-2ca5-4a25-8771-4adb42082fb1"
+        ],
+        "validationNodeIds": [
+          "1a7e412b-9a94-4d21-b861-c8b7e5664b1e",
+          "c311601a-e1d1-4f9e-9e3d-670c78ebf17d",
+          "dff924d3-c8ef-435f-a155-90bdff68fefa",
+          "2a5a5c2f-42a0-4fd0-94f8-49b375798f10",
+          "4d53fd72-2175-49be-a3a9-bbd9567774c2"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "b29f68e15716600b",
+      "codeRefs": {
+        "index.html": "9059ba6dde2f9f07"
+      },
+      "feature": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261124-125247",
+      "lastRunAt": "2026-11-24T13:14:37.134Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-24T13:14:03.724Z"
     }
   },
   "repositories": {
@@ -4508,5 +4941,5 @@
       "front"
     ]
   },
-  "updatedAt": "2026-11-24T12:32:00.488Z"
+  "updatedAt": "2026-11-24T13:14:37.134Z"
 }
