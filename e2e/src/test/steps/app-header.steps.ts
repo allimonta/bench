@@ -82,3 +82,8 @@ Then('a {string} button is displayed next to the {string} button', async ({ appH
     })
     .toBe(true);
 });
+
+// expected: the cart counter shows "<count>" (the badge on the header Cart button)
+Then('the cart counter shows {string}', async ({ appHeader }, count: string) => {
+  await expect(appHeader.cartCount, `the cart counter does not show "${count}"`).toHaveText(count);
+});

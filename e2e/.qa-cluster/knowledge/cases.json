@@ -3617,6 +3617,205 @@
       "lastRunAt": "2026-11-23T17:51:12.867Z",
       "bugs": [],
       "firstSeenAt": "2026-11-23T17:51:12.867Z"
+    },
+    "TC-VOLUME1-026": {
+      "title": "Open an empty cart — empty-cart illustration shown",
+      "flow": "volume-1",
+      "priority": "P1",
+      "tier": "smoke",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwts7a5403fe01thiwkqudf5",
+        "testCaseId": "cmwts89j703ff01thjl12xkpz",
+        "scenarioId": "ff3aa1de-ba31-4f8e-97fb-95e5e14a1ab9::b64f0969-86ae-4e2a-ab08-2a69bfcb699c",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "ede55c28-78c2-4418-a642-98e121c4b1f3",
+          "3eabe1bd-b12c-4cfc-8579-2f27cf212fbe",
+          "b64f0969-86ae-4e2a-ab08-2a69bfcb699c"
+        ],
+        "pathNodeIds": [
+          "ac44ba54-0c7a-4027-903c-d163d193f788",
+          "ede55c28-78c2-4418-a642-98e121c4b1f3",
+          "757e5822-01e1-4da1-bdc4-49daaa6126e7",
+          "291eeaf0-bd7b-4afb-8ca3-ea16c906bdab",
+          "3eabe1bd-b12c-4cfc-8579-2f27cf212fbe",
+          "b64f0969-86ae-4e2a-ab08-2a69bfcb699c"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "757e5822-01e1-4da1-bdc4-49daaa6126e7"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "d9284f545ceebbb0",
+      "codeRefs": {
+        "index.html": "9059ba6dde2f9f07"
+      },
+      "feature": "src/test/resources/features/volume-1/volume-1-empty-cart-illustration.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-212523",
+      "lastRunAt": "2026-11-23T21:45:52.484Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T21:45:11.563Z"
+    },
+    "TC-VOLUME1-027": {
+      "title": "Open a cart with a part — no empty-cart illustration",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwts7a5403fe01thiwkqudf5",
+        "testCaseId": "cmwts89v803yq01szcacaf505",
+        "scenarioId": "b0c4cc00-58f6-41a0-8ff4-292a9f16dc41::2bc5cbf5-126b-4fa0-9c0f-c689744aadfa",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "dataNodeIds": [
+          "438f4f93-a466-4f0b-bac7-872361cfec01"
+        ],
+        "validationNodeIds": [
+          "ede55c28-78c2-4418-a642-98e121c4b1f3",
+          "4d946342-a7bd-439b-af42-1977923b8f2f",
+          "60be3958-94a6-4886-861e-2f9a1ceef442",
+          "2bc5cbf5-126b-4fa0-9c0f-c689744aadfa"
+        ],
+        "pathNodeIds": [
+          "ac44ba54-0c7a-4027-903c-d163d193f788",
+          "ede55c28-78c2-4418-a642-98e121c4b1f3",
+          "757e5822-01e1-4da1-bdc4-49daaa6126e7",
+          "438f4f93-a466-4f0b-bac7-872361cfec01",
+          "4d946342-a7bd-439b-af42-1977923b8f2f",
+          "ff077bb7-abaa-498e-8e90-bce3083707eb",
+          "60be3958-94a6-4886-861e-2f9a1ceef442",
+          "2bc5cbf5-126b-4fa0-9c0f-c689744aadfa"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "757e5822-01e1-4da1-bdc4-49daaa6126e7"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "59f05c6307841a3e",
+      "codeRefs": {
+        "index.html": "9059ba6dde2f9f07"
+      },
+      "feature": "src/test/resources/features/volume-1/volume-1-empty-cart-illustration.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-212523",
+      "lastRunAt": "2026-11-23T21:45:52.484Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T21:45:11.563Z"
+    },
+    "TC-VOLUME1-028": {
+      "title": "Remove the last part — empty-cart illustration shown",
+      "flow": "volume-1",
+      "priority": "P1",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwts7a5403fe01thiwkqudf5",
+        "testCaseId": "cmwts8a3n03fg01ths032qo5g",
+        "scenarioId": "61efe387-a2d3-401a-bf4f-0542688f7a3e::d2526e27-d57e-4749-8b14-0ec25c8b7886",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "dataNodeIds": [
+          "5b7f399d-e33c-4b52-b741-1982d1f34de2"
+        ],
+        "validationNodeIds": [
+          "ede55c28-78c2-4418-a642-98e121c4b1f3",
+          "0517d4d7-5fe3-4829-9d87-32f5cf8f2986",
+          "5520f9e3-2b29-4fed-b6b8-86c2cfd75b10",
+          "9a95472e-c3bc-48b3-8372-80742d6801f9",
+          "d2526e27-d57e-4749-8b14-0ec25c8b7886"
+        ],
+        "pathNodeIds": [
+          "ac44ba54-0c7a-4027-903c-d163d193f788",
+          "ede55c28-78c2-4418-a642-98e121c4b1f3",
+          "757e5822-01e1-4da1-bdc4-49daaa6126e7",
+          "5b7f399d-e33c-4b52-b741-1982d1f34de2",
+          "0517d4d7-5fe3-4829-9d87-32f5cf8f2986",
+          "3d9ff713-b63f-49be-804f-8289772488c9",
+          "5520f9e3-2b29-4fed-b6b8-86c2cfd75b10",
+          "b8a6d5cb-ca9d-4cf3-a209-3cf0ca190cef",
+          "9a95472e-c3bc-48b3-8372-80742d6801f9",
+          "d2526e27-d57e-4749-8b14-0ec25c8b7886"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "757e5822-01e1-4da1-bdc4-49daaa6126e7"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "e7be9f10107ffbe5",
+      "codeRefs": {
+        "index.html": "9059ba6dde2f9f07"
+      },
+      "feature": "src/test/resources/features/volume-1/volume-1-empty-cart-illustration.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-212523",
+      "lastRunAt": "2026-11-23T21:45:52.484Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T21:45:11.563Z"
+    },
+    "TC-VOLUME1-029": {
+      "title": "Remove one of two parts — no empty-cart illustration",
+      "flow": "volume-1",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwts7a5403fe01thiwkqudf5",
+        "testCaseId": "cmwts8adb03yr01szfe2ukuup",
+        "scenarioId": "685218db-3bf5-46f8-a0e1-9fab1b627329::4c123bdc-9027-46e3-85fe-b337ca2a4f15",
+        "feature": "Volume 1",
+        "area": "Volume Test",
+        "dataNodeIds": [
+          "09608003-725f-4f23-8e97-f27b15631b2a",
+          "779a1656-36ff-4bfc-91ce-3552a34a85fd"
+        ],
+        "validationNodeIds": [
+          "ede55c28-78c2-4418-a642-98e121c4b1f3",
+          "d84f6a40-3ab2-474a-b6cc-a4265dcb6693",
+          "757da305-961e-4212-a3cb-909320bea499",
+          "572087ee-7185-4d3d-b7f4-30b90dde9f13",
+          "e1738b7b-e260-4494-ba55-57e98308d6af",
+          "bb0633bf-8a32-41bb-9305-88e616bffe92",
+          "4c123bdc-9027-46e3-85fe-b337ca2a4f15"
+        ],
+        "pathNodeIds": [
+          "ac44ba54-0c7a-4027-903c-d163d193f788",
+          "ede55c28-78c2-4418-a642-98e121c4b1f3",
+          "757e5822-01e1-4da1-bdc4-49daaa6126e7",
+          "09608003-725f-4f23-8e97-f27b15631b2a",
+          "d84f6a40-3ab2-474a-b6cc-a4265dcb6693",
+          "779a1656-36ff-4bfc-91ce-3552a34a85fd",
+          "757da305-961e-4212-a3cb-909320bea499",
+          "2d816966-bce5-4ddd-910a-a8ce56e9facb",
+          "572087ee-7185-4d3d-b7f4-30b90dde9f13",
+          "242908f1-f131-42da-8244-eeda491b742d",
+          "e1738b7b-e260-4494-ba55-57e98308d6af",
+          "bb0633bf-8a32-41bb-9305-88e616bffe92",
+          "4c123bdc-9027-46e3-85fe-b337ca2a4f15"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "757e5822-01e1-4da1-bdc4-49daaa6126e7"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "21f5602438adb882",
+      "codeRefs": {
+        "index.html": "9059ba6dde2f9f07"
+      },
+      "feature": "src/test/resources/features/volume-1/volume-1-empty-cart-illustration.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261123-212523",
+      "lastRunAt": "2026-11-23T21:45:52.484Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-23T21:45:11.563Z"
     }
   },
   "repositories": {
@@ -3624,5 +3823,5 @@
       "front"
     ]
   },
-  "updatedAt": "2026-11-23T17:51:12.867Z"
+  "updatedAt": "2026-11-23T21:45:52.484Z"
 }

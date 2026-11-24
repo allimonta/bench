@@ -10,6 +10,7 @@ export class CartDrawer {
   readonly items: Locator;
   readonly removeButtons: Locator;
   readonly emptyMessage: Locator;
+  readonly emptyImage: Locator;
   readonly subtotal: Locator;
   readonly total: Locator;
   readonly placeOrderButton: Locator;
@@ -34,6 +35,7 @@ export class CartDrawer {
     this.items = this.root.locator("//li[contains(@class,'item')]");
     this.removeButtons = this.root.locator("//button[contains(@class,'remove')]");
     this.emptyMessage = this.root.getByTestId('cart-empty');
+    this.emptyImage = this.root.getByTestId('cart-empty-image');
     this.subtotal = this.root.getByTestId('cart-subtotal');
     this.total = this.root.getByTestId('cart-total');
     this.placeOrderButton = this.root.locator("//*[@id='checkout']");
@@ -56,6 +58,16 @@ export class CartDrawer {
 
   lineItem(id: string): Locator {
     return this.root.locator(`//li[contains(@class,'item')][@data-product-id='${id}']`);
+  }
+
+  /** A line of the cart, by the name of its part. */
+  lineNamed(name: string): Locator {
+    return this.root.locator(`//li[contains(@class,'item')][.//*[contains(@class,'item-name')][normalize-space()='${name}']]`);
+  }
+
+  /** Removes a line by the name of its part (the cart re-renders, the pop-up stays open). */
+  async removePart(name: string): Promise<void> {
+    await this.lineNamed(name).locator("//button[contains(@class,'remove')]").click();
   }
 
   quantity(id: string): Locator {

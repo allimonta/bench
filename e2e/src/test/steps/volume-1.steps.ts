@@ -328,3 +328,42 @@ When('the user is on the Partwerk shop page', async ({ homePage }) => {
 When('the user opens the page on a {int}px wide viewport', async ({ homePage }, width: number) => {
   await homePage.openOnViewport(width);
 });
+
+// ---- Empty cart illustration (TC-VOLUME1-026..029) ----
+
+// TestGraph decision node (the last step of the shared Background): it asks a question the scenario's own steps answer,
+// so there is nothing to do here. Each scenario is one answer.
+When('Does the cart end up empty?', async () => {});
+
+When('the user adds the {string} part to the cart', async ({ homePage }, part: string) => {
+  await homePage.addToCartByName(part);
+});
+
+When('the user removes the {string} part from the cart', async ({ cartDrawer }, part: string) => {
+  await cartDrawer.removePart(part);
+});
+
+// expected: the cart lists the "<part>" part
+Then('the cart lists the {string} part', async ({ cartDrawer }, part: string) => {
+  await expect(cartDrawer.lineNamed(part), `the cart does not list the "${part}" part`).toBeVisible();
+});
+
+// expected: the cart does not list the "<part>" part
+Then('the cart does not list the {string} part', async ({ cartDrawer }, part: string) => {
+  await expect(cartDrawer.lineNamed(part), `the cart still lists the "${part}" part`).toHaveCount(0);
+});
+
+// expected: the cart shows the message "<message>"
+Then('the cart shows the message {string}', async ({ cartDrawer }, message: string) => {
+  await expect(cartDrawer.message(message), `the cart does not show the message "${message}"`).toBeVisible();
+});
+
+// expected: the cart shows the empty-cart illustration
+Then('the cart shows the empty-cart illustration', async ({ cartDrawer }) => {
+  await expect(cartDrawer.emptyImage, 'the cart does not show the empty-cart illustration').toBeVisible();
+});
+
+// expected: the cart does not show the empty-cart illustration
+Then('the cart does not show the empty-cart illustration', async ({ cartDrawer }) => {
+  await expect(cartDrawer.emptyImage, 'the cart still shows the empty-cart illustration').toBeHidden();
+});

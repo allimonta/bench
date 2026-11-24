@@ -106,6 +106,16 @@ export class HomePage extends BasePage {
     await this.addToCartButton(id).click();
   }
 
+  /** A product's card, by the name it shows. */
+  productCardNamed(name: string): Locator {
+    return this.root.locator(`//article[contains(@class,'card')][.//*[@data-testid='product-name'][normalize-space()='${name}']]`);
+  }
+
+  /** Adds a part to the cart by the name its card shows (the "Add to cart" button, by its own attribute). */
+  async addToCartByName(name: string): Promise<void> {
+    await this.productCardNamed(name).locator('//button[@data-add]').click();
+  }
+
   async clickProductButton(id: string, name: string): Promise<void> {
     await this.productButton(id, name).click();
   }

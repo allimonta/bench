@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T17:51:12.889Z",
+  "updatedAt": "2026-11-23T21:45:52.524Z",
   "fixtures": [
     "ctx",
     "api",
@@ -49,6 +49,7 @@
       ],
       "methods": [
         "expectLoaded",
+        "removePart",
         "removeProduct",
         "setQuantity",
         "totalAmount",
@@ -71,6 +72,7 @@
         "reload",
         "productInfo",
         "addToCart",
+        "addToCartByName",
         "clickProductButton",
         "openProductDetails",
         "filterByCategory",
@@ -235,6 +237,14 @@
     {
       "keyword": "Then",
       "pattern": "a {string} button is displayed next to the {string} button",
+      "file": "src/test/steps/app-header.steps.ts",
+      "pages": [
+        "AppHeader"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the cart counter shows {string}",
       "file": "src/test/steps/app-header.steps.ts",
       "pages": [
         "AppHeader"
@@ -1309,6 +1319,67 @@
       "file": "src/test/steps/volume-1.steps.ts",
       "pages": [
         "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "Does the cart end up empty?",
+      "file": "src/test/steps/volume-1.steps.ts"
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user adds the {string} part to the cart",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "HomePage"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "the user removes the {string} part from the cart",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the cart lists the {string} part",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the cart does not list the {string} part",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the cart shows the message {string}",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the cart shows the empty-cart illustration",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the cart does not show the empty-cart illustration",
+      "file": "src/test/steps/volume-1.steps.ts",
+      "pages": [
+        "CartDrawer"
       ]
     }
   ]

@@ -1,9 +1,9 @@
 {
   "generator": "qa-cluster",
-  "version": "0.25.0",
+  "version": "0.29.0",
   "layout": "src",
   "createdAt": "2026-11-23T13:40:51.265Z",
-  "updatedAt": "2026-11-23T17:51:04.077Z",
+  "updatedAt": "2026-11-23T21:45:44.751Z",
   "packageManager": "npm",
   "ciProvider": "github-actions",
   "ciFiles": [
@@ -45,6 +45,18 @@
       "inconclusive": 0,
       "iterations": 2,
       "report": "docs/qa-cluster-report.md"
+    },
+    {
+      "runId": "run-20261123-212523",
+      "at": "2026-11-23T21:45:44.751Z",
+      "result": "completed",
+      "commit": "4d07d40285906820d3c6f7e22e484d54b3f11210",
+      "cases": 4,
+      "stable": 4,
+      "bugs": 0,
+      "inconclusive": 0,
+      "iterations": 2,
+      "report": "docs/qa-cluster-report.md"
     }
   ],
   "files": {
@@ -59,7 +71,7 @@
     "src/main/entities/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "src/main/fixtures/index.ts": "2509b91c94ac16cc69977a951e54213ef2828f5621e8a4324557daf2fa2f080f",
     "src/main/pages/BasePage.ts": "63f9ae7ac176e9036f19d54afeea64456d262a2b448d1d6f07dcde9d22560545",
-    "src/main/pages/HomePage.ts": "b98830bef460f8d4ae375aedc710b15b8de4d54d2d9895fd03d0d6ca100a58d2",
+    "src/main/pages/HomePage.ts": "177d39d2f2219925bf601bad6b9e42d4e82ea2e29ea41ae72f8d38fc7eaf6cbb",
     "src/main/pages/LoginPage.ts": "e5f4a4bdf34a4cc7c9d806eb9b75dfd8527e58a43dbac1c03f4727cddefcfd4c",
     "src/main/reporters/summary-reporter.ts": "341a3c708e1273add66440fa13eab813e1e96b0a102109d57ce46dc15031dfb1",
     "src/main/support/ApiLog.ts": "e617c47238620b30a4de8cb33657d00e291cd96acff19e43c493ad864ff513d1",
@@ -71,10 +83,10 @@
     "src/test/steps/common.steps.ts": "f4d8ce5d25ff8d51ab50ca0645c93f3fc7f76e7d57147570592e6cf66bdbfe79",
     "tsconfig.json": "9633511e74ec0869fd1b54ac431a060137163f2f9826a94819195b8bc806ca0e",
     "src/test/resources/features/volume-1/volume-1.feature": "4e56cc1e08877c3f7f13e61117a1a90e47004f930d089afd299f1181e60a8540",
-    "src/test/steps/volume-1.steps.ts": "7acfa312f4aed922088bb17eba16f7f33c22494b99a6db175397bc5401d281d7",
-    "src/test/steps/app-header.steps.ts": "5f5165bf0e1cad689196142858266f88f9e375119f3e50b3ad32313a606448e7",
+    "src/test/steps/volume-1.steps.ts": "2883e8e35a4824fdbb2f14efa74a3db550c40e65dfac992a3f2869c0c1a6925b",
+    "src/test/steps/app-header.steps.ts": "c863b852efa1e7347dfba4f4ed514b53c55579c106680058d0f12b48ced6ad77",
     "src/main/pages/AppHeader.ts": "c2f0d4e029405872089c55c2a4314874f5e15b79496bfcc72dbfa7863d48e614",
-    "src/main/pages/CartDrawer.ts": "10bc22ad6193ed6986bbca38167374439e393af1431248bbe031013aea25f66f",
+    "src/main/pages/CartDrawer.ts": "29a5b77fdcf0385efe3690d60b1c4af9610b6f51554e8a2bf90ac78a262f3c94",
     "src/main/pages/ProductDetailView.ts": "b0c2874e0bb7a240c7088a323830877b09d3510622d3a75f2c8963400785a705",
     "src/main/data/products.ts": "53aa56460ac44b899859d6f4da1e829cdc0408c47a65aec5a31423dab829206c",
     "src/main/utils/money.ts": "f7fed4d1b53b980d53bc576968ad8868c51186a71ce60199fbae061957577855",
@@ -83,7 +95,8 @@
     "src/test/steps/bulk-parts-reservation.steps.ts": "de280dff9397677317fdd64bcdbe50a8ba6fc58cc693f3038360b4bfe9387619",
     "src/test/resources/features/bulk-parts-reservation/bulk-parts-reservation.feature": "65ead70e5c425094e405fb2719535f4efaea40bdcf03dd4b8ce24d95305ea020",
     "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature": "9f72eec05352abc7ac4fce25af843d1dfba61617ced1f31b1cf34b2cde031d1c",
-    ".qa-cluster/knowledge/observations.md": "4259ded4b4287c5dc2bc7ed92d52d46eb0c57b0f00b112dabe0c6fcb38600979"
+    ".qa-cluster/knowledge/observations.md": "4259ded4b4287c5dc2bc7ed92d52d46eb0c57b0f00b112dabe0c6fcb38600979",
+    "src/test/resources/features/volume-1/volume-1-empty-cart-illustration.feature": "5950f4235f443e25a78ab98f64aa89a4ff09c05a0e6849fd25e7d43107490ea9"
   },
   "cases": {
     "TC-VOLUME1-001": {
@@ -568,18 +581,57 @@
       "spec": "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature",
       "testCaseId": "cmwtipgud02yc01th4t10om4k",
       "status": "blocked"
+    },
+    "TC-VOLUME1-026": {
+      "spec": "src/test/resources/features/volume-1/volume-1-empty-cart-illustration.feature",
+      "testCaseId": "cmwts89j703ff01thjl12xkpz",
+      "status": "stable"
+    },
+    "TC-VOLUME1-027": {
+      "spec": "src/test/resources/features/volume-1/volume-1-empty-cart-illustration.feature",
+      "testCaseId": "cmwts89v803yq01szcacaf505",
+      "status": "stable"
+    },
+    "TC-VOLUME1-028": {
+      "spec": "src/test/resources/features/volume-1/volume-1-empty-cart-illustration.feature",
+      "testCaseId": "cmwts8a3n03fg01ths032qo5g",
+      "status": "stable"
+    },
+    "TC-VOLUME1-029": {
+      "spec": "src/test/resources/features/volume-1/volume-1-empty-cart-illustration.feature",
+      "testCaseId": "cmwts8adb03yr01szfe2ukuup",
+      "status": "stable"
     }
   },
   "lastBugNumber": 11,
   "testgraph": {
     "projectId": "cmwmh64un008r01th1gyazrxj",
     "project": "Bench - QA Cluster",
-    "lastRunId": "cmwtk1r19036t01szoyb0kn8s"
+    "lastRunId": "cmwtsmq5803ga01th9hl8qgbx",
+    "url": "https://testgraph.internal.qubika.com/projects/cmwmh64un008r01th1gyazrxj"
   },
-  "baseCommit": "146771f660adc6e54e80286b0b1da039bf032e6d",
+  "baseCommit": "4d07d40285906820d3c6f7e22e484d54b3f11210",
   "finalizedBy": {
     "by": "manifest-finalize",
-    "runId": "run-20261123-170922",
-    "at": "2026-11-23T17:51:04.077Z"
+    "runId": "run-20261123-212523",
+    "at": "2026-11-23T21:45:44.751Z"
+  },
+  "shapes": {
+    "src/test/steps/volume-1.steps.ts": {
+      "of": "2883e8e35a4824fdbb2f14efa74a3db550c40e65dfac992a3f2869c0c1a6925b",
+      "sha": "b1e9a850f5e17e7887186bef836b93f43d1bb3b5b60718c8b899c6dba5313d7d"
+    },
+    "src/test/steps/app-header.steps.ts": {
+      "of": "c863b852efa1e7347dfba4f4ed514b53c55579c106680058d0f12b48ced6ad77",
+      "sha": "962f4e152891b4c118bb129c0ef4255180b7cffa5eb57ee5db649778360f78eb"
+    },
+    "src/main/pages/HomePage.ts": {
+      "of": "177d39d2f2219925bf601bad6b9e42d4e82ea2e29ea41ae72f8d38fc7eaf6cbb",
+      "sha": "c5a8b21e3632a7744ee329b854bc7c96f7cf3d04d3d829c0d544e25ee9a61e6b"
+    },
+    "src/main/pages/CartDrawer.ts": {
+      "of": "29a5b77fdcf0385efe3690d60b1c4af9610b6f51554e8a2bf90ac78a262f3c94",
+      "sha": "0f34c70d565942026e48186bd71d2ab95d60d49dc6eb1c7b987d4b8964959fad"
+    }
   }
 }
