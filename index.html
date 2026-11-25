@@ -478,7 +478,7 @@ function renderCart(){
       ${discount ? `<div class="row discount"><span>Volume discount (5%)</span><span data-testid="cart-discount">−${money(discount)}</span></div>` : ""}
       <div class="row"><span>Shipping${ship?" (free over $10,000)":""}</span><span data-testid="cart-shipping">${ship?money(ship):"Free"}</span></div>
       <div class="row total"><span>Total</span><span data-testid="cart-total">${money(total)}</span></div>
-      <p class="volume-note" data-testid="volume-note">${discount ? "Volume discount applied: 5% off for 3 or more parts." : `Add ${missing} more part${missing===1?"":"s"} to get 5% off.`}</p>
+      <p class="volume-note" data-testid="volume-discount-note">${discount ? "Volume discount applied: 5% off for 3 or more parts." : `Add ${missing} more part${missing===1?"":"s"} to get 5% off.`}</p>
       <button class="cta" id="checkout" data-testid="checkout-button">Place order</button>
     </div>`;
 }
