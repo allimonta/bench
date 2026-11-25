@@ -3,7 +3,7 @@
   "version": "0.29.1",
   "layout": "src",
   "createdAt": "2026-11-23T13:40:51.265Z",
-  "updatedAt": "2026-11-24T19:11:21.749Z",
+  "updatedAt": "2026-11-24T19:53:01.973Z",
   "packageManager": "npm",
   "ciProvider": "github-actions",
   "ciFiles": [
@@ -144,13 +144,14 @@
     "src/test/resources/features/bulk-parts-reservation/bulk-parts-reservation.feature": "65ead70e5c425094e405fb2719535f4efaea40bdcf03dd4b8ce24d95305ea020",
     "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature": "9f72eec05352abc7ac4fce25af843d1dfba61617ced1f31b1cf34b2cde031d1c",
     "src/test/resources/features/volume-1/volume-1-empty-cart-illustration.feature": "5950f4235f443e25a78ab98f64aa89a4ff09c05a0e6849fd25e7d43107490ea9",
-    "src/main/pages/FindReservationDrawer.ts": "b495e6b1b6674739db96fa326508a353777e1bfb889107972db263e1e09ccfa8",
-    "src/test/steps/weird-names.steps.ts": "46cb3c054fe97550fc52c0913fe0df7419e4ec2d639eafee27e0ce74f230b8a2",
+    "src/main/pages/FindReservationDrawer.ts": "a3290194372ff8af4d9b1085cbcc9a68f6482512907cba0b43586a5b471fe0f8",
+    "src/test/steps/weird-names.steps.ts": "bd9ce5ce866d9b502147bd66d49d8ae992222d4dae046fe00ee8f8890d36f3ff",
     "src/test/resources/features/weird-names/weird-names.feature": "e90564cb23beaec16ad68fc5a10569863e400092a0c1d6be3769a48dd5beba77",
-    "src/test/resources/features/find-a-reservation/find-a-reservation.feature": "c2776bb4bad4669e674b0c508eb60f74822e51c5cf3009693281c902202aa024",
+    "src/test/resources/features/find-a-reservation/find-a-reservation.feature": "7a0862ba10c18d8af3df20d287bb91edb69e90911d5681d0d6df123c1056bdd9",
     "src/test/resources/features/find-a-reservation/find-a-reservation-search-variants.feature": "db831df619b4f8e33570366a6aa222d2a839989ccd0edb4f51c2f43d84f26c45",
     "src/test/steps/local-find.steps.ts": "6c50d80b5f44a6817c0a1a102a5551a78c75b82d666dc69df3edf6c18a31e0f8",
-    "src/test/resources/features/cart-volume-discount/cart-volume-discount.feature": "3dcb35d8a08ec7e7cdef0d8d17f83148de317ebf9b3fff42efcb22d403ee9fe9"
+    "src/test/resources/features/cart-volume-discount/cart-volume-discount.feature": "3dcb35d8a08ec7e7cdef0d8d17f83148de317ebf9b3fff42efcb22d403ee9fe9",
+    "src/test/resources/features/clear-reservation-search/clear-reservation-search.feature": "8528a7357133e95062a50a4adfcaf42b7ddd656ee660f2962c745b769d09c75b"
   },
   "cases": {
     "TC-VOLUME1-001": {
@@ -764,7 +765,7 @@
     "TC-FINDARESER-002": {
       "spec": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
       "testCaseId": "cmwupbyju002g01si5ezuessg",
-      "status": "stable"
+      "status": "generated"
     },
     "TC-FINDARESER-003": {
       "spec": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
@@ -789,7 +790,7 @@
     "TC-FINDARESER-007": {
       "spec": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
       "testCaseId": "cmwupbzuq005301tuxhkkc9u6",
-      "status": "stable"
+      "status": "generated"
     },
     "TC-FINDARESER-008": {
       "spec": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
@@ -858,6 +859,16 @@
       "spec": "src/test/resources/features/cart-volume-discount/cart-volume-discount.feature",
       "testCaseId": "cmwv22fca014q01si046klnos",
       "status": "stable"
+    },
+    "TC-CLEARRESE-001": {
+      "spec": "src/test/resources/features/clear-reservation-search/clear-reservation-search.feature",
+      "testCaseId": "cmwv3o0at00gn01tusz00ilva",
+      "status": "generated"
+    },
+    "TC-CLEARRESE-002": {
+      "spec": "src/test/resources/features/clear-reservation-search/clear-reservation-search.feature",
+      "testCaseId": "cmwv3o0kk01di01sih6klateg",
+      "status": "generated"
     }
   },
   "lastBugNumber": 12,
@@ -895,8 +906,8 @@
       "sha": "d4ac1c1466007dc65425d4eda9d1ba0093119099bca44c50572805b539b3c410"
     },
     "src/main/pages/FindReservationDrawer.ts": {
-      "of": "b495e6b1b6674739db96fa326508a353777e1bfb889107972db263e1e09ccfa8",
-      "sha": "33026d0e4aa6f21feebe4160e2db8bf01ee96efc70f1dd30f60936ddc6cecd3b"
+      "of": "a3290194372ff8af4d9b1085cbcc9a68f6482512907cba0b43586a5b471fe0f8",
+      "sha": "4cff0fafbc190d2d2069189f15f3712c8c3429b78f85c68bbee9fa9e72c014de"
     },
     "src/main/fixtures/index.ts": {
       "of": "adf4a677bda97ad0b4253d67d06074ef5761d2ac6f96461d1797589105736e85",
@@ -907,8 +918,8 @@
       "sha": "8af16051514c9a3ea00ae5c459666c9f3a1d1be749af144e106b8552229d3de3"
     },
     "src/test/steps/weird-names.steps.ts": {
-      "of": "46cb3c054fe97550fc52c0913fe0df7419e4ec2d639eafee27e0ce74f230b8a2",
-      "sha": "d66802d99434e277b23cbe3ed646c5a870af70f122b1a7b4a4def9003fe42755"
+      "of": "bd9ce5ce866d9b502147bd66d49d8ae992222d4dae046fe00ee8f8890d36f3ff",
+      "sha": "c5f4868dff9195c5d2d164e5577c5ca17c70970f6d168186d62a5446a9167a0d"
     },
     "src/test/steps/local-find.steps.ts": {
       "of": "6c50d80b5f44a6817c0a1a102a5551a78c75b82d666dc69df3edf6c18a31e0f8",

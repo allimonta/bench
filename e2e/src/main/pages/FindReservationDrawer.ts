@@ -7,7 +7,8 @@ export class FindReservationDrawer {
   readonly closeButton: Locator;
   readonly queryField: Locator;
   readonly searchButton: Locator;
-  readonly showAllButton: Locator;
+  /** "Clear search": shown only while a search term is applied. */
+  readonly clearSearchButton: Locator;
   /** "All reservations", "All reservations (N)" or "M of N reservations match …". */
   readonly reservationsTitle: Locator;
   /** The status line: "No reservations yet." or "No reservation matches …". */
@@ -28,7 +29,7 @@ export class FindReservationDrawer {
     this.closeButton = this.root.locator("//*[@id='closeFind']");
     this.queryField = this.root.locator("//*[@id='findQuery']");
     this.searchButton = this.root.locator("//*[@id='findSubmit']");
-    this.showAllButton = this.root.locator("//*[@id='findClear']");
+    this.clearSearchButton = this.root.locator("//*[@id='findReset']");
     this.reservationsTitle = this.root.locator("//*[@id='reservationsTitle']");
     this.message = this.root.locator("//*[@id='findMsg']");
     this.reservationRows = this.root.getByTestId('reservation-row'); // a list: one row per listed reservation
@@ -56,7 +57,7 @@ export class FindReservationDrawer {
     await this.queryField.fill(query);
   }
 
-  /** A button of the search form, by its visible name ("Search", "Show all"). */
+  /** A button of the search form, by its visible name ("Search", "Clear search"). */
   button(name: string): Locator {
     return this.root.getByRole('button', { name, exact: true });
   }

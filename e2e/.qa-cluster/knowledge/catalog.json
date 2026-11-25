@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T19:11:30.275Z",
+  "updatedAt": "2026-11-24T19:48:21.012Z",
   "fixtures": [
     "ctx",
     "api",
@@ -1838,6 +1838,27 @@
     {
       "keyword": "Then",
       "pattern": "the reservation search field is empty",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "Does the search field hold a search term?",
+      "file": "src/test/steps/weird-names.steps.ts"
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation search {string} button is shown",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation search {string} button is not shown",
       "file": "src/test/steps/weird-names.steps.ts",
       "pages": [
         "FindReservationDrawer"

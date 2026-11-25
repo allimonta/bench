@@ -127,3 +127,18 @@ Then('the reservation search field is empty', async ({ findReservationDrawer }) 
   await expect(findReservationDrawer.queryField, 'the reservation search field is not empty').toHaveValue('');
 });
 
+// ---- The Clear search button (clear-reservation-search) ----
+
+// TestGraph decision node (the last step of the shared Background): each scenario below is one answer, nothing to do.
+When('Does the search field hold a search term?', async () => {});
+
+// expected: the reservation search "<button>" button is shown
+Then('the reservation search {string} button is shown', async ({ findReservationDrawer }, button: string) => {
+  await expect(findReservationDrawer.button(button), `the reservation search "${button}" button is not shown`).toBeVisible();
+});
+
+// expected: the reservation search "<button>" button is not shown
+Then('the reservation search {string} button is not shown', async ({ findReservationDrawer }, button: string) => {
+  await expect(findReservationDrawer.button(button), `the reservation search "${button}" button is shown`).toBeHidden();
+});
+
