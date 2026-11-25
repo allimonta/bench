@@ -49,7 +49,7 @@ export class CartDrawer {
     this.total = this.root.getByTestId('cart-total');
     this.discount = this.root.getByTestId('cart-discount');
     this.shipping = this.root.getByTestId('cart-shipping');
-    this.volumeNote = this.root.locator("//p[contains(@class,'volume-note')]");
+    this.volumeNote = this.root.getByTestId('volume-note'); // changed by hand: use the test id, not the CSS class
     this.placeOrderButton = this.root.locator("//*[@id='checkout']");
     this.orderConfirmation = this.root.locator("//div[contains(@class,'confirm')]");
     this.continueShoppingButton = this.root.locator("//*[@id='continue']");
