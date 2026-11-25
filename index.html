@@ -694,6 +694,7 @@ function renderReservations(){
   $("#reservationsTitle").textContent = q
     ? `${list.length} of ${all.length} reservation${all.length===1?"":"s"} match "${findQuery.trim()}"`
     : `All reservations (${all.length})`;
+  if(findQuery && !q){ msg.textContent = "Type a reservation code, company or number of pieces to search."; msg.hidden = false; }
   if(!list.length){ msg.textContent = `No reservation matches "${findQuery.trim()}".`; msg.hidden = false; return; }
   table.innerHTML = reservationTable(list);
 }
