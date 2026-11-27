@@ -61,7 +61,7 @@ Feature: Find a reservation
     When the user enters the reservation search "Nordic Drives"
     And the user clicks the reservation search "Search" button
     Then the reservation list title says "1" of "2" reservations match "Nordic Drives"
-    When the user clicks the reservation search "Show all" button
+    When the user clicks the reservation search "Clear search" button
     Then the reservation list title reads "All reservations (2)"
     And the reservation search field is empty
 

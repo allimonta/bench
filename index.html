@@ -462,7 +462,7 @@ function renderCart(){
   const ship = sub >= 10000 ? 0 : 150;
   const pieces = count();
   const discount = pieces >= VOLUME_MIN_PARTS ? Math.round(sub * VOLUME_RATE) : 0;
-  const total = sub + ship;
+  const total = sub - discount + ship;
   const missing = VOLUME_MIN_PARTS - pieces;
   body.innerHTML = `
     <ul class="items" data-testid="cart-items">${ids.map(id=>{const p=PRODUCTS.find(x=>x.id===id);return `
@@ -498,7 +498,7 @@ document.addEventListener("click", e=>{
     t.classList.add("added"); t.textContent="Added"; setTimeout(()=>{t.classList.remove("added"); t.textContent="Add to cart";},1200);
   }
   if(t.dataset.inc){ cart[t.dataset.inc]++; save(); renderCart(); }
-  if(t.dataset.dec){ const id=t.dataset.dec; cart[id]--; if(cart[id]<=0) delete cart[id]; save(); renderCart(); }
+  if(t.dataset.dec){ const id=t.dataset.dec; if(cart[id]>1){ cart[id]--; save(); renderCart(); } }
   if(t.dataset.remove){ delete cart[t.dataset.remove]; save(); renderCart(); toast("Part removed"); }
   if(t.id==="checkout"){ confirmed="PW-"+Math.random().toString(36).slice(2,8).toUpperCase(); cart={}; save(); renderCart(); }
   if(t.id==="continue"){ confirmed=null; renderCart(); closeCart(); }
