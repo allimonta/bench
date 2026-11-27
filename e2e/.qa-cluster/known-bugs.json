@@ -39,19 +39,9 @@
     "title": "Cart: the total adds $150 shipping to the product prices instead of equalling their sum",
     "stage": "assertion"
   },
-  "BUG-010": {
-    "signature": "neither stays at quantity",
-    "title": "Cart: \u2212 at quantity 1 removes the product with no confirmation instead of keeping quantity 1 or asking first",
-    "stage": "assertion"
-  },
   "BUG-011": {
     "signature": "focus left the cart dialog",
-    "title": "Cart drawer: keyboard focus falls to the page body after +, \u2212 or Remove instead of staying in the cart dialog",
+    "title": "Cart drawer: keyboard focus falls to the page body after +, − or Remove instead of staying in the cart dialog",
     "stage": "action"
-  },
-  "BUG-012": {
-    "signature": "the cart total is not",
-    "title": "Cart: the total ignores the 5% volume discount instead of subtracting it",
-    "stage": "assertion"
   }
 }

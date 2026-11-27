@@ -91,7 +91,7 @@ Feature: Volume 1
     And the user clicks "Add to cart" on the same product again
     Then the cart shows that product with quantity 2
 
-  @TC-VOLUME1-019 @P2 @regression @tg-cmwtav3z501pg01th5py3lr6h @fail @BUG-010
+  @TC-VOLUME1-019 @P2 @regression @tg-cmwtav3z501pg01th5py3lr6h
   Scenario: TC-VOLUME1-019 Quantity cannot be set below 1
     When the user has a product in the cart
     And the user tries to set the quantity to 0

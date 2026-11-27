@@ -690,16 +690,10 @@
       "gherkinHash": "6a1a3b0b1fa5b2fe",
       "codeRefs": {},
       "feature": "src/test/resources/features/volume-1/volume-1.feature",
-      "lastStatus": "bug",
-      "lastRunId": "run-20261123-133227",
-      "lastRunAt": "2026-11-23T14:29:45.360Z",
-      "bugs": [
-        {
-          "id": "BUG-010",
-          "severity": "minor",
-          "pattern": "deterministic"
-        }
-      ],
+      "lastStatus": "stable",
+      "lastRunId": "test-20261127-145319",
+      "lastRunAt": "2026-11-27T14:53:19.701Z",
+      "bugs": [],
       "firstSeenAt": "2026-11-23T14:28:48.090Z"
     },
     "TC-VOLUME1-020": {
@@ -4870,9 +4864,9 @@
         "index.html": "9059ba6dde2f9f07"
       },
       "feature": "src/test/resources/features/find-a-reservation/find-a-reservation.feature",
-      "lastStatus": "failed",
-      "lastRunId": "test-20261124-193357",
-      "lastRunAt": "2026-11-24T19:33:57.072Z",
+      "lastStatus": "stable",
+      "lastRunId": "test-20261127-145338",
+      "lastRunAt": "2026-11-27T14:53:38.517Z",
       "bugs": [],
       "firstSeenAt": "2026-11-24T13:14:03.724Z"
     },
@@ -5297,16 +5291,10 @@
         "index.html": "83cb16c57a1283bc"
       },
       "feature": "src/test/resources/features/cart-volume-discount/cart-volume-discount.feature",
-      "lastStatus": "bug",
-      "lastRunId": "run-20261124-184916",
-      "lastRunAt": "2026-11-24T19:11:30.244Z",
-      "bugs": [
-        {
-          "id": "BUG-012",
-          "severity": "major",
-          "pattern": "deterministic"
-        }
-      ],
+      "lastStatus": "stable",
+      "lastRunId": "test-20261127-145319",
+      "lastRunAt": "2026-11-27T14:53:19.701Z",
+      "bugs": [],
       "firstSeenAt": "2026-11-24T19:11:17.937Z"
     },
     "TC-CARTVOLUME-002": {
@@ -5419,9 +5407,9 @@
         "index.html": "83cb16c57a1283bc"
       },
       "feature": "src/test/resources/features/cart-volume-discount/cart-volume-discount.feature",
-      "lastStatus": "bug",
-      "lastRunId": "run-20261124-184916",
-      "lastRunAt": "2026-11-24T19:11:30.244Z",
+      "lastStatus": "stable",
+      "lastRunId": "test-20261127-145319",
+      "lastRunAt": "2026-11-27T14:53:19.701Z",
       "bugs": [],
       "firstSeenAt": "2026-11-24T19:11:17.937Z"
     },
@@ -5532,9 +5520,9 @@
         "index.html": "83cb16c57a1283bc"
       },
       "feature": "src/test/resources/features/cart-volume-discount/cart-volume-discount.feature",
-      "lastStatus": "bug",
-      "lastRunId": "run-20261124-184916",
-      "lastRunAt": "2026-11-24T19:11:30.244Z",
+      "lastStatus": "stable",
+      "lastRunId": "test-20261127-145319",
+      "lastRunAt": "2026-11-27T14:53:19.701Z",
       "bugs": [],
       "firstSeenAt": "2026-11-24T19:11:17.937Z"
     },
@@ -5748,5 +5736,5 @@
       "front"
     ]
   },
-  "updatedAt": "2026-11-25T16:05:26.431Z"
+  "updatedAt": "2026-11-27T14:53:38.517Z"
 }

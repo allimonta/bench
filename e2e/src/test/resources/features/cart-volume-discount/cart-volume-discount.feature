@@ -6,7 +6,7 @@ Feature: Cart volume discount
     Then the cart counter shows "0"
     When Does the cart hold 3 or more parts?
 
-  @TC-CARTVOLUME-001 @P1 @smoke @regression @tg-cmwv22e0400fj01tu20hc2fpm @fail @BUG-012
+  @TC-CARTVOLUME-001 @P1 @smoke @regression @tg-cmwv22e0400fj01tu20hc2fpm
   Scenario: TC-CARTVOLUME-001 Three different parts in the cart — the volume discount is applied
     When the user fills the cart with "Optic Sensor Array, Dexterous Hand Unit, Vocal Synth Module"
     Then the cart counter shows "3"
@@ -28,7 +28,7 @@ Feature: Cart volume discount
     And the cart total is "$5,780"
     And the cart volume discount note reads "Add 1 more part to get 5% off."
 
-  @TC-CARTVOLUME-003 @P1 @regression @tg-cmwv22ek200fk01tuarrw39nt @fail @BUG-012
+  @TC-CARTVOLUME-003 @P1 @regression @tg-cmwv22ek200fk01tuarrw39nt
   Scenario: TC-CARTVOLUME-003 One part with quantity 3 — the volume discount is applied
     When the user fills the cart with "Fusion Core Cell"
     Then the cart counter shows "1"
@@ -58,7 +58,7 @@ Feature: Cart volume discount
     And the cart total is "$15,600"
     And the cart volume discount note reads "Add 1 more part to get 5% off."
 
-  @TC-CARTVOLUME-005 @P1 @regression @tg-cmwv22f2u00fl01tuzdd9g1ao @fail @BUG-012
+  @TC-CARTVOLUME-005 @P1 @regression @tg-cmwv22f2u00fl01tuzdd9g1ao
   Scenario: TC-CARTVOLUME-005 Four parts in the cart — the volume discount is rounded to the dollar
     When the user fills the cart with "Hydraulic Leg Module, Optic Sensor Array, Servo Arm Assembly, Vocal Synth Module"
     Then the cart counter shows "4"
