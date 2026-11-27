@@ -142,3 +142,13 @@ Then('the reservation search {string} button is not shown', async ({ findReserva
   await expect(findReservationDrawer.button(button), `the reservation search "${button}" button is shown`).toBeHidden();
 });
 
+
+// ---- The search hint (blank-reservation-search-hint) ----
+
+// TestGraph decision node (the last step of the shared Background): each scenario below is one answer, nothing to do.
+When('What is in the reservation search field?', async () => {});
+
+// expected: the reservation search shows no message (no hint and no no-match line under the search form)
+Then('the reservation search shows no message', async ({ findReservationDrawer }) => {
+  await expect(findReservationDrawer.message, 'the reservation search shows a message').toBeHidden();
+});

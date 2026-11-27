@@ -3,7 +3,7 @@
   "version": "0.29.1",
   "layout": "src",
   "createdAt": "2026-11-23T13:40:51.265Z",
-  "updatedAt": "2026-11-24T19:53:01.973Z",
+  "updatedAt": "2026-11-25T16:05:20.885Z",
   "packageManager": "npm",
   "ciProvider": "github-actions",
   "ciFiles": [
@@ -105,6 +105,18 @@
       "inconclusive": 0,
       "iterations": 2,
       "report": "docs/qa-cluster-report.md"
+    },
+    {
+      "runId": "run-20261125-155222",
+      "at": "2026-11-25T16:05:20.885Z",
+      "result": "completed",
+      "commit": "c070e9281dab037e039b5e99c94c4cd16ca4c11d",
+      "cases": 3,
+      "stable": 3,
+      "bugs": 0,
+      "inconclusive": 0,
+      "iterations": 2,
+      "report": "docs/qa-cluster-report.md"
     }
   ],
   "files": {
@@ -145,13 +157,14 @@
     "src/test/resources/features/reserve-parts-manual-cases/reserve-parts-manual-cases.feature": "9f72eec05352abc7ac4fce25af843d1dfba61617ced1f31b1cf34b2cde031d1c",
     "src/test/resources/features/volume-1/volume-1-empty-cart-illustration.feature": "5950f4235f443e25a78ab98f64aa89a4ff09c05a0e6849fd25e7d43107490ea9",
     "src/main/pages/FindReservationDrawer.ts": "a3290194372ff8af4d9b1085cbcc9a68f6482512907cba0b43586a5b471fe0f8",
-    "src/test/steps/weird-names.steps.ts": "bd9ce5ce866d9b502147bd66d49d8ae992222d4dae046fe00ee8f8890d36f3ff",
+    "src/test/steps/weird-names.steps.ts": "eba712cd9d3b5dc9fb290d797780b1f457dc467f8d326ce78b01a895d3e9cfa8",
     "src/test/resources/features/weird-names/weird-names.feature": "e90564cb23beaec16ad68fc5a10569863e400092a0c1d6be3769a48dd5beba77",
     "src/test/resources/features/find-a-reservation/find-a-reservation.feature": "7a0862ba10c18d8af3df20d287bb91edb69e90911d5681d0d6df123c1056bdd9",
     "src/test/resources/features/find-a-reservation/find-a-reservation-search-variants.feature": "db831df619b4f8e33570366a6aa222d2a839989ccd0edb4f51c2f43d84f26c45",
     "src/test/steps/local-find.steps.ts": "6c50d80b5f44a6817c0a1a102a5551a78c75b82d666dc69df3edf6c18a31e0f8",
     "src/test/resources/features/cart-volume-discount/cart-volume-discount.feature": "3dcb35d8a08ec7e7cdef0d8d17f83148de317ebf9b3fff42efcb22d403ee9fe9",
-    "src/test/resources/features/clear-reservation-search/clear-reservation-search.feature": "8528a7357133e95062a50a4adfcaf42b7ddd656ee660f2962c745b769d09c75b"
+    "src/test/resources/features/clear-reservation-search/clear-reservation-search.feature": "8528a7357133e95062a50a4adfcaf42b7ddd656ee660f2962c745b769d09c75b",
+    "src/test/resources/features/blank-reservation-search-hint/blank-reservation-search-hint.feature": "23fab9a97fb67b8c00e26c532c1bb8dea55c149a0edde7e342c71aba828f688a"
   },
   "cases": {
     "TC-VOLUME1-001": {
@@ -869,20 +882,35 @@
       "spec": "src/test/resources/features/clear-reservation-search/clear-reservation-search.feature",
       "testCaseId": "cmwv3o0kk01di01sih6klateg",
       "status": "generated"
+    },
+    "TC-BLANKRESER-001": {
+      "spec": "src/test/resources/features/blank-reservation-search-hint/blank-reservation-search-hint.feature",
+      "testCaseId": "cmwwb3l0e000101nsuwbx023f",
+      "status": "stable"
+    },
+    "TC-BLANKRESER-002": {
+      "spec": "src/test/resources/features/blank-reservation-search-hint/blank-reservation-search-hint.feature",
+      "testCaseId": "cmwwb3lci000001ns1qjy3ty7",
+      "status": "stable"
+    },
+    "TC-BLANKRESER-003": {
+      "spec": "src/test/resources/features/blank-reservation-search-hint/blank-reservation-search-hint.feature",
+      "testCaseId": "cmwwb3llw000201ns0t1jd08u",
+      "status": "stable"
     }
   },
   "lastBugNumber": 12,
   "testgraph": {
     "projectId": "cmwmh64un008r01th1gyazrxj",
     "project": "Bench - QA Cluster",
-    "lastRunId": "cmwv2ihts015l01si9msnsjkt",
+    "lastRunId": "cmwwbcrar000b01nsj7a2thf5",
     "url": "https://testgraph.internal.qubika.com/projects/cmwmh64un008r01th1gyazrxj"
   },
-  "baseCommit": "a3bfd69eb334d66241cf463b671b4395ee64a30a",
+  "baseCommit": "c070e9281dab037e039b5e99c94c4cd16ca4c11d",
   "finalizedBy": {
     "by": "manifest-finalize",
-    "runId": "run-20261124-184916",
-    "at": "2026-11-24T19:11:21.749Z"
+    "runId": "run-20261125-155222",
+    "at": "2026-11-25T16:05:20.885Z"
   },
   "shapes": {
     "src/test/steps/volume-1.steps.ts": {
@@ -918,8 +946,8 @@
       "sha": "8af16051514c9a3ea00ae5c459666c9f3a1d1be749af144e106b8552229d3de3"
     },
     "src/test/steps/weird-names.steps.ts": {
-      "of": "bd9ce5ce866d9b502147bd66d49d8ae992222d4dae046fe00ee8f8890d36f3ff",
-      "sha": "c5f4868dff9195c5d2d164e5577c5ca17c70970f6d168186d62a5446a9167a0d"
+      "of": "eba712cd9d3b5dc9fb290d797780b1f457dc467f8d326ce78b01a895d3e9cfa8",
+      "sha": "ca6448939fd8138799069217d6e82b0a3d0b27f988c78831accdee17db0df567"
     },
     "src/test/steps/local-find.steps.ts": {
       "of": "6c50d80b5f44a6817c0a1a102a5551a78c75b82d666dc69df3edf6c18a31e0f8",

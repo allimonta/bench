@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T19:48:21.012Z",
+  "updatedAt": "2026-11-25T16:05:26.457Z",
   "fixtures": [
     "ctx",
     "api",
@@ -1859,6 +1859,19 @@
     {
       "keyword": "Then",
       "pattern": "the reservation search {string} button is not shown",
+      "file": "src/test/steps/weird-names.steps.ts",
+      "pages": [
+        "FindReservationDrawer"
+      ]
+    },
+    {
+      "keyword": "When",
+      "pattern": "What is in the reservation search field?",
+      "file": "src/test/steps/weird-names.steps.ts"
+    },
+    {
+      "keyword": "Then",
+      "pattern": "the reservation search shows no message",
       "file": "src/test/steps/weird-names.steps.ts",
       "pages": [
         "FindReservationDrawer"

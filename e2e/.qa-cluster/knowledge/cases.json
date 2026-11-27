@@ -5591,6 +5591,156 @@
       "lastRunAt": "2026-11-24T19:11:30.244Z",
       "bugs": [],
       "firstSeenAt": "2026-11-24T19:11:17.937Z"
+    },
+    "TC-BLANKRESER-001": {
+      "title": "Search for a company — no search hint is shown",
+      "flow": "blank-reservation-search-hint",
+      "priority": "P1",
+      "tier": "smoke",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwwb2yf7000001nsyxcf36sa",
+        "testCaseId": "cmwwb3l0e000101nsuwbx023f",
+        "scenarioId": "3cb272e3-8bfc-4b72-82d3-51ae5dfd31d9::cb8cbf3d-00de-4691-b253-62bc70d4e2f1",
+        "feature": "Blank reservation search hint",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "bccd873b-3f90-4ece-af87-5f24fcf6624c",
+          "b49656d6-fc40-4c7f-aa00-0616ba69e277",
+          "ab74d9a5-0260-43e9-a86a-7ded79c035c2",
+          "ead0281d-722f-44d8-9d8d-0b31fd522464",
+          "da9fb51a-cecf-416b-af95-5169304611db",
+          "7dd28020-ffd5-474d-9c93-b8a9e53d5239",
+          "1a4b5a56-3562-4eac-b930-79ce962b1f72",
+          "b0e5e9f5-d1d8-4019-91df-dbf14f1f568f",
+          "c79e71a8-eba3-4bbf-904c-837c43096e39",
+          "94c5bf36-e7d9-475f-82f8-2f75e0483085",
+          "cb8cbf3d-00de-4691-b253-62bc70d4e2f1"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "1a4b5a56-3562-4eac-b930-79ce962b1f72"
+        ],
+        "dataNodeIds": [
+          "b0e5e9f5-d1d8-4019-91df-dbf14f1f568f"
+        ],
+        "validationNodeIds": [
+          "da9fb51a-cecf-416b-af95-5169304611db",
+          "7dd28020-ffd5-474d-9c93-b8a9e53d5239",
+          "94c5bf36-e7d9-475f-82f8-2f75e0483085",
+          "cb8cbf3d-00de-4691-b253-62bc70d4e2f1"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "4714f134906d7ff8",
+      "codeRefs": {
+        "index.html": "0869d3f88c6e47f4"
+      },
+      "feature": "src/test/resources/features/blank-reservation-search-hint/blank-reservation-search-hint.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261125-155222",
+      "lastRunAt": "2026-11-25T16:05:26.431Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-25T16:05:26.431Z"
+    },
+    "TC-BLANKRESER-002": {
+      "title": "Search with only spaces — the search hint is shown",
+      "flow": "blank-reservation-search-hint",
+      "priority": "P2",
+      "tier": "regression",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwwb2yf7000001nsyxcf36sa",
+        "testCaseId": "cmwwb3lci000001ns1qjy3ty7",
+        "scenarioId": "3e5f20ae-9fb5-4ee0-9d35-0fab8b388c6c::a98589ab-66d3-4067-a589-bc60188acd21",
+        "feature": "Blank reservation search hint",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "bccd873b-3f90-4ece-af87-5f24fcf6624c",
+          "b49656d6-fc40-4c7f-aa00-0616ba69e277",
+          "ab74d9a5-0260-43e9-a86a-7ded79c035c2",
+          "ead0281d-722f-44d8-9d8d-0b31fd522464",
+          "da9fb51a-cecf-416b-af95-5169304611db",
+          "7dd28020-ffd5-474d-9c93-b8a9e53d5239",
+          "1a4b5a56-3562-4eac-b930-79ce962b1f72",
+          "c300a136-a53a-43f6-a667-a6941949a46b",
+          "a68b3011-cfce-4694-a1a4-99512e652945",
+          "1e1e33d0-7c59-4de9-b88d-06424043a518",
+          "a98589ab-66d3-4067-a589-bc60188acd21"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "1a4b5a56-3562-4eac-b930-79ce962b1f72"
+        ],
+        "dataNodeIds": [
+          "c300a136-a53a-43f6-a667-a6941949a46b"
+        ],
+        "validationNodeIds": [
+          "da9fb51a-cecf-416b-af95-5169304611db",
+          "7dd28020-ffd5-474d-9c93-b8a9e53d5239",
+          "1e1e33d0-7c59-4de9-b88d-06424043a518",
+          "a98589ab-66d3-4067-a589-bc60188acd21"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "e2af5898c6611f9e",
+      "codeRefs": {
+        "index.html": "0869d3f88c6e47f4"
+      },
+      "feature": "src/test/resources/features/blank-reservation-search-hint/blank-reservation-search-hint.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261125-155222",
+      "lastRunAt": "2026-11-25T16:05:26.431Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-25T16:05:26.431Z"
+    },
+    "TC-BLANKRESER-003": {
+      "title": "Search with an empty field — no search hint is shown",
+      "flow": "blank-reservation-search-hint",
+      "priority": "P3",
+      "tier": "edge",
+      "testgraph": {
+        "projectId": "cmwmh64un008r01th1gyazrxj",
+        "suiteId": "cmwwb2yf7000001nsyxcf36sa",
+        "testCaseId": "cmwwb3llw000201ns0t1jd08u",
+        "scenarioId": "4064f39f-1bf7-45a1-9848-fb674687a093::97343228-f11e-451a-b141-2c8f4d3cc157",
+        "feature": "Blank reservation search hint",
+        "area": "Volume Test",
+        "pathNodeIds": [
+          "bccd873b-3f90-4ece-af87-5f24fcf6624c",
+          "b49656d6-fc40-4c7f-aa00-0616ba69e277",
+          "ab74d9a5-0260-43e9-a86a-7ded79c035c2",
+          "ead0281d-722f-44d8-9d8d-0b31fd522464",
+          "da9fb51a-cecf-416b-af95-5169304611db",
+          "7dd28020-ffd5-474d-9c93-b8a9e53d5239",
+          "1a4b5a56-3562-4eac-b930-79ce962b1f72",
+          "01294c02-1126-4da5-9831-4b78f7e3c3f3",
+          "62e42e97-0c5a-461b-9a65-7ae7071886b1",
+          "97343228-f11e-451a-b141-2c8f4d3cc157"
+        ],
+        "pathStale": false,
+        "decisionNodeIds": [
+          "1a4b5a56-3562-4eac-b930-79ce962b1f72"
+        ],
+        "dataNodeIds": [],
+        "validationNodeIds": [
+          "da9fb51a-cecf-416b-af95-5169304611db",
+          "7dd28020-ffd5-474d-9c93-b8a9e53d5239",
+          "62e42e97-0c5a-461b-9a65-7ae7071886b1",
+          "97343228-f11e-451a-b141-2c8f4d3cc157"
+        ],
+        "tags": []
+      },
+      "gherkinHash": "e6445e9aca45da62",
+      "codeRefs": {
+        "index.html": "0869d3f88c6e47f4"
+      },
+      "feature": "src/test/resources/features/blank-reservation-search-hint/blank-reservation-search-hint.feature",
+      "lastStatus": "stable",
+      "lastRunId": "run-20261125-155222",
+      "lastRunAt": "2026-11-25T16:05:26.431Z",
+      "bugs": [],
+      "firstSeenAt": "2026-11-25T16:05:26.431Z"
     }
   },
   "repositories": {
@@ -5598,5 +5748,5 @@
       "front"
     ]
   },
-  "updatedAt": "2026-11-24T19:33:57.072Z"
+  "updatedAt": "2026-11-25T16:05:26.431Z"
 }
